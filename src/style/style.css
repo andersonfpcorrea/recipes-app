@@ -20,6 +20,7 @@ html,
 body {
   height: 100%;
   font-size: 1.6rem;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 /* Allow consistently using rem istead of px for accessibility reasons */
@@ -82,8 +83,7 @@ h6 {
 }
 
 .link {
-  color: #ef6453;
-  font-weight: 600;
+  color: #b12211;
 }
 
 .btn {
@@ -100,7 +100,7 @@ h6 {
   align-items: center;
   justify-content: center;
   min-height: 100%;
-  background-image: linear-gradient(to right top, rgba(244, 136, 128, 0.4), rgba(251, 218, 137, 0.25)), url("../assets/gardie-design-social-media-marketing-a-eC_o3TRCU-unsplash.jpg");
+  background-image: linear-gradient(to right top, rgb(244, 136, 128), rgba(251, 218, 137, 0.7)), url("../assets/pablo-merchan-montes-Orz90t6o0e4-unsplash.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -136,9 +136,10 @@ h6 {
 .form-login .form-login__actions-btns .form-login__remember-forgot {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-end;
   gap: 0.5rem;
   justify-content: space-between;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .form-login .form-login__actions-btns .form-login__hrows {
   display: flex;

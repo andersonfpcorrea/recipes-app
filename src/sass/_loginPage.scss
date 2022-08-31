@@ -4,7 +4,7 @@
   justify-content: center;
   min-height: 100%;
   background-image: $gradient-right-top-transparent,
-    url('../assets/gardie-design-social-media-marketing-a-eC_o3TRCU-unsplash.jpg');
+    url('../assets/pablo-merchan-montes-Orz90t6o0e4-unsplash.jpg');
   background-position: center;
   background-size: cover;
 }
@@ -39,9 +39,10 @@
     .form-login__remember-forgot {
       display: flex;
       flex-wrap: wrap;
+      align-items: flex-end;
       gap: 0.5rem;
       justify-content: space-between;
-      font-size: $font-size-15;
+      font-size: $font-size-13;
     }
 
     .form-login__hrows {
