@@ -13,42 +13,52 @@ function LoginForm() {
           </p>
         </div>
       </div>
-      <div className='form-login__inputs'>
-        <div>
-          <label htmlFor='email-input'>Email</label>
-          <input type='email' id='email-input' className='width-100percent' />
+      <div className='form-login__body'>
+        <div className='form-login__inputs'>
+          <div>
+            <label htmlFor='email-input'>Email</label>
+            <input
+              type='email'
+              id='email-input'
+              className='width-100percent border-radius-3 inputs'
+            />
+          </div>
+          <div>
+            <label htmlFor='pass-input'>Password</label>
+            <input
+              type='password'
+              id='pass-input'
+              className='width-100percent border-radius-3 inputs'
+            />
+          </div>
         </div>
-        <div>
-          <label htmlFor='pass-input'>Password</label>
-          <input type='password' id='pass-input' className='width-100percent' />
-        </div>
-      </div>
-      <div className='form-login__actions-btns width-100percent'>
-        <div className='form-login__remember-forgot'>
-          <label htmlFor='remember-input'>
-            <input type='checkbox' id='remember-input' />
-            &nbsp;Remember-me
-          </label>
-          <span className='link'>Forgot password?</span>
-        </div>
-        <button type='submit' className='btn btn--login'>
-          Sign in
-        </button>
-        <div className='form-login__hrows'>
-          <hr />
-          <p>&nbsp;or continue with&nbsp;</p>
-          <hr />
-        </div>
-        <div className='form-login__socialBtns'>
-          <button type='button' className='btn btn--social'>
-            <BsGoogle />
+        <div className='form-login__actions-btns width-100percent'>
+          <div className='form-login__remember-forgot'>
+            <label htmlFor='remember-input'>
+              <input type='checkbox' id='remember-input' />
+              &nbsp;Remember-me
+            </label>
+            <span className='link'>Forgot password?</span>
+          </div>
+          <button type='submit' className='btn btn--login'>
+            Sign in
           </button>
-          <button type='button' className='btn btn--social'>
-            <BsFacebook />
-          </button>
-          <button type='button' className='btn btn--social'>
-            <BsTwitter />
-          </button>
+          <div className='form-login__hrows'>
+            <hr />
+            <p>&nbsp;or continue with&nbsp;</p>
+            <hr />
+          </div>
+          <div className='form-login__socialBtns'>
+            <button type='button' className='btn btn--social'>
+              <BsGoogle />
+            </button>
+            <button type='button' className='btn btn--social'>
+              <BsFacebook />
+            </button>
+            <button type='button' className='btn btn--social'>
+              <BsTwitter />
+            </button>
+          </div>
         </div>
       </div>
     </form>

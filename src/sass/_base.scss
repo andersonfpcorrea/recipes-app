@@ -5,13 +5,16 @@ $color-grad-2: #f48982;
 $color-grey-light-1: #f9f5f3; // Light background
 $color-grey-light-2: #f2efee; // Light lines
 $color-grey-light-3: #d3c7c3; // Light text (placeholder)
-$color-grey-dark-1: #615551; // Normal text
-$color-grey-dark-2: #918581; // Lighter text
+$color-white-1: #fff; // Normal text
+$color-black-1: #222; // Normal text
+$color-grey-dark-1: #615551; // Lighter text
+$color-grey-dark-2: #918581; // Even lighter text
 
 $gradient-right-top-transparent: linear-gradient(
   to right top,
-  rgb(244, 136, 128, 1),
-  rgb(251, 218, 137, 0.7)
+  rgb(244, 136, 128, 0.6),
+  rgb(244, 136, 128, 0.1),
+  rgb(251, 218, 137, 0.4)
 );
 $gradient-to-rigth-bottom: linear-gradient(
   to right bottom,
@@ -36,6 +39,8 @@ $font-size-14: 1.4rem;
 $font-size-13: 1.3rem;
 $font-size-12: 1.2rem;
 
+$border-radius-3: 3px;
+
 /*
 1. Use a more-intuitive box-sizing model. */
 *,
@@ -48,6 +53,10 @@ $font-size-12: 1.2rem;
 */
 * {
   margin: 0;
+
+  &:focus {
+    outline: 3px solid $color-grad-1;
+  }
 }
 /*
   3. Allow percentage-based heights in the application
@@ -57,6 +66,7 @@ body {
   height: 100%;
   font-size: $font-size-16;
   font-family: 'Nunito Sans', sans-serif;
+  color: $color-black-1;
 }
 /* Allow consistently using rem istead of px for accessibility reasons */
 html {

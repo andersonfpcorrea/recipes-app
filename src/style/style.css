@@ -12,6 +12,9 @@
 * {
   margin: 0;
 }
+*:focus {
+  outline: 3px solid #fbdb89;
+}
 
 /*
   3. Allow percentage-based heights in the application
@@ -21,6 +24,7 @@ body {
   height: 100%;
   font-size: 1.6rem;
   font-family: "Nunito Sans", sans-serif;
+  color: #222;
 }
 
 /* Allow consistently using rem istead of px for accessibility reasons */
@@ -82,13 +86,54 @@ h6 {
   height: 100%;
 }
 
-.link {
-  color: #b12211;
-}
-
 .btn {
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: #f48982;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 0.4rem;
+  transition: all 0.6s;
+}
+.btn:hover {
+  background-color: #f69f99;
+}
+
+.btn--social {
+  background-color: #fff;
+  color: #222;
+  height: 2.8rem;
+  width: 8.6rem;
+}
+.btn--social svg {
+  font-size: 1.8rem;
+  color: #615551;
+}
+
+.inputs {
+  padding: 0.3rem 1rem;
+  border-style: none none solid;
+  border-bottom: 1px solid #facdc8;
+  transition: all 0.4s;
+  border-radius: 3px;
+}
+.inputs:focus {
+  outline: 1px solid #fbdb89;
+}
+.inputs:hover {
+  border-bottom: 1px solid #f38e82;
+}
+
+.link {
+  color: #f38e82;
+  font-weight: 600;
+  transition: all 0.4s;
+}
+.link:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .width-100percent {
@@ -100,12 +145,13 @@ h6 {
   align-items: center;
   justify-content: center;
   min-height: 100%;
-  background-image: linear-gradient(to right top, rgb(244, 136, 128), rgba(251, 218, 137, 0.7)), url("../assets/pablo-merchan-montes-Orz90t6o0e4-unsplash.jpg");
+  background-image: linear-gradient(to right top, rgba(244, 136, 128, 0.6), rgba(244, 136, 128, 0.1), rgba(251, 218, 137, 0.4)), url("../assets/pablo-merchan-montes-Orz90t6o0e4-unsplash.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .form-login {
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -122,18 +168,26 @@ h6 {
 .form-login .form-login__header img {
   width: 8rem;
 }
-.form-login .form-login__inputs {
+.form-login .form-login__body {
+  color: #222;
+  border: 1px solid #fff;
+  padding: 3rem 1.3rem 5rem;
+  border-radius: 3px;
+  box-shadow: 0 0.3rem 1rem 0.2rem rgba(0, 0, 0, 0.5);
+  background-color: #f9f5f3;
+}
+.form-login .form-login__body .form-login__inputs {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.form-login .form-login__actions-btns {
+.form-login .form-login__body .form-login__actions-btns {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
   padding-top: 1.8rem;
 }
-.form-login .form-login__actions-btns .form-login__remember-forgot {
+.form-login .form-login__body .form-login__actions-btns .form-login__remember-forgot {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
@@ -141,26 +195,23 @@ h6 {
   justify-content: space-between;
   font-size: 1.3rem;
 }
-.form-login .form-login__actions-btns .form-login__hrows {
+.form-login .form-login__body .form-login__actions-btns .form-login__hrows {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.form-login .form-login__actions-btns .form-login__hrows hr {
+.form-login .form-login__body .form-login__actions-btns .form-login__hrows hr {
   width: 100%;
   height: 1px;
+  color: #f9f5f3;
 }
-.form-login .form-login__actions-btns .form-login__hrows p {
+.form-login .form-login__body .form-login__actions-btns .form-login__hrows p {
   font-size: 1.4rem;
   white-space: nowrap;
 }
-.form-login .form-login__actions-btns .form-login__socialBtns {
+.form-login .form-login__body .form-login__actions-btns .form-login__socialBtns {
   display: flex;
   justify-content: space-between;
-}
-.form-login .form-login__actions-btns .form-login__socialBtns .btn--social {
-  padding: 0.2rem;
-  width: 7.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

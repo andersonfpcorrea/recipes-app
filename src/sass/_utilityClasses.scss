@@ -1,13 +1,13 @@
 // Typograpghy
 .link {
-  color: darken($color-primary, 35%);
-  // font-weight: 600;
-}
+  color: $color-primary;
+  font-weight: 600;
+  transition: all 0.4s;
 
-// Elements
-.btn {
-  display: flex;
-  justify-content: center;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
 
 // Layout

@@ -1,0 +1,43 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-grad-2;
+  color: $color-white-1;
+  border: none;
+  border-radius: $border-radius-3;
+  padding: 0.4rem;
+  transition: all 0.6s;
+
+  &:hover {
+    background-color: lighten($color-grad-2, 5%);
+  }
+}
+
+.btn--social {
+  background-color: $color-white-1;
+  color: $color-black-1;
+  height: 2.8rem;
+  width: 8.6rem;
+
+  svg {
+    font-size: 1.8rem;
+    color: $color-grey-dark-1;
+  }
+}
+
+.inputs {
+  padding: 0.3rem 1rem;
+  border-style: none none solid;
+  border-bottom: 1px solid lighten($color-primary, 15%);
+  transition: all 0.4s;
+  border-radius: $border-radius-3;
+
+  &:focus {
+    outline: 1px solid $color-grad-1;
+  }
+
+  &:hover {
+    border-bottom: 1px solid $color-primary;
+  }
+}
