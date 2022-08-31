@@ -32,7 +32,7 @@
     border: 1px solid #fff;
     padding: 3rem 1.3rem 5rem;
     border-radius: $border-radius-3;
-    box-shadow: 0 0.3rem 1rem 0.2rem rgba(0, 0, 0, 0.5);
+    @include box-shadow-bg(0.5);
     background-color: $color-grey-light-1;
 
     .form-login__inputs {
@@ -74,6 +74,7 @@
       .form-login__socialBtns {
         display: flex;
         justify-content: space-between;
+        gap: 0.5rem;
       }
     }
   }

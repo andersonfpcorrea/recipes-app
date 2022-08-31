@@ -95,7 +95,8 @@ h6 {
   border: none;
   border-radius: 3px;
   padding: 0.4rem;
-  transition: all 0.6s;
+  transition: all 0.3s;
+  cursor: pointer;
 }
 .btn:hover {
   background-color: #f69f99;
@@ -105,7 +106,11 @@ h6 {
   background-color: #fff;
   color: #222;
   height: 2.8rem;
-  width: 8.6rem;
+  width: 100%;
+}
+.btn--social:hover {
+  background-color: #fff;
+  box-shadow: 0 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.3);
 }
 .btn--social svg {
   font-size: 1.8rem;
@@ -212,6 +217,7 @@ h6 {
 .form-login .form-login__body .form-login__actions-btns .form-login__socialBtns {
   display: flex;
   justify-content: space-between;
+  gap: 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
