@@ -1,9 +1,27 @@
 import Icon from '../assets/favicon.png';
 import { BsGoogle, BsFacebook, BsTwitter } from 'react-icons/bs';
+import isEmail from 'validator/lib/isEmail';
+import { SyntheticEvent, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function LoginForm() {
+  const [user, setUser] = useState({ email: '', password: '' });
+  const [errMsg, setErrMsg] = useState(false);
+  let navigate = useNavigate();
+
+  const handleInput = ({ target }: SyntheticEvent) => {
+    const { value, type } = target as HTMLInputElement;
+    setUser((prevState) => ({ ...prevState, [type]: value }));
+  };
+
+  const handleSubmit = (e: SyntheticEvent) => {
+    e.preventDefault();
+    isEmail(user.email) && user.password.length > 8 && navigate('/home');
+    setErrMsg(true);
+  };
+
   return (
-    <form className='form-login'>
+    <form className='form-login' onSubmit={handleSubmit}>
       <div className='form-login__header'>
         <img src={Icon} alt='Forkify logo' />
         <div>
@@ -21,6 +39,8 @@ function LoginForm() {
               type='email'
               id='email-input'
               className='width-100percent border-radius-3 inputs'
+              value={user.email}
+              onChange={handleInput}
             />
           </div>
           <div>
@@ -29,6 +49,8 @@ function LoginForm() {
               type='password'
               id='pass-input'
               className='width-100percent border-radius-3 inputs'
+              value={user.password}
+              onChange={handleInput}
             />
           </div>
         </div>
