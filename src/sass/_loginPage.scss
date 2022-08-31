@@ -1,19 +1,24 @@
 .login-page {
-  height: 100%;
-  background-color: orangered;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  background-image: $gradient-right-top-transparent,
+    url('../assets/gardie-design-social-media-marketing-a-eC_o3TRCU-unsplash.jpg');
+  background-position: center;
+  background-size: cover;
 }
 
 .form-login {
   @include flex-column;
   align-items: center;
-  padding: 1rem;
-  background-color: #fff;
+  padding: 0rem 1rem 3rem;
 
   .form-login__header {
     @include flex-column;
     align-items: center;
     gap: 1.8rem;
-    padding: 1.2rem;
+    padding: 1.8rem 0;
     text-align: center;
 
     img {
@@ -29,7 +34,7 @@
   .form-login__actions-btns {
     @include flex-column;
     gap: 1.2rem;
-    padding-top: 1.4rem;
+    padding-top: 1.8rem;
 
     .form-login__remember-forgot {
       display: flex;
@@ -60,6 +65,7 @@
       justify-content: space-between;
 
       .btn--social {
+        padding: 0.2rem;
         width: 7.5rem;
       }
     }

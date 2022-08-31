@@ -1,4 +1,5 @@
 import Icon from '../assets/favicon.png';
+import { BsGoogle, BsFacebook, BsTwitter } from 'react-icons/bs';
 
 function LoginForm() {
   return (
@@ -39,14 +40,14 @@ function LoginForm() {
           <hr />
         </div>
         <div className='form-login__socialBtns'>
-          <button type='button' className='btn--social'>
-            Google
+          <button type='button' className='btn btn--social'>
+            <BsGoogle />
           </button>
-          <button type='button' className='btn--social'>
-            Facebook
+          <button type='button' className='btn btn--social'>
+            <BsFacebook />
           </button>
-          <button type='button' className='btn--social'>
-            Twitter
+          <button type='button' className='btn btn--social'>
+            <BsTwitter />
           </button>
         </div>
       </div>

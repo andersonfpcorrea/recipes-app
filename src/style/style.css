@@ -82,7 +82,13 @@ h6 {
 }
 
 .link {
-  color: #f38e82;
+  color: #ef6453;
+  font-weight: 600;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
 }
 
 .width-100percent {
@@ -90,23 +96,27 @@ h6 {
 }
 
 .login-page {
-  height: 100%;
-  background-color: orangered;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  background-image: linear-gradient(to right top, rgba(244, 136, 128, 0.4), rgba(251, 218, 137, 0.25)), url("../assets/gardie-design-social-media-marketing-a-eC_o3TRCU-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .form-login {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
-  background-color: #fff;
+  padding: 0rem 1rem 3rem;
 }
 .form-login .form-login__header {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.8rem;
-  padding: 1.2rem;
+  padding: 1.8rem 0;
   text-align: center;
 }
 .form-login .form-login__header img {
@@ -121,7 +131,7 @@ h6 {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  padding-top: 1.4rem;
+  padding-top: 1.8rem;
 }
 .form-login .form-login__actions-btns .form-login__remember-forgot {
   display: flex;
@@ -148,6 +158,7 @@ h6 {
   justify-content: space-between;
 }
 .form-login .form-login__actions-btns .form-login__socialBtns .btn--social {
+  padding: 0.2rem;
   width: 7.5rem;
 }
 
