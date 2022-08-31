@@ -1,3 +1,20 @@
+$color-primary: #f38e82;
+$color-grad-1: #fbdb89;
+$color-grad-2: #f48982;
+
+$color-grey-light-1: #f9f5f3; // Light background
+$color-grey-light-2: #f2efee; // Light lines
+$color-grey-light-3: #d3c7c3; // Light text (placeholder)
+$color-grey-dark-1: #615551; // Normal text
+$color-grey-dark-2: #918581; // Lighter text
+
+$gradient: linear-gradient(to right bottom, $color-grad-1, $color-grad-2);
+
+$font-size-16: 1.6rem;
+$font-size-15: 1.5rem;
+$font-size-14: 1.4rem;
+$font-size-12: 1.2rem;
+
 /*
 1. Use a more-intuitive box-sizing model. */
 *,
@@ -17,7 +34,7 @@
 html,
 body {
   height: 100%;
-  font-size: 1.6rem;
+  font-size: $font-size-16;
 }
 /* Allow consistently using rem istead of px for accessibility reasons */
 html {
@@ -70,4 +87,5 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+  height: 100%;
 }

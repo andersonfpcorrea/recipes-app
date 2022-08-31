@@ -1,0 +1,7 @@
+// A ordem das importações importa: mixins, base e utility devem vir primeiro porque são necessárias nos outros
+// arquivos.
+@import 'mixins';
+@import 'base';
+@import 'utilityClasses';
+@import 'elements';
+@import 'loginPage';
