@@ -77,11 +77,15 @@ h6 {
   overflow-wrap: break-word;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /*
   9. Create a root stacking context
 */
-#root,
-#__next {
+#root {
   isolation: isolate;
   height: 100%;
 }
@@ -149,6 +153,16 @@ h6 {
   font-size: 1.1rem;
   font-style: italic;
   bottom: 3rem;
+  right: 0.7rem;
+}
+
+.skip-login-element {
+  position: absolute;
+  display: inline-block;
+  color: #615551;
+  font-size: 1.2rem;
+  font-style: italic;
+  bottom: 0.2rem;
   right: 0.7rem;
 }
 

@@ -74,4 +74,12 @@
   right: 0.7rem;
 }
 
-// PASSWORD INPUT ON LOGIN
+.skip-login-element {
+  position: absolute;
+  display: inline-block;
+  color: $color-grey-dark-1;
+  font-size: $font-size-12;
+  font-style: italic;
+  bottom: 0.2rem;
+  right: 0.7rem;
+}

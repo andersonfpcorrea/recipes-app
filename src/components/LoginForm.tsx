@@ -2,7 +2,7 @@ import Icon from '../assets/favicon.png';
 import { BsGoogle, BsFacebook, BsTwitter } from 'react-icons/bs';
 import isEmail from 'validator/lib/isEmail';
 import { SyntheticEvent, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 function LoginForm() {
   const [user, setUser] = useState({ email: '', password: '' });
@@ -38,7 +38,7 @@ function LoginForm() {
           </p>
         </div>
       </div>
-      <div className='form-login__body'>
+      <div className='form-login__body pos-rel'>
         <div className='form-login__inputs'>
           <div className='form-login__email-div pos-rel'>
             <label htmlFor='email-input'>
@@ -101,6 +101,13 @@ function LoginForm() {
             </button>
           </div>
         </div>
+        <p className='skip-login-element'>
+          or click{' '}
+          <Link to='/home' className='link'>
+            here
+          </Link>{' '}
+          to skip login and see the app
+        </p>
       </div>
     </form>
   );
