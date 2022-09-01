@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 function LoginForm() {
   const [user, setUser] = useState({ email: '', password: '' });
-  const [errMsg, setErrMsg] = useState(false);
+  const [validationError, setValidationError] = useState(false);
   let navigate = useNavigate();
 
   const handleInput = ({ target }: SyntheticEvent) => {
@@ -17,7 +17,14 @@ function LoginForm() {
   const handleSubmit = (e: SyntheticEvent) => {
     e.preventDefault();
     isEmail(user.email) && user.password.length > 8 && navigate('/home');
-    setErrMsg(true);
+    setValidationError(true);
+  };
+
+  const renderValidationError = (msg: string) => {
+    if (validationError) {
+      // setTimeout(() => setValidationError(false), 5000);
+      return <p className='error-el-login-inputs'>{msg}</p>;
+    }
   };
 
   return (
@@ -33,7 +40,7 @@ function LoginForm() {
       </div>
       <div className='form-login__body'>
         <div className='form-login__inputs'>
-          <div>
+          <div className='form-login__email-div pos-rel'>
             <label htmlFor='email-input'>Email</label>
             <input
               type='email'
@@ -42,16 +49,21 @@ function LoginForm() {
               value={user.email}
               onChange={handleInput}
             />
+            {validationError &&
+              renderValidationError('Use a valid email address')}
           </div>
-          <div>
+          <div className='form-login__password-div pos-rel'>
             <label htmlFor='pass-input'>Password</label>
             <input
               type='password'
+              placeholder='Must be at least 8 characters'
               id='pass-input'
               className='width-100percent border-radius-3 inputs'
               value={user.password}
               onChange={handleInput}
             />
+            {validationError &&
+              renderValidationError('must be at least 8 char.')}
           </div>
         </div>
         <div className='form-login__actions-btns width-100percent'>

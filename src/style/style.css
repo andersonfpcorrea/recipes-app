@@ -123,12 +123,28 @@ h6 {
   border-bottom: 1px solid #facdc8;
   transition: all 0.4s;
   border-radius: 3px;
+  font-size: 1.4rem;
 }
 .inputs:focus {
   outline: 1px solid #fbdb89;
 }
 .inputs:hover {
   border-bottom: 1px solid #f38e82;
+}
+.inputs::placeholder {
+  color: #d3c7c3;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.error-el-login-inputs {
+  position: absolute;
+  display: inline-block;
+  color: #f48982;
+  font-size: 1.1rem;
+  font-style: italic;
+  bottom: 3rem;
+  right: 0.7rem;
 }
 
 .link {
@@ -143,6 +159,14 @@ h6 {
 
 .width-100percent {
   width: 100%;
+}
+
+.pos-abs {
+  position: absolute;
+}
+
+.pos-rel {
+  position: relative;
 }
 
 .login-page {
