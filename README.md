@@ -1,6 +1,6 @@
 # _[Forkify](https://recipes-app-andersonfpcorrea.netlify.app/)_
 
-This _[app](https://recipes-app-andersonfpcorrea.netlify.app/)_ is inspired by the _[final project](https://forkify-v2.netlify.app/)_ of _[Jonas Schmedtmann's](https://recipes-app-andersonfpcorrea.netlify.app/)_ JavaScript course.
+This _[app](https://recipes-app-andersonfpcorrea.netlify.app/)_ is inspired by the _[final project](https://forkify-v2.netlify.app/)_ of _[Jonas Schmedtmann's](https://github.com/jonasschmedtmann)_ JavaScript course.
 
 My Forkify app is being built with Vite, React, TypeScript and SASS.
 
