@@ -4,7 +4,7 @@
   justify-content: center;
   min-height: 100%;
   background-image: $gradient-right-top-transparent,
-    url('../assets/pablo-merchan-montes-Orz90t6o0e4-unsplash.jpg');
+    url('../assets/pablo-merchan-montes-Orz90t6o0e4-unsplash.webp');
   background-position: center;
   background-size: cover;
 }
@@ -38,14 +38,6 @@
     .form-login__inputs {
       @include flex-column;
       gap: 1rem;
-
-      // .form-login__email-div::after {
-      //   @include after-pseudo-el-login('Use a valid email address');
-      // }
-
-      // .form-login__password-div::after {
-      //   @include after-pseudo-el-login('must be +8 char.');
-      // }
     }
 
     .form-login__actions-btns {
