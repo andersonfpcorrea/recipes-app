@@ -1,6 +1,6 @@
 import LoginForm from '../components/LoginForm';
 
-function LoginPage() {
+function Login() {
   return (
     <section className='login-page'>
       <LoginForm />
@@ -8,4 +8,4 @@ function LoginPage() {
   );
 }
 
-export default LoginPage;
+export default Login;

@@ -1,12 +1,23 @@
 import { Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
 import Hero from './pages/Hero';
-import LoginPage from './pages/LoginPage';
+import Home from './pages/Home';
+import Login from './pages/Login';
 
 function App() {
   return (
     <Routes>
-      <Route path='/login' element={<LoginPage />} />
       <Route path='/' element={<Hero />} />
+      <Route path='/login' element={<Login />} />
+      <Route
+        path='/home'
+        element={
+          <>
+            <Header />
+            <Home />
+          </>
+        }
+      />
     </Routes>
   );
 }

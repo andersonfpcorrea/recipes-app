@@ -1,4 +1,6 @@
-// Typograpghy
+// %%%%%%%%%%%%%%
+// Typography
+// %%%%%%%%%%%%%%
 .link {
   color: $color-primary;
   font-weight: 600;
@@ -14,7 +16,90 @@
   color: $color-primary;
 }
 
+// Font sizes
+.fs-10 {
+  font-size: 1rem;
+}
+
+.fs-11 {
+  font-size: 1.1rem;
+}
+
+.fs-12 {
+  font-size: 1.2rem;
+}
+
+.fs-13 {
+  font-size: 1.3rem;
+}
+
+.fs-14 {
+  font-size: 1.4rem;
+}
+
+.fs-15 {
+  font-size: 1.5rem;
+}
+
+.fs-16 {
+  font-size: 1.6rem;
+}
+
+.fs-18 {
+  font-size: 1.8rem;
+}
+
+.fs-20 {
+  font-size: 2rem;
+}
+
+.fs-22 {
+  font-size: 2.2rem;
+}
+
+.fs-24 {
+  font-size: 2.4rem;
+}
+
+.fs-32 {
+  font-size: 3.2rem;
+}
+
+// Font colors
+.color-primary {
+  color: $color-primary;
+}
+.color-grad-1 {
+  color: $color-grad-1;
+}
+.color-grad-2 {
+  color: $color-grad-2;
+}
+.color-white-1 {
+  color: $color-white-1;
+}
+.color-black-1 {
+  color: $color-black-1;
+}
+.color-grey-dark-1 {
+  color: $color-grey-dark-1;
+}
+.color-grey-dark-2 {
+  color: $color-grey-dark-2;
+}
+.color-grey-light-1 {
+  color: $color-grey-light-1;
+}
+.color-grey-light-2 {
+  color: $color-grey-light-2;
+}
+.color-grey-light-3 {
+  color: $color-grey-light-3;
+}
+
+// %%%%%%%%%%%%%%
 // Layout
+// %%%%%%%%%%%%%%
 .width-100percent {
   width: 100%;
 }
@@ -25,4 +110,8 @@
 
 .pos-rel {
   position: relative;
+}
+
+.flex {
+  display: flex;
 }

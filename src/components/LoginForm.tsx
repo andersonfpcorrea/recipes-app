@@ -48,7 +48,7 @@ function LoginForm() {
               type='email'
               placeholder='teresa@email.com'
               id='email-input'
-              className='width-100percent border-radius-3 inputs'
+              className='width-100percent border-radius-3 inputs inputs__login'
               required
               value={user.email}
               onChange={handleInput}
@@ -64,7 +64,7 @@ function LoginForm() {
               type='password'
               placeholder='Must be at least 8 characters'
               id='pass-input'
-              className='width-100percent border-radius-3 inputs'
+              className='width-100percent border-radius-3 inputs inputs__login'
               required
               value={user.password}
               onChange={handleInput}
@@ -81,7 +81,7 @@ function LoginForm() {
             </label>
             <span className='link'>Forgot password?</span>
           </div>
-          <button type='submit' className='btn btn--login'>
+          <button type='submit' className='btn btn__signin'>
             Sign in
           </button>
           <div className='form-login__hrows'>
