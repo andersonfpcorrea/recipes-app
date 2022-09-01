@@ -41,11 +41,15 @@ function LoginForm() {
       <div className='form-login__body'>
         <div className='form-login__inputs'>
           <div className='form-login__email-div pos-rel'>
-            <label htmlFor='email-input'>Email</label>
+            <label htmlFor='email-input'>
+              Email <span className='require-indicator'>*</span>
+            </label>
             <input
               type='email'
+              placeholder='teresa@email.com'
               id='email-input'
               className='width-100percent border-radius-3 inputs'
+              required
               value={user.email}
               onChange={handleInput}
             />
@@ -53,12 +57,15 @@ function LoginForm() {
               renderValidationError('Use a valid email address')}
           </div>
           <div className='form-login__password-div pos-rel'>
-            <label htmlFor='pass-input'>Password</label>
+            <label htmlFor='pass-input'>
+              Password <span className='require-indicator'>*</span>
+            </label>
             <input
               type='password'
               placeholder='Must be at least 8 characters'
               id='pass-input'
               className='width-100percent border-radius-3 inputs'
+              required
               value={user.password}
               onChange={handleInput}
             />

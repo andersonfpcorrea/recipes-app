@@ -133,7 +133,7 @@ h6 {
 }
 .inputs::placeholder {
   color: #d3c7c3;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-style: italic;
 }
 
@@ -155,6 +155,10 @@ h6 {
 .link:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.require-indicator {
+  color: #f38e82;
 }
 
 .width-100percent {
