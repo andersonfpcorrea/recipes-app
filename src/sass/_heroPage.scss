@@ -1,0 +1,47 @@
+.hero {
+  height: 100%;
+  @include flex-column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 10rem 1rem 14rem;
+  background-image: $gradient-right-top-transparent,
+    url('../assets/pablo-merchan-montes-Orz90t6o0e4-unsplash.webp');
+  background-position: center;
+  background-size: cover;
+
+  img {
+    width: 12rem;
+  }
+
+  .hero-cta-container {
+    @include flex-column;
+    align-items: center;
+    gap: 5.4rem;
+
+    .hero-cta-text {
+      @include flex-column;
+      align-items: center;
+      color: $color-white-1;
+
+      .hero-cta-heading {
+        font-size: $font-size-42;
+        letter-spacing: 1.2px;
+      }
+
+      .hero-cta-subheading {
+        font-size: $font-size-22;
+        color: $color-white-1;
+      }
+    }
+
+    a {
+      text-decoration: none;
+
+      .hero__icon {
+        width: 2.4rem;
+        fill: $color-white-1;
+      }
+    }
+  }
+}

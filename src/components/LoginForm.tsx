@@ -16,7 +16,7 @@ function LoginForm() {
 
   const handleSubmit = (e: SyntheticEvent) => {
     e.preventDefault();
-    isEmail(user.email) && user.password.length > 8 && navigate('/home');
+    isEmail(user.email) && user.password.length > 7 && navigate('/home');
     setValidationError(true);
   };
 

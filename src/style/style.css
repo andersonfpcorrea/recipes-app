@@ -117,6 +117,11 @@ h6 {
   color: #615551;
 }
 
+.hero__btn {
+  height: 5.2rem;
+  width: 18rem;
+}
+
 .inputs {
   padding: 0.3rem 1rem;
   border-style: none none solid;
@@ -246,6 +251,49 @@ h6 {
   display: flex;
   justify-content: space-between;
   gap: 0.5rem;
+}
+
+.hero {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 10rem 1rem 14rem;
+  background-image: linear-gradient(to right top, rgba(244, 136, 128, 0.6), rgba(244, 136, 128, 0.1), rgba(251, 218, 137, 0.4)), url("../assets/pablo-merchan-montes-Orz90t6o0e4-unsplash.webp");
+  background-position: center;
+  background-size: cover;
+}
+.hero img {
+  width: 12rem;
+}
+.hero .hero-cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5.4rem;
+}
+.hero .hero-cta-container .hero-cta-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+.hero .hero-cta-container .hero-cta-text .hero-cta-heading {
+  font-size: 4.2rem;
+  letter-spacing: 1.2px;
+}
+.hero .hero-cta-container .hero-cta-text .hero-cta-subheading {
+  font-size: 2.2rem;
+  color: #fff;
+}
+.hero .hero-cta-container a {
+  text-decoration: none;
+}
+.hero .hero-cta-container a .hero__icon {
+  width: 2.4rem;
+  fill: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
