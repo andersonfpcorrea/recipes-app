@@ -183,18 +183,19 @@ a {
 .search-bar .search-bar-input {
   width: 100%;
   border: 1px solid #d3c7c3;
-  border-radius: 3px;
+  border-radius: 1rem;
 }
 .search-bar .search-bar-input::placeholder {
   color: #918581;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-style: italic;
 }
 .search-bar .search-bar-icon {
   background-color: #f38e82;
-  border-radius: 6px;
+  border-radius: 1rem;
   color: white;
   font-size: 3.4rem;
+  padding: 5px;
 }
 
 .link {
@@ -297,6 +298,10 @@ a {
 
 .color-grey-light-3 {
   color: #d3c7c3;
+}
+
+.fw-600 {
+  font-weight: 600;
 }
 
 .width-100percent {
@@ -431,6 +436,25 @@ a {
 .hero .hero-cta-container a .hero__icon {
   width: 2.4rem;
   fill: #fff;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 3rem;
+}
+.header .header--user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header--user--img {
+  background-color: #f38e82;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

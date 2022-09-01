@@ -103,19 +103,20 @@
   .search-bar-input {
     width: 100%;
     border: 1px solid $color-grey-light-3;
-    border-radius: $border-radius-3;
+    border-radius: 1rem;
 
     &::placeholder {
       color: $color-grey-dark-2;
-      font-size: $font-size-14;
+      font-size: 1.3rem;
       font-style: italic;
     }
   }
 
   .search-bar-icon {
     background-color: $color-primary;
-    border-radius: $border-radius-6;
+    border-radius: 1rem;
     color: white;
     font-size: 3.4rem;
+    padding: 5px;
   }
 }

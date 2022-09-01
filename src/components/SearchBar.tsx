@@ -1,6 +1,11 @@
 import { IoOptionsOutline } from 'react-icons/io5';
 
-function SearchBar() {
+interface propsType {
+  filterIcon: boolean;
+}
+
+function SearchBar(props: propsType) {
+  const { filterIcon } = props;
   return (
     <div className='search-bar'>
       <input
@@ -8,7 +13,7 @@ function SearchBar() {
         placeholder='Search recipe'
         className='inputs search-bar-input'
       />
-      <IoOptionsOutline className='search-bar-icon' />
+      {filterIcon && <IoOptionsOutline className='search-bar-icon' />}
     </div>
   );
 }

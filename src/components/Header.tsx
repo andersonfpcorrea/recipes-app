@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Icons from '../assets/icons.svg'; //icon-user
 import SearchBar from './SearchBar';
 
@@ -6,15 +7,17 @@ function Header() {
     <header className='header width-100percent'>
       <div className='header--user'>
         <div className='header--user--text'>
-          <h3>Hello, user</h3>
-          <p>What are you cooking today?</p>
+          <p className='fs-20 fw-600'>Hello, user</p>
+          <p className='color-grey-dark-2 fs-13'>What are you cooking today?</p>
         </div>
-        <svg>
+        <svg className='header--user--img'>
           <use href={`${Icons}#icon-user`} />
         </svg>
       </div>
       <div className='header--search'>
-        <SearchBar />
+        <Link to='/search'>
+          <SearchBar filterIcon={false} />
+        </Link>
       </div>
     </header>
   );

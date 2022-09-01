@@ -1,0 +1,18 @@
+.header {
+  @include flex-column;
+  gap: 3rem;
+  padding: 3rem;
+
+  .header--user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.header--user--img {
+  background-color: $color-primary;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+}
