@@ -10,6 +10,7 @@ function SearchBar(props: propsType) {
     <div className='search-bar'>
       <input
         type='text'
+        id='search-input'
         placeholder='Search recipe'
         className='inputs search-bar-input'
       />

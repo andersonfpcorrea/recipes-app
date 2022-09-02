@@ -12,3 +12,8 @@
   width: $icons-size-1;
   height: $icons-size-1;
 }
+
+.results {
+  @include flex-column;
+  gap: 2rem;
+}

@@ -496,4 +496,10 @@ a {
   height: 2.4rem;
 }
 
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 /*# sourceMappingURL=style.css.map */

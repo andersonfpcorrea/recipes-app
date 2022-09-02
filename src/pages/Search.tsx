@@ -2,6 +2,7 @@ import SearchBar from '../components/SearchBar';
 import Icons from '../assets/icons.svg';
 import { useNavigate } from 'react-router-dom';
 import Cards from '../components/Cards';
+import { useEffect } from 'react';
 
 function Search() {
   let navigate = useNavigate();
@@ -9,6 +10,10 @@ function Search() {
   const navigateBack = () => {
     navigate(-1);
   };
+
+  useEffect(() => {
+    document.getElementById('search-input')?.focus();
+  }, []);
 
   return (
     <main className='page-container'>
