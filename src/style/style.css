@@ -176,8 +176,9 @@ a {
 
 .search-bar {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
   width: 100%;
 }
 .search-bar .search-bar-input {
@@ -482,9 +483,6 @@ a {
 
 .search {
   padding-bottom: 3rem;
-}
-
-.search--top {
   display: flex;
   flex-direction: column;
   gap: 2rem;

@@ -1,8 +1,5 @@
 .search {
   padding-bottom: 3rem;
-}
-
-.search--top {
   @include flex-column;
   gap: 2rem;
 }

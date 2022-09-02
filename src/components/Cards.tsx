@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { countries } from '../apiMock/countries.js';
+import { countries } from '../data/countries.js';
 
 function Cards() {
   console.log(countries[0].flags.svg);

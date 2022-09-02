@@ -16,7 +16,7 @@ function Header() {
       </div>
       <div className='header--search'>
         <Link to='/search'>
-          <SearchBar filterIcon={true} />
+          <SearchBar filterIcon={false} filters={false} />
         </Link>
       </div>
     </header>
