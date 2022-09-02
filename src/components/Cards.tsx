@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
+import { countries } from '../apiMock/countries.js';
 
 function Cards() {
+  console.log(countries);
+
   const renderCards = () => {
     const markup = () => {
       return (
