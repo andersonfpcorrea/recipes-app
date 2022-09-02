@@ -304,6 +304,14 @@ a {
   font-weight: 600;
 }
 
+.ta-center {
+  text-align: center;
+}
+
+.page-container {
+  padding: 3rem;
+}
+
 .width-100percent {
   width: 100%;
 }
@@ -318,6 +326,20 @@ a {
 
 .flex {
   display: flex;
+}
+
+.pd-all-3 {
+  padding: 3rem;
+}
+
+.grid-6-cols {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.center-on-grid-6-cols {
+  grid-column: 2/6;
 }
 
 .login-page {
@@ -435,6 +457,7 @@ a {
 }
 .hero .hero-cta-container a .hero__icon {
   width: 2.4rem;
+  height: 2.4rem;
   fill: #fff;
 }
 
@@ -455,6 +478,22 @@ a {
   border-radius: 50%;
   width: 4rem;
   height: 4rem;
+}
+
+.search {
+  padding-bottom: 3rem;
+}
+
+.search--top {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.search--top-left-arrow {
+  fill: #222;
+  width: 2.4rem;
+  height: 2.4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

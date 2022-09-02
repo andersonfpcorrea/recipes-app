@@ -102,21 +102,37 @@
   font-weight: 600;
 }
 
+// Font align
+.ta-center {
+  text-align: center;
+}
+
 // %%%%%%%%%%%%%%
 // Layout
 // %%%%%%%%%%%%%%
+.page-container {
+  padding: 3rem;
+}
 .width-100percent {
   width: 100%;
 }
-
 .pos-abs {
   position: absolute;
 }
-
 .pos-rel {
   position: relative;
 }
-
 .flex {
   display: flex;
+}
+.pd-all-3 {
+  padding: 3rem;
+}
+.grid-6-cols {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(6, 1fr);
+}
+.center-on-grid-6-cols {
+  grid-column: 2 / 6;
 }

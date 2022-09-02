@@ -1,0 +1,14 @@
+.search {
+  padding-bottom: 3rem;
+}
+
+.search--top {
+  @include flex-column;
+  gap: 2rem;
+}
+
+.search--top-left-arrow {
+  fill: $color-black-1;
+  width: $icons-size-1;
+  height: $icons-size-1;
+}

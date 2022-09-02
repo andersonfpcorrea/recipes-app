@@ -39,7 +39,8 @@
       text-decoration: none;
 
       .hero__icon {
-        width: 2.4rem;
+        width: $icons-size-1;
+        height: $icons-size-1;
         fill: $color-white-1;
       }
     }
