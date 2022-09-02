@@ -1,32 +1,47 @@
 import { SyntheticEvent, useState } from 'react';
 import { IoOptionsOutline } from 'react-icons/io5';
 import { basicFilters } from '../data/mealsCategories';
+import { getMeals } from '../helper';
 
 interface propsType {
   filterIcon: boolean;
   filters: boolean;
 }
 
-function handleInput({ target }: SyntheticEvent, setter: Function) {
+function handleInput({ target }: SyntheticEvent, filterSetter: Function) {
   const { value } = target as HTMLInputElement;
-  setter(value);
+  filterSetter(value);
 }
 
-function renderFilters(filters: string[], filter: string, setter: Function) {
+function handleSubmit(
+  e: SyntheticEvent,
+  querySetter: Function,
+  query: string,
+  filter: string
+) {
+  e.preventDefault();
+  getMeals(filter, null, query);
+  querySetter('');
+}
+
+function renderFilters(
+  filters: string[],
+  filter: string,
+  filterSetter: Function
+) {
   const markup = (filterName: string) => (
-    <div className='flex flex-gap-02 '>
+    <div className='flex flex-gap-02' key={filterName}>
       <input
         type='radio'
         name='filters'
         id={filterName.split(' ').join().toLowerCase()}
         checked={filterName === filter}
         value={filterName}
-        onChange={(e) => handleInput(e, setter)}
+        onChange={(e) => handleInput(e, filterSetter)}
       />
       <label
         htmlFor={filterName.split(' ').join().toLowerCase()}
         className='fs-13'
-        key={filterName}
       >
         {`${filterName}`}
       </label>
@@ -38,14 +53,20 @@ function renderFilters(filters: string[], filter: string, setter: Function) {
 
 function SearchBar(props: propsType) {
   const [filter, setFilter] = useState('Name');
+  const [query, setQuery] = useState('');
   const { filterIcon, filters } = props;
   return (
-    <div className='search-bar'>
+    <form
+      className='search-bar'
+      onSubmit={(e) => handleSubmit(e, setQuery, query, filter)}
+    >
       <input
         type='text'
         id='search-input'
         placeholder='Search recipe'
         className='inputs search-bar-input'
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
       />
       {/* TODO: Delete or update the implementation of the filter icon: */}
       {filterIcon && <IoOptionsOutline className='search-bar-icon' />}
@@ -61,7 +82,7 @@ function SearchBar(props: propsType) {
           </div>
         </div>
       )}
-    </div>
+    </form>
   );
 }
 

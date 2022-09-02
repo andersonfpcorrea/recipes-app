@@ -114,6 +114,9 @@ textarea,
 select {
   font: inherit;
 }
+input:checked {
+  outline: none;
+}
 /*
   8. Avoid text overflows
 */
