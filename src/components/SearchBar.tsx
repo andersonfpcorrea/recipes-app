@@ -1,7 +1,7 @@
 import { SyntheticEvent, useState } from 'react';
 import { IoOptionsOutline } from 'react-icons/io5';
 import { basicFilters } from '../data/mealsCategories';
-import { getMeals } from '../helper';
+import { getMeals } from '../utils/fetch';
 
 interface propsType {
   filterIcon: boolean;
@@ -13,15 +13,17 @@ function handleInput({ target }: SyntheticEvent, filterSetter: Function) {
   filterSetter(value);
 }
 
-function handleSubmit(
+async function handleSubmit(
   e: SyntheticEvent,
   querySetter: Function,
   query: string,
   filter: string
 ) {
   e.preventDefault();
-  getMeals(filter, null, query);
-  querySetter('');
+  const meals = await getMeals(filter, null, query);
+  console.log(meals);
+
+  // querySetter('');
 }
 
 function renderFilters(

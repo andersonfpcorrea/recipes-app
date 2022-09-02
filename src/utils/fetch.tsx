@@ -27,24 +27,23 @@ const searchMealsdb = {
     `https://www.themealdb.com/images/ingredients/`,
 };
 
-const fetchFromMealdb = (url: string) => {
-  fetch(url)
+const fetchFromMealdb = async (url: string) =>
+  await fetch(url)
     .then((res) => res.json())
-    .then((data) => console.log(data.meals))
+    .then((data) => data.meals)
     .catch((err) => console.log('SOMETHING WAS WRONG! 💣🤯:', err));
-};
 
 const NAME = 'Name';
 const FIRST_LETTER = 'First Letter';
 const MAIN_INGREDIENT = 'Main Ingredient';
 
-export const getMeals = (
+export const getMeals = async (
   basicFilter: string | null = null,
   category: string | null = null,
   query: string | null = null
 ) => {
   switch (basicFilter) {
     case NAME:
-      fetchFromMealdb(searchMealsdb.byName(query as string));
+      return await fetchFromMealdb(searchMealsdb.byName(query as string));
   }
 };
