@@ -96,7 +96,8 @@
 // SEARCH BAR
 .search-bar {
   @include flex-column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
   width: 100%;
 

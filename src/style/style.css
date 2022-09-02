@@ -177,7 +177,8 @@ a {
 .search-bar {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
   width: 100%;
 }
@@ -309,8 +310,24 @@ a {
   text-align: center;
 }
 
+.bg-color-main {
+  background-color: #f38e82;
+}
+
 .page-container {
   padding: 3rem;
+}
+
+.pd-all-3 {
+  padding: 3rem;
+}
+
+.pad-1 {
+  padding: 1rem;
+}
+
+.br-1 {
+  border-radius: 1rem;
 }
 
 .width-100percent {
@@ -329,8 +346,17 @@ a {
   display: flex;
 }
 
-.pd-all-3 {
-  padding: 3rem;
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.flex-gap-02 {
+  gap: 0.2rem;
 }
 
 .grid-6-cols {

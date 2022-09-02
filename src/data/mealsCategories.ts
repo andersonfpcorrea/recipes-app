@@ -14,3 +14,5 @@ export const mealsCategories = [
   'Vegan',
   'Vegetarian',
 ];
+
+export const basicFilters = ['Name', 'First Letter', 'Main Ingredient'];

@@ -108,26 +108,55 @@
 }
 
 // %%%%%%%%%%%%%%
+// Colors
+// %%%%%%%%%%%%%%
+.bg-color-main {
+  background-color: $color-primary;
+}
+// %%%%%%%%%%%%%%
 // Layout
 // %%%%%%%%%%%%%%
+// Containers
 .page-container {
   padding: 3rem;
 }
+// Paddings
+.pd-all-3 {
+  padding: 3rem;
+}
+.pad-1 {
+  padding: 1rem;
+}
+// Border-radius
+.br-1 {
+  border-radius: 1rem;
+}
+// Widths
 .width-100percent {
   width: 100%;
 }
+// Positions
 .pos-abs {
   position: absolute;
 }
 .pos-rel {
   position: relative;
 }
+// Flex
 .flex {
   display: flex;
 }
-.pd-all-3 {
-  padding: 3rem;
+.flex-center {
+  align-items: center;
+  justify-content: center;
 }
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-gap-02 {
+  gap: 0.2rem;
+}
+// Grids
 .grid-6-cols {
   display: grid;
   align-items: center;
