@@ -5,12 +5,18 @@ function Cards() {
     const markup = () => {
       return (
         <figure>
-          <Link to='/details'></Link>
+          <Link to='/details'>
+            <img src='strArea' alt='country flag' />
+            <div>
+              <h4>Nome da receita</h4>
+              <p>Categoria</p>
+            </div>
+          </Link>
         </figure>
       );
     };
 
-    return <p>A CARD</p>;
+    return markup();
   };
 
   return renderCards();
