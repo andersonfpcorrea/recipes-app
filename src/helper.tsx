@@ -27,7 +27,7 @@ const searchMealsdb = {
     `https://www.themealdb.com/images/ingredients/`,
 };
 
-const fetchFromMealdb = async (url: string) => {
+const fetchFromMealdb = (url: string) => {
   fetch(url)
     .then((res) => res.json())
     .then((data) => console.log(data.meals))
