@@ -1,4 +1,16 @@
-# _[Forkify](https://recipes-app-andersonfpcorrea.netlify.app/)_
+# Description
+
+This project is going to be a recipes app. Click _[here](https://recipes-app-andersonfpcorrea.netlify.app/)_ to check the progress so far.
+
+## Project setup
+
+- React v.18.2.0
+- React Router v.6.3.0
+- TypeScript v.4.6.4
+- SASS v.1.54.7
+- Vite v.3.0.7
+
+##
 
 This recipes app is being built with Vite, React, TypeScript and SASS.
 
