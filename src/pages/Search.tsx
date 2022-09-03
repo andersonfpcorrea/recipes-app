@@ -16,20 +16,20 @@ function Search() {
   }, []);
 
   return (
-    <main className='page-container'>
-      <section className='search'>
-        <div className='grid-6-cols'>
-          <svg className='search--top-left-arrow' onClick={navigateBack}>
+    <main className="page-container">
+      <section className="search">
+        <div className="grid-6-cols">
+          <svg className="search--top-left-arrow" onClick={navigateBack}>
             <use xlinkHref={`${Icons}#icon-arrow-left`} />
           </svg>
-          <h3 className='ta-center fs-20 center-on-grid-6-cols'>
+          <h3 className="ta-center fs-20 center-on-grid-6-cols">
             Search recipes
           </h3>
         </div>
         <SearchBar filterIcon={false} filters={true} />
       </section>
-      <section className='results'>
-        <h4 className='fs-16'>Recent Search</h4>
+      <section className="results">
+        <h4 className="fs-16">Recent Search</h4>
         <div>
           <Cards />
         </div>
