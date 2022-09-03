@@ -17,24 +17,24 @@ function handleInput({ target }: SyntheticEvent, filterSetter: Function) {
 
 async function handleSubmit(
   e: SyntheticEvent,
-  querySetter: Function,
+  searchInputSetter: Function,
   query: string,
   filter: string,
-  searchPageSetter: Function
+  searchPageStateSetter: Function
 ) {
   e.preventDefault();
   try {
     const meals = await getMeals(filter, null, query);
     console.log(meals);
     if (meals === null) throw new Error('Sorry! We could not find any recipes');
-    searchPageSetter((prevState: SearchPageStateInterface) => ({
+    searchPageStateSetter((prevState: SearchPageStateInterface) => ({
       ...prevState,
       lastSearch: meals,
     }));
   } catch (err) {
     console.error('Something went wrong 💣💣💣', err);
   } finally {
-    querySetter('');
+    searchInputSetter('');
   }
 }
 
@@ -68,13 +68,13 @@ function renderFilters(
 function SearchBar(props: propsType) {
   const { filterIcon, filters } = props;
   const [filter, setFilter] = useState('Name');
-  const [query, setQuery] = useState('');
+  const [searchInput, setSearchInput] = useState('');
   const { setSearchPageState } = useContext(AppContext);
   return (
     <form
       className="search-bar"
       onSubmit={(e) =>
-        handleSubmit(e, setQuery, query, filter, setSearchPageState)
+        handleSubmit(e, setSearchInput, searchInput, filter, setSearchPageState)
       }
     >
       <input
@@ -82,15 +82,15 @@ function SearchBar(props: propsType) {
         id="search-input"
         placeholder="Search recipe"
         className="inputs search-bar-input"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        value={searchInput}
+        onChange={(e) => setSearchInput(e.target.value)}
       />
       {/* TODO: Delete or update the implementation of the filter icon: */}
       {filterIcon && <IoOptionsOutline className="search-bar-icon" />}
 
       {filters && (
         <div className="width-100percent bg-color-main pad-1 br-1">
-          <p className="fs-13 ta-center">
+          <p className="fs-13 ta-center fw-600">
             Please choose one filter for your search:
           </p>
 

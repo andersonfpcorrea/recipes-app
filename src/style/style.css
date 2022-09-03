@@ -284,6 +284,10 @@ a {
   font-weight: 600;
 }
 
+.fstyle-i {
+  font-style: italic;
+}
+
 .ta-center {
   text-align: center;
 }

@@ -15,7 +15,6 @@ type RecipesType = [RecipeType];
 
 function Cards(props: PropsType) {
   const { recipes } = props;
-  //linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
   const markup = (recipe: RecipeType) => {
     return (
       <Link to="/details" key={recipe.idMeal}>
