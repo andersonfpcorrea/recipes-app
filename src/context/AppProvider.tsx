@@ -1,17 +1,21 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { createContext } from 'react';
 
-export const AppContext = createContext({
+const init = {
   searchHistory: [{}],
   setSearchHistory(value: Array<Object>) {
-    this.searchHistory = value;
+    init.searchHistory = [...this.searchHistory, ...value];
   },
-});
+};
+
+export const AppContext = createContext(init);
 
 export const AppProvider: React.FC = ({
   children,
 }: React.PropsWithChildren) => {
   const [searchHistory, setSearchHistory] = useState<Array<Object>>([{}]);
+
+  useEffect(() => console.log(searchHistory), [searchHistory]);
 
   const store = { searchHistory, setSearchHistory };
 

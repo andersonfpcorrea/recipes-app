@@ -8,10 +8,10 @@ import Search from './pages/Search';
 function App() {
   return (
     <Routes>
-      <Route path='/' element={<Hero />} />
-      <Route path='/login' element={<Login />} />
+      <Route path="/" element={<Hero />} />
+      <Route path="/login" element={<Login />} />
       <Route
-        path='/home'
+        path="/home"
         element={
           <>
             <Header />
@@ -19,7 +19,7 @@ function App() {
           </>
         }
       />
-      <Route path='/search' element={<Search />} />
+      <Route path="/search" element={<Search />} />
     </Routes>
   );
 }

@@ -42,8 +42,12 @@ export const getMeals = async (
   category: string | null = null,
   query: string | null = null
 ) => {
-  switch (basicFilter) {
-    case NAME:
-      return await fetchFromMealdb(searchMealsdb.byName(query as string));
+  try {
+    switch (basicFilter) {
+      case NAME:
+        return await fetchFromMealdb(searchMealsdb.byName(query as string));
+    }
+  } catch (err) {
+    console.error('Somethin went wrong 💣💣💣', err);
   }
 };

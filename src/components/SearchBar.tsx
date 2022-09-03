@@ -22,9 +22,16 @@ async function handleSubmit(
   searchHistorySetter: Function
 ) {
   e.preventDefault();
-  const meals = await getMeals(filter, null, query);
-  console.log(meals);
-  searchHistorySetter((prevState: Array<Object[]>) => [...prevState, ...meals]);
+  try {
+    const meals = await getMeals(filter, null, query);
+    console.log(meals);
+    searchHistorySetter((prevState: Array<Object[]>) => [
+      ...prevState,
+      ...meals,
+    ]);
+  } catch (err) {
+    console.error('Something went wrong 💣💣💣', err);
+  }
   querySetter('');
 }
 
