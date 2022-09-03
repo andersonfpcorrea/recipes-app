@@ -1,34 +1,46 @@
 import { Link } from 'react-router-dom';
 import { countries } from '../data/countries.js';
 
-function Cards() {
-  console.log(countries[0].flags.svg);
+interface RecipeType {
+  strMealThumb: string;
+  strMeal: string;
+  strCategory: string;
+  idMeal: string;
+  [propName: string]: any;
+}
+interface PropsType {
+  recipes: [RecipeType];
+}
+type RecipesType = [RecipeType];
 
-  const renderCards = () => {
-    const markup = () => {
-      return (
+function Cards(props: PropsType) {
+  const { recipes } = props;
+  //linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+  const markup = (recipe: RecipeType) => {
+    return (
+      <Link to="/details" key={recipe.idMeal}>
         <figure
+          className="cards"
           style={{
-            background: `url('${countries[5].flags.svg}')`,
+            backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5)), url('${recipe.strMealThumb}')`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
           }}
         >
-          <Link to='/details'>
-            <img src={countries[1].flags.svg} alt='country flag' />
-            <div>
-              <h4>Nome da receita</h4>
-              <p>Categoria</p>
-            </div>
-          </Link>
+          {/* <img src={recipe.strMealThumb} alt={recipe.strMeal} /> */}
+          <div>
+            <h4 className="cards-name--searchPage">{recipe.strMeal}</h4>
+            <p className="cards-category--searchPage">{recipe.strCategory}</p>
+          </div>
         </figure>
-      );
-    };
-    return markup();
-    // return array.map((recipe) => markup(recipe));
+      </Link>
+    );
   };
 
-  return renderCards();
+  const renderCards = (recipes: RecipesType) =>
+    recipes.map((recipe) => markup(recipe));
+
+  return <>{renderCards(recipes)}</>;
 }
 
 export default Cards;

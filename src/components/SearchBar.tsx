@@ -3,6 +3,7 @@ import { IoOptionsOutline } from 'react-icons/io5';
 import { AppContext } from '../context/AppProvider';
 import { basicFilters } from '../data/mealsCategories';
 import { getMeals } from '../utils/fetch';
+import { SearchPageStateInterface } from '../utils/interfaces';
 
 interface propsType {
   filterIcon: boolean;
@@ -19,14 +20,17 @@ async function handleSubmit(
   querySetter: Function,
   query: string,
   filter: string,
-  searchHistorySetter: Function
+  searchPageSetter: Function
 ) {
   e.preventDefault();
   try {
     const meals = await getMeals(filter, null, query);
     console.log(meals);
     if (meals === null) throw new Error('Sorry! We could not find any recipes');
-    searchHistorySetter(meals);
+    searchPageSetter((prevState: SearchPageStateInterface) => ({
+      ...prevState,
+      lastSearch: meals,
+    }));
   } catch (err) {
     console.error('Something went wrong 💣💣💣', err);
   } finally {
@@ -65,12 +69,12 @@ function SearchBar(props: propsType) {
   const { filterIcon, filters } = props;
   const [filter, setFilter] = useState('Name');
   const [query, setQuery] = useState('');
-  const { setSearchHistory } = useContext(AppContext);
+  const { setSearchPageState } = useContext(AppContext);
   return (
     <form
       className="search-bar"
       onSubmit={(e) =>
-        handleSubmit(e, setQuery, query, filter, setSearchHistory)
+        handleSubmit(e, setQuery, query, filter, setSearchPageState)
       }
     >
       <input

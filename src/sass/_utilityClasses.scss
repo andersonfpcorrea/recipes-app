@@ -118,7 +118,7 @@
 // %%%%%%%%%%%%%%
 // Containers
 .page-container {
-  padding: 3rem;
+  padding: 2rem;
 }
 // Paddings
 .pd-all-3 {
@@ -146,6 +146,9 @@
 .flex {
   display: flex;
 }
+.flex-wrap {
+  flex-wrap: wrap;
+}
 .flex-center {
   align-items: center;
   justify-content: center;
@@ -155,6 +158,18 @@
 }
 .flex-gap-02 {
   gap: 0.2rem;
+}
+.flex-gap-04 {
+  gap: 0.4rem;
+}
+.flex-gap-06 {
+  gap: 0.6rem;
+}
+.flex-gap-08 {
+  gap: 0.8rem;
+}
+.flex-gap-10 {
+  gap: 1rem;
 }
 // Grids
 .grid-6-cols {

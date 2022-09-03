@@ -178,32 +178,6 @@ a {
   right: 0.7rem;
 }
 
-.search-bar {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-}
-.search-bar .search-bar-input {
-  width: 100%;
-  border: 1px solid #d3c7c3;
-  border-radius: 1rem;
-}
-.search-bar .search-bar-input::placeholder {
-  color: #918581;
-  font-size: 1.3rem;
-  font-style: italic;
-}
-.search-bar .search-bar-icon {
-  background-color: #f38e82;
-  border-radius: 1rem;
-  color: white;
-  font-size: 3.4rem;
-  padding: 5px;
-}
-
 .link {
   color: #f38e82;
   font-weight: 600;
@@ -319,7 +293,7 @@ a {
 }
 
 .page-container {
-  padding: 3rem;
+  padding: 2rem;
 }
 
 .pd-all-3 {
@@ -350,6 +324,10 @@ a {
   display: flex;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .flex-center {
   align-items: center;
   justify-content: center;
@@ -361,6 +339,22 @@ a {
 
 .flex-gap-02 {
   gap: 0.2rem;
+}
+
+.flex-gap-04 {
+  gap: 0.4rem;
+}
+
+.flex-gap-06 {
+  gap: 0.6rem;
+}
+
+.flex-gap-08 {
+  gap: 0.8rem;
+}
+
+.flex-gap-10 {
+  gap: 1rem;
 }
 
 .grid-6-cols {
@@ -492,6 +486,51 @@ a {
   fill: #fff;
 }
 
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.search-bar .search-bar-input {
+  width: 100%;
+  border: 1px solid #d3c7c3;
+  border-radius: 1rem;
+}
+.search-bar .search-bar-input::placeholder {
+  color: #918581;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+.search-bar .search-bar-icon {
+  background-color: #f38e82;
+  border-radius: 1rem;
+  color: white;
+  font-size: 3.4rem;
+  padding: 5px;
+}
+
+.search {
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.search--top-left-arrow {
+  fill: #222;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -511,23 +550,30 @@ a {
   height: 4rem;
 }
 
-.search {
-  padding-bottom: 3rem;
+.cards {
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  justify-content: flex-end;
+  height: 25vh;
+  padding: 1rem;
+  transition: all 0.3s;
+  width: 42vw;
+}
+.cards:hover {
+  filter: brightness(1.1);
+  cursor: pointer;
 }
 
-.search--top-left-arrow {
-  fill: #222;
-  width: 2.4rem;
-  height: 2.4rem;
+.cards-name--searchPage {
+  font-size: 1.4rem;
+  color: #fff;
 }
 
-.results {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.cards-category--searchPage {
+  font-size: 1.3rem;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

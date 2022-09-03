@@ -33,6 +33,12 @@ $gradient-to-right-top: linear-gradient(
 );
 $gradient-to-top: linear-gradient(to top, $color-grad-1, $color-grad-2);
 
+$gradient-white-for-cards: linear-gradient(
+  to bottom,
+  rgba(255, 255, 255, 0.5),
+  rgba(255, 255, 255, 1)
+);
+
 $font-size-46: 4.6rem;
 $font-size-42: 4.2rem;
 $font-size-36: 3.6rem;

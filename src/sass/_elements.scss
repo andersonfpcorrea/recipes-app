@@ -37,7 +37,7 @@
   height: 3.8rem;
 }
 
-// CTA button
+// HERO button
 .hero__btn {
   height: 5.2rem;
   width: 18rem;
@@ -48,7 +48,7 @@
   padding: 0.3rem 1rem;
   height: 3.6rem;
 }
-
+// INPUTS LOGIN
 .inputs__login {
   border-style: none none solid;
   border-bottom: 1px solid lighten($color-primary, 15%);
@@ -91,33 +91,4 @@
   font-style: italic;
   bottom: 0.2rem;
   right: 0.7rem;
-}
-
-// SEARCH BAR
-.search-bar {
-  @include flex-column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-
-  .search-bar-input {
-    width: 100%;
-    border: 1px solid $color-grey-light-3;
-    border-radius: 1rem;
-
-    &::placeholder {
-      color: $color-grey-dark-2;
-      font-size: 1.3rem;
-      font-style: italic;
-    }
-  }
-
-  .search-bar-icon {
-    background-color: $color-primary;
-    border-radius: 1rem;
-    color: white;
-    font-size: 3.4rem;
-    padding: 5px;
-  }
 }

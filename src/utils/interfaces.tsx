@@ -1,3 +1,15 @@
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// SEARCH PAGE INTERFACES
+// searchPageState:
+export interface SearchPageStateInterface {
+  lastSearch: [fullMealDetails] | null;
+  errorMsg: string;
+}
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// API DATA INTERFACES
+// Full meals detaisl retured after search by ID:
 export interface fullMealDetails {
   idMeal: string;
   strMeal: string;

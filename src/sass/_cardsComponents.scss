@@ -1,0 +1,24 @@
+.cards {
+  border-radius: 1rem;
+  @include box-shadow-sm(0.2);
+  @include flex-column;
+  justify-content: flex-end;
+  height: 25vh;
+  padding: 1rem;
+  transition: all 0.3s;
+  width: 42vw;
+  &:hover {
+    filter: brightness(1.1);
+    cursor: pointer;
+  }
+}
+
+.cards-name--searchPage {
+  font-size: 1.4rem;
+  color: $color-white-1;
+}
+
+.cards-category--searchPage {
+  font-size: 1.3rem;
+  color: $color-white-1;
+}
