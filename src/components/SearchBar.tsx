@@ -26,10 +26,7 @@ async function handleSubmit(
     const meals = await getMeals(filter, null, query);
     console.log(meals);
     if (meals === null) throw new Error('Sorry! We could not find any recipes');
-    searchHistorySetter((prevState: Array<Object[]>) => [
-      ...prevState,
-      ...meals,
-    ]);
+    searchHistorySetter(meals);
   } catch (err) {
     console.error('Something went wrong 💣💣💣', err);
   } finally {

@@ -15,3 +15,5 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     </BrowserRouter>
   </React.StrictMode>
 );
+
+// Aparrently there is an error on React regarding typing of functional components: https://github.com/chakra-ui/chakra-ui/issues/5896
