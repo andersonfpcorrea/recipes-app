@@ -1,7 +1,7 @@
 # _[Recipes app](https://recipes-app-andersonfpcorrea.netlify.app/)_
 
 <details>
-<summary>Read the project's description in English 🇬🇧<summary><br />
+<summary>Read the project's description in English 🇬🇧<summary>
 
 This project is going to be a recipes app. Click _[here](https://recipes-app-andersonfpcorrea.netlify.app/)_ to check the progress so far.
 
