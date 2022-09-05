@@ -3,13 +3,11 @@
 <details>
 <summary>Read the project's description in English 🇬🇧<summary><br />
 
-## Details
-
 This project is going to be a recipes app. Click _[here](https://recipes-app-andersonfpcorrea.netlify.app/)_ to check the progress so far.
 
 Data are consumed from _[spoonacular API](https://spoonacular.com/food-api/)_, _[mealdb API](https://www.themealdb.com/api.php)_, and _[REST Countries API](https://restcountries.com/#rest-countries)_.
 
-## Project setup
+[✅] Project setup
 
 - TypeScript v.4.6.4
 - React v.18.2.0
@@ -26,13 +24,11 @@ The app was inspired on the _[final project](https://forkify-v2.netlify.app/)_ o
 <details>
 <summary>Leia a descrição do projeto em português 🇧🇷<summary><br />
 
-## Detalhes
-
 Este projeto será um app de receitas. Clique aqui _[aqui](https://recipes-app-andersonfpcorrea.netlify.app/)_ para conferir o progresso até o momento.
 
 São consumidos dados das seguintes APIs: _[spoonacular API](https://spoonacular.com/food-api/)_, _[mealdb API](https://www.themealdb.com/api.php)_, e _[REST Countries API](https://restcountries.com/#rest-countries)_.
 
-## Setup do projeto
+[✅] Project setup
 
 - TypeScript v.4.6.4
 - React v.18.2.0
