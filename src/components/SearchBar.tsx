@@ -4,6 +4,7 @@ import { AppContext } from '../context/AppProvider';
 import { basicFilters } from '../data/mealsCategories';
 import { getMeals } from '../utils/fetch';
 import { SearchPageStateInterface } from '../utils/interfaces';
+import { setSearchOnLocalStorage } from '../utils/helpers';
 
 interface propsType {
   filterIcon: boolean;

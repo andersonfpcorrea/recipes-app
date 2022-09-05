@@ -2,21 +2,19 @@ import SearchBar from '../components/SearchBar';
 import Icons from '../assets/icons.svg';
 import { useNavigate } from 'react-router-dom';
 import Cards from '../components/Cards';
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { AppContext } from '../context/AppProvider';
-import { getFromLocalStorage } from '../utils/helpers';
 
 function Search() {
   let navigate = useNavigate();
   const { searchPageState, setSearchPageState } = useContext(AppContext);
-  console.log(searchPageState);
+  const [fromLocal, setFromLocal] = useState(true);
 
   const navigateBack = () => {
     navigate(-1);
   };
 
   useEffect(() => {
-    getFromLocalStorage('search', setSearchPageState);
     document.getElementById('search-input')?.focus();
   }, []);
 
@@ -34,7 +32,9 @@ function Search() {
         <SearchBar filterIcon={false} filters={true} />
       </section>
       <section className="results">
-        <h4 className="fs-18">Recent Search</h4>
+        <h4 className="fs-18">
+          {fromLocal ? 'Recent Search' : 'Search results'}
+        </h4>
         <div className="flex flex-center flex-wrap flex-gap-10">
           {searchPageState?.lastSearch ? (
             <Cards recipes={searchPageState.lastSearch} />

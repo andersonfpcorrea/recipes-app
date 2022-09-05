@@ -19,4 +19,4 @@
 
 ## Next task:
 
-- Implement retrieving from localstorage the previous search data.
+- Adjust subheading according to the origin of the recipes data: "Last search" if from localstorage, "Search results" if from API (there must be an element to display the total amount of results)

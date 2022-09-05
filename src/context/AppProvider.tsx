@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { createContext } from 'react';
-import { getFromLocalStorage, setSearchOnLocalStorage } from '../utils/helpers';
+import { getSearchFromLocalStorage } from '../utils/helpers';
 import { SearchPageStateInterface } from '../utils/interfaces';
 
 export type AppContextInterface = {
@@ -24,9 +24,8 @@ export const AppProvider: React.FC | any = ({
     });
 
   useEffect(() => {
-    console.log(searchPageState);
-    setSearchOnLocalStorage('search', searchPageState);
-  }, [searchPageState]);
+    getSearchFromLocalStorage(setSearchPageState);
+  }, []);
 
   const appStore: AppContextInterface = { searchPageState, setSearchPageState };
 

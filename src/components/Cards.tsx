@@ -26,7 +26,6 @@ function Cards(props: PropsType) {
             backgroundSize: 'cover',
           }}
         >
-          {/* <img src={recipe.strMealThumb} alt={recipe.strMeal} /> */}
           <div>
             <h4 className="cards-name--searchPage">{recipe.strMeal}</h4>
             <p className="cards-category--searchPage">{recipe.strCategory}</p>
