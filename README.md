@@ -2,7 +2,7 @@
 
 This project is going to be a recipes app. Click _[here](https://recipes-app-andersonfpcorrea.netlify.app/)_ to check the progress so far.
 
-Data are consumed from _[spoonacular](https://spoonacular.com/food-api/)_, _[mealdb](https://www.themealdb.com/api.php)_, and _[REST Countries](https://restcountries.com/#rest-countries)_.
+Data are consumed from _[spoonacular API](https://spoonacular.com/food-api/)_, _[mealdb API](https://www.themealdb.com/api.php)_, and _[REST Countries API](https://restcountries.com/#rest-countries)_.
 
 ## Project setup
 

@@ -12,6 +12,7 @@ export const AppContext = createContext<AppContextInterface>({
   setSearchPageState: () => {},
 });
 
+// FIXME: Fix the type of AppProvider.
 export const AppProvider: React.FC | any = ({
   children,
 }: React.PropsWithChildren) => {
