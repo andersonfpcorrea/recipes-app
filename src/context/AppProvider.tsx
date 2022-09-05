@@ -12,7 +12,7 @@ export const AppContext = createContext<AppContextInterface>({
   setSearchPageState: () => {},
 });
 
-export const AppProvider: React.FC = ({
+export const AppProvider: React.FC | any = ({
   children,
 }: React.PropsWithChildren) => {
   const [searchPageState, setSearchPageState] =
