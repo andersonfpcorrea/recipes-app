@@ -4,10 +4,11 @@ import { useNavigate } from 'react-router-dom';
 import Cards from '../components/Cards';
 import { useContext, useEffect } from 'react';
 import { AppContext } from '../context/AppProvider';
+import { getFromLocalStorage } from '../utils/helpers';
 
 function Search() {
   let navigate = useNavigate();
-  const { searchPageState } = useContext(AppContext);
+  const { searchPageState, setSearchPageState } = useContext(AppContext);
   console.log(searchPageState);
 
   const navigateBack = () => {
@@ -15,9 +16,9 @@ function Search() {
   };
 
   useEffect(() => {
+    getFromLocalStorage('search', setSearchPageState);
     document.getElementById('search-input')?.focus();
   }, []);
-  useEffect(() => {}, []);
 
   return (
     <main className="page-container">

@@ -19,4 +19,4 @@
 
 ## Next task:
 
-- Finish the "getMeals" function implementation.
+- Implement retrieving from localstorage the previous search data.
