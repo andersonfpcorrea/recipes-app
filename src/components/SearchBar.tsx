@@ -24,7 +24,10 @@ async function handleSubmit(
 ) {
   e.preventDefault();
   try {
-    const meals = await getMeals(filter, null, query);
+    const cleanedQuery =
+      filter === 'First Letter' ? query.trim().at(0) : query.trim();
+
+    const meals = await getMeals(filter, null, cleanedQuery);
     console.log(meals);
     if (meals === null) throw new Error('Sorry! We could not find any recipes');
     searchPageStateSetter((prevState: SearchPageStateInterface) => ({

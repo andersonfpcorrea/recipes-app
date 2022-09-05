@@ -16,3 +16,7 @@
 ## Back-end
 
 - Implemenent RESTFul API using Node.js, Express.js, Mongoose and MongoDB, in order to use Brazilian recipes and Portuguese language.
+
+## Next task:
+
+- Finish the "getMeals" function implementation.

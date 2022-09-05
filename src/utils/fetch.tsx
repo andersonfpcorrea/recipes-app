@@ -31,7 +31,9 @@ const fetchFromMealdb = async (url: string) =>
   await fetch(url)
     .then((res) => res.json())
     .then((data) => data.meals)
-    .catch((err) => console.log('SOMETHING WAS WRONG! 💣🤯:', err));
+    .catch((err) =>
+      console.log('Sonthing went wrong during fetching of data! 💣🤯:', err)
+    );
 
 const NAME = 'Name';
 const FIRST_LETTER = 'First Letter';
@@ -42,12 +44,18 @@ export const getMeals = async (
   category: string | null = null,
   query: string | null = null
 ) => {
-  try {
-    switch (basicFilter) {
-      case NAME:
-        return await fetchFromMealdb(searchMealsdb.byName(query as string));
-    }
-  } catch (err) {
-    console.error('Somethin went wrong 💣💣💣', err);
+  switch (basicFilter) {
+    case NAME:
+      return await fetchFromMealdb(searchMealsdb.byName(query as string));
+    case FIRST_LETTER:
+      return await fetchFromMealdb(
+        searchMealsdb.byFirstLetter(query as string)
+      );
+    case MAIN_INGREDIENT:
+      return await fetchFromMealdb(
+        searchMealsdb.filterByMainIng(query as string)
+      );
+    default:
+      return await fetchFromMealdb(searchMealsdb.byName(query as string));
   }
 };
