@@ -19,7 +19,9 @@
 
 ## Next tasks:
 
-- Create the details page.
+- Create the details page:
+  - Implement filterObj helper function to render.
+  - Continue from rendering the ingredients list on details page.
 - Implement pagination on search page;
 
 - Fix ESLint

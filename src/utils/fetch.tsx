@@ -35,40 +35,38 @@ const fetchFromMealdb = async (url: string) =>
       console.log('Sonthing went wrong during fetching of data! 💣🤯:', err)
     );
 
-const getMealsByBasicFilter = async (
-  basicFilter: string | null,
-  query: string | null
-) => {
+const getMealsByBasicFilter = async (basicFilter: string, query: string) => {
   const NAME = 'Name';
   const FIRST_LETTER = 'First Letter';
   const MAIN_INGREDIENT = 'Main Ingredient';
   switch (basicFilter) {
     case NAME:
-      return await fetchFromMealdb(searchMealsdb.byName(query as string));
+      return await fetchFromMealdb(searchMealsdb.byName(query));
     case FIRST_LETTER:
-      return await fetchFromMealdb(
-        searchMealsdb.byFirstLetter(query as string)
-      );
+      return await fetchFromMealdb(searchMealsdb.byFirstLetter(query));
     case MAIN_INGREDIENT:
-      return await fetchFromMealdb(
-        searchMealsdb.filterByMainIng(query as string)
-      );
+      return await fetchFromMealdb(searchMealsdb.filterByMainIng(query));
     default:
-      return await fetchFromMealdb(searchMealsdb.byName(query as string));
+      return await fetchFromMealdb(searchMealsdb.byName(query));
   }
 };
 
-const getMealsByCategory = async (category: string | null) => {
-  return await fetchFromMealdb(
-    searchMealsdb.filterByCategory(category as string)
-  );
+const getMealsByCategory = async (category: string) => {
+  return await fetchFromMealdb(searchMealsdb.filterByCategory(category));
+};
+
+const getMealByID = async (id: string) => {
+  return await fetchFromMealdb(searchMealsdb.byID(id));
 };
 
 export async function getMeals(
   basicFilter: string | null = null,
   category: string | null = null,
-  query: string | null = null
+  query: string | null = null,
+  id: string | null = null
 ) {
-  if (basicFilter) return await getMealsByBasicFilter(basicFilter, query);
+  if (basicFilter && query)
+    return await getMealsByBasicFilter(basicFilter, query);
   if (category) return await getMealsByCategory(category);
+  if (id) return await getMealByID(id);
 }

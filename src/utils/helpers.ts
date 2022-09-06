@@ -10,3 +10,8 @@ export const getSearchFromLocalStorage = (setter: Function) => {
   const data = json ? JSON.parse(json) : null;
   data && setter(data);
 };
+
+export const filterObj = (obj: Object, keyOrValue: string) => {
+  let results = {};
+  const keys = Object.keys(obj);
+};
