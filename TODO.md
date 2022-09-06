@@ -19,6 +19,7 @@
 
 ## Next task:
 
+- Implement pagination on search page;
 - Create the details page.
 
 - Fix ESLint

@@ -312,8 +312,21 @@ a {
   border-radius: 1rem;
 }
 
+.br-round {
+  border-radius: 50%;
+}
+
+.b-all-white-1 {
+  border: 1px solid #fff;
+}
+
 .width-100percent {
   width: 100%;
+}
+
+.width-heigth-2 {
+  width: 2rem;
+  height: 2rem;
 }
 
 .pos-abs {
@@ -341,8 +354,16 @@ a {
   align-items: center;
 }
 
+.flex-align-end {
+  align-self: flex-end;
+}
+
 .flex-jc-sb {
   justify-content: space-between;
+}
+
+.flex-jc-self-center {
+  justify-self: flex-start;
 }
 
 .flex-gap-02 {
@@ -563,7 +584,7 @@ a {
   box-shadow: 0 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   height: 25vh;
   padding: 1rem;
   transition: all 0.3s;
@@ -572,6 +593,12 @@ a {
 .cards:hover {
   filter: brightness(1.1);
   cursor: pointer;
+}
+
+.cards-img--searchPage {
+  align-self: flex-end;
+  width: 2.4rem;
+  background-blend-mode: color;
 }
 
 .cards-name--searchPage {

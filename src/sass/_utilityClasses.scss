@@ -132,13 +132,23 @@
 .pad-1 {
   padding: 1rem;
 }
-// Border-radius
+// BORDERS
 .br-1 {
   border-radius: 1rem;
+}
+.br-round {
+  border-radius: 50%;
+}
+.b-all-white-1 {
+  border: 1px solid $color-white-1;
 }
 // Widths
 .width-100percent {
   width: 100%;
+}
+.width-heigth-2 {
+  width: 2rem;
+  height: 2rem;
 }
 // Positions
 .pos-abs {
@@ -161,8 +171,14 @@
 .flex-align {
   align-items: center;
 }
+.flex-align-end {
+  align-self: flex-end;
+}
 .flex-jc-sb {
   justify-content: space-between;
+}
+.flex-jc-self-center {
+  justify-self: flex-start;
 }
 .flex-gap-02 {
   gap: 0.2rem;

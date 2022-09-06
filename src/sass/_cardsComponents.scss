@@ -2,7 +2,7 @@
   border-radius: 1rem;
   @include box-shadow-sm(0.2);
   @include flex-column;
-  justify-content: flex-end;
+  justify-content: space-between;
   height: 25vh;
   padding: 1rem;
   transition: all 0.3s;
@@ -11,6 +11,12 @@
     filter: brightness(1.1);
     cursor: pointer;
   }
+}
+
+.cards-img--searchPage {
+  align-self: flex-end;
+  width: 2.4rem;
+  background-blend-mode: color;
 }
 
 .cards-name--searchPage {

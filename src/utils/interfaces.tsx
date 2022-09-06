@@ -13,6 +13,7 @@ export type RecipeType = {
   strMealThumb: string;
   strMeal: string;
   strCategory: string;
+  strArea: string;
   idMeal: string;
   [propName: string]: any;
 };
