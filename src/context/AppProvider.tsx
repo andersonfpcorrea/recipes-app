@@ -20,9 +20,9 @@ export const AppProvider: React.FC | any = ({
   const [searchPageState, setSearchPageState] =
     useState<SearchPageStateInterface>([]);
 
-  useEffect(() => {
-    getSearchFromLocalStorage(setSearchPageState);
-  }, []);
+  // useEffect(() => {
+  //   getSearchFromLocalStorage(setSearchPageState);
+  // }, []);
 
   const appStore: AppContextInterface = { searchPageState, setSearchPageState };
 

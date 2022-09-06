@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { countries } from '../data/countries.js';
+// import { countries } from '../data/countries.js';
 import { RecipeType, RecipesType, PropsType } from '../utils/interfaces.js';
 
 function Cards(props: PropsType) {

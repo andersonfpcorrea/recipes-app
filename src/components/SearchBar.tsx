@@ -3,7 +3,6 @@ import { IoOptionsOutline } from 'react-icons/io5';
 import { AppContext } from '../context/AppProvider';
 import { basicFilters } from '../data/mealsCategories';
 import { getMeals } from '../utils/fetch';
-import { SearchPageStateInterface } from '../utils/interfaces';
 import { setSearchOnLocalStorage } from '../utils/helpers';
 
 interface propsType {
@@ -28,12 +27,12 @@ async function handleSubmit(
     const cleanedQuery =
       filter === 'First Letter' ? query.trim().at(0) : query.trim();
     const meals = await getMeals(filter, null, cleanedQuery);
-    console.log(meals);
     if (meals === null) {
       searchPageStateSetter([]);
       throw new Error('Sorry! We could not find any recipes');
     }
     searchPageStateSetter(meals);
+    setSearchOnLocalStorage(meals);
   } catch (err) {
     console.error('Something went wrong 💣💣💣', err);
   } finally {
@@ -73,6 +72,7 @@ function SearchBar(props: propsType) {
   const [filter, setFilter] = useState('Name');
   const [searchInput, setSearchInput] = useState('');
   const { setSearchPageState } = useContext(AppContext);
+
   return (
     <form
       className="search-bar"
