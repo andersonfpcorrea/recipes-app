@@ -8,7 +8,7 @@ import { setSearchOnLocalStorage } from '../utils/helpers';
 interface propsType {
   filterIcon: boolean;
   filters: boolean;
-  callbacksSearchPage: CallBacksSearchPage;
+  callbacksSearchPage?: CallBacksSearchPage;
 }
 
 type CallBacksSearchPage = {
