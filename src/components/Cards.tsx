@@ -1,17 +1,15 @@
 import { Link } from 'react-router-dom';
 import { countries } from '../data/countries.js';
 import { RecipeType, RecipesType, PropsType } from '../utils/interfaces.js';
-import unknownIcon from '../assets/unknownIcon.jpeg';
 
 function Cards(props: PropsType) {
   const { recipes } = props;
-  console.log(recipes);
 
   const markup = (recipe: RecipeType) => {
     const flag = countries.find((el) => el.demonyms.eng.f === recipe.strArea)
       ?.flags.svg;
     return (
-      <Link to="/details" key={recipe.idMeal}>
+      <Link to={`/details/${recipe.idMeal}`} key={recipe.idMeal}>
         <figure
           className="cards"
           style={{
@@ -20,7 +18,6 @@ function Cards(props: PropsType) {
             backgroundSize: 'cover',
           }}
         >
-          {/* <p className="flex-align-end">bandeira</p> */}
           {flag ? (
             <img
               src={flag}

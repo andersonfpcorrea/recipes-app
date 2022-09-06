@@ -1,4 +1,21 @@
-export const mealsCategories = [
+export const mealsCategoriesObj = {
+  BEEF: 'Beef',
+  BREAKFAST: 'Breakfast',
+  CHICKEN: 'Chicken',
+  DESERT: 'Dessert',
+  GOAT: 'Goat',
+  LAMB: 'Lamb',
+  MISCELLANEOUS: 'Miscellaneous',
+  PASTA: 'Pasta',
+  PORK: 'Pork',
+  SEAFOOD: 'Seafood',
+  SIDE: 'Side',
+  STARTER: 'Starter',
+  VEGAN: 'Vegan',
+  VEGETARIAN: 'Vegetarian',
+};
+
+export const mealsCategoryArray = [
   'Beef',
   'Breakfast',
   'Chicken',

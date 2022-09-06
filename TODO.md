@@ -17,9 +17,9 @@
 
 - Implemenent RESTFul API using Node.js, Express.js, Mongoose and MongoDB, in order to use Brazilian recipes and Portuguese language.
 
-## Next task:
+## Next tasks:
 
-- Implement pagination on search page;
 - Create the details page.
+- Implement pagination on search page;
 
 - Fix ESLint

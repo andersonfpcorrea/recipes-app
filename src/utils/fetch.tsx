@@ -35,15 +35,13 @@ const fetchFromMealdb = async (url: string) =>
       console.log('Sonthing went wrong during fetching of data! 💣🤯:', err)
     );
 
-const NAME = 'Name';
-const FIRST_LETTER = 'First Letter';
-const MAIN_INGREDIENT = 'Main Ingredient';
-
-export const getMeals = async (
-  basicFilter: string | null = null,
-  category: string | null = null,
-  query: string | null = null
+const getMealsByBasicFilter = async (
+  basicFilter: string | null,
+  query: string | null
 ) => {
+  const NAME = 'Name';
+  const FIRST_LETTER = 'First Letter';
+  const MAIN_INGREDIENT = 'Main Ingredient';
   switch (basicFilter) {
     case NAME:
       return await fetchFromMealdb(searchMealsdb.byName(query as string));
@@ -59,3 +57,18 @@ export const getMeals = async (
       return await fetchFromMealdb(searchMealsdb.byName(query as string));
   }
 };
+
+const getMealsByCategory = async (category: string | null) => {
+  return await fetchFromMealdb(
+    searchMealsdb.filterByCategory(category as string)
+  );
+};
+
+export async function getMeals(
+  basicFilter: string | null = null,
+  category: string | null = null,
+  query: string | null = null
+) {
+  if (basicFilter) return await getMealsByBasicFilter(basicFilter, query);
+  if (category) return await getMealsByCategory(category);
+}
