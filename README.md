@@ -20,8 +20,6 @@ São consumidos dados das seguintes APIs: _[spoonacular API](https://spoonacular
 - ESLint v.8.23.0
 - StyleLint v.14.11.0
 
-Este app foi baseado no _[projeto final](https://forkify-v2.netlify.app/)_ do curso de JavaScript de _[Jonas Schmedtmann's](https://github.com/jonasschmedtmann)_, no qual aprendi todos os aspectos fundamentais de JavaScript. Meu objetivo é extender o protótipo inicial, criando uma aplicação bonita, responsiva, escalável e útil.
-
 </details>
 <br />
 <details open>
@@ -45,7 +43,5 @@ Project setup
 - Vite v.3.0.7
 - ESLint v.8.23.0
 - StyleLint v.14.11.0
-
-The app was inspired on the _[final project](https://forkify-v2.netlify.app/)_ of _[Jonas Schmedtmann's](https://github.com/jonasschmedtmann)_ JavaScript course, on which I learned all the fundamentals aspects of JavaScript. My goal is to extend that initial project, creating a nice looking, responsive, scalable and functional app.
 
 </details>
