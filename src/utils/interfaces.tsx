@@ -1,14 +1,32 @@
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // SEARCH PAGE INTERFACES
-// searchPageState:
-export interface SearchPageStateInterface {
-  lastSearch: [fullMealDetails] | null;
-  errorMsg: string;
-}
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// searchPageState:
+export type SearchPageStateInterface = RecipesType;
+// ===============================
+// ===============================
+
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// CARDS COMPONENT INTERFACES
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+export type RecipeType = {
+  strMealThumb: string;
+  strMeal: string;
+  strCategory: string;
+  idMeal: string;
+  [propName: string]: any;
+};
+
+export interface PropsType {
+  recipes: [RecipeType] | [];
+}
+export type RecipesType = [RecipeType] | [];
+// ================================
+// ================================
+
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // API DATA INTERFACES
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // Full meals detaisl retured after search by ID:
 export interface fullMealDetails {
   idMeal: string;

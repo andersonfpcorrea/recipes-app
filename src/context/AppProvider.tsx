@@ -4,12 +4,12 @@ import { getSearchFromLocalStorage } from '../utils/helpers';
 import { SearchPageStateInterface } from '../utils/interfaces';
 
 export type AppContextInterface = {
-  searchPageState: SearchPageStateInterface | null;
+  searchPageState: SearchPageStateInterface;
   setSearchPageState: Function;
 };
 
 export const AppContext = createContext<AppContextInterface>({
-  searchPageState: { lastSearch: null, errorMsg: '' },
+  searchPageState: [],
   setSearchPageState: () => {},
 });
 
@@ -18,10 +18,7 @@ export const AppProvider: React.FC | any = ({
   children,
 }: React.PropsWithChildren) => {
   const [searchPageState, setSearchPageState] =
-    useState<SearchPageStateInterface>({
-      lastSearch: null,
-      errorMsg: '',
-    });
+    useState<SearchPageStateInterface>([]);
 
   useEffect(() => {
     getSearchFromLocalStorage(setSearchPageState);

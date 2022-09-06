@@ -1,17 +1,6 @@
 import { Link } from 'react-router-dom';
 import { countries } from '../data/countries.js';
-
-interface RecipeType {
-  strMealThumb: string;
-  strMeal: string;
-  strCategory: string;
-  idMeal: string;
-  [propName: string]: any;
-}
-interface PropsType {
-  recipes: [RecipeType];
-}
-type RecipesType = [RecipeType];
+import { RecipeType, RecipesType, PropsType } from '../utils/interfaces.js';
 
 function Cards(props: PropsType) {
   const { recipes } = props;
@@ -35,7 +24,7 @@ function Cards(props: PropsType) {
     );
   };
 
-  const renderCards = (recipes: RecipesType) =>
+  const renderCards = (recipes: RecipesType | []) =>
     recipes.map((recipe) => markup(recipe));
 
   return <>{renderCards(recipes)}</>;

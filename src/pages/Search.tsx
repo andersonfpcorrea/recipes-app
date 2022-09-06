@@ -36,8 +36,8 @@ function Search() {
           {fromLocal ? 'Recent Search' : 'Search results'}
         </h4>
         <div className="flex flex-center flex-wrap flex-gap-10">
-          {searchPageState?.lastSearch ? (
-            <Cards recipes={searchPageState.lastSearch} />
+          {searchPageState.length > 0 ? (
+            <Cards recipes={searchPageState} />
           ) : (
             <p>No results 🤔. Give it a try 👍</p>
           )}
