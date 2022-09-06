@@ -8,7 +8,13 @@ import { setSearchOnLocalStorage } from '../utils/helpers';
 interface propsType {
   filterIcon: boolean;
   filters: boolean;
+  callbacksSearchPage: CallBacksSearchPage;
 }
+
+type CallBacksSearchPage = {
+  setFromLocal: Function;
+  setShowNumberOfResults: Function;
+};
 
 function handleInput({ target }: SyntheticEvent, filterSetter: Function) {
   const { value } = target as HTMLInputElement;
@@ -20,19 +26,26 @@ async function handleSubmit(
   searchInputSetter: Function,
   query: string,
   filter: string,
-  searchPageStateSetter: Function
+  searchResultStateSetter: Function,
+  searchMessageStateSetter: Function,
+  callbacksSearchPage?: CallBacksSearchPage
 ) {
   e.preventDefault();
+  callbacksSearchPage?.setFromLocal(false);
+  callbacksSearchPage?.setShowNumberOfResults(true);
   try {
     const cleanedQuery =
       filter === 'First Letter' ? query.trim().at(0) : query.trim();
     const meals = await getMeals(filter, null, cleanedQuery);
     if (meals === null) {
-      searchPageStateSetter([]);
-      throw new Error('Sorry! We could not find any recipes');
+      searchResultStateSetter([]);
+      return searchMessageStateSetter(
+        'Sorry! We could not find any recipes 🤔. Please try again.'
+      );
     }
-    searchPageStateSetter(meals);
+    searchResultStateSetter(meals);
     setSearchOnLocalStorage(meals);
+    searchMessageStateSetter('');
   } catch (err) {
     console.error('Something went wrong 💣💣💣', err);
   } finally {
@@ -68,16 +81,24 @@ function renderFilters(
 }
 
 function SearchBar(props: propsType) {
-  const { filterIcon, filters } = props;
+  const { filterIcon, filters, callbacksSearchPage } = props;
   const [filter, setFilter] = useState('Name');
   const [searchInput, setSearchInput] = useState('');
-  const { setSearchPageState } = useContext(AppContext);
+  const { setSearchResultState, setSearchPageMessage } = useContext(AppContext);
 
   return (
     <form
       className="search-bar"
       onSubmit={(e) =>
-        handleSubmit(e, setSearchInput, searchInput, filter, setSearchPageState)
+        handleSubmit(
+          e,
+          setSearchInput,
+          searchInput,
+          filter,
+          setSearchResultState,
+          setSearchPageMessage,
+          callbacksSearchPage
+        )
       }
     >
       <input

@@ -1,30 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import { createContext } from 'react';
 import { getSearchFromLocalStorage } from '../utils/helpers';
-import { SearchPageStateInterface } from '../utils/interfaces';
+import { SearchResultStateInterface } from '../utils/interfaces';
 
 export type AppContextInterface = {
-  searchPageState: SearchPageStateInterface;
-  setSearchPageState: Function;
+  searchResultState: SearchResultStateInterface;
+  setSearchResultState: Function;
+  searchPageMessage: string;
+  setSearchPageMessage: Function;
 };
 
-export const AppContext = createContext<AppContextInterface>({
-  searchPageState: [],
-  setSearchPageState: () => {},
-});
+export const AppContext = createContext<any>(null);
 
 // FIXME: Fix the type of AppProvider.
 export const AppProvider: React.FC | any = ({
   children,
 }: React.PropsWithChildren) => {
-  const [searchPageState, setSearchPageState] =
-    useState<SearchPageStateInterface>([]);
+  const [searchResultState, setSearchResultState] =
+    useState<SearchResultStateInterface>([]);
+  const [searchPageMessage, setSearchPageMessage] = useState('');
 
-  // useEffect(() => {
-  //   getSearchFromLocalStorage(setSearchPageState);
-  // }, []);
-
-  const appStore: AppContextInterface = { searchPageState, setSearchPageState };
+  const appStore: AppContextInterface = {
+    searchResultState,
+    setSearchResultState,
+    searchPageMessage,
+    setSearchPageMessage,
+  };
 
   return <AppContext.Provider value={appStore}>{children}</AppContext.Provider>;
 };

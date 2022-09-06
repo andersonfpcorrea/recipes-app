@@ -8,17 +8,33 @@ import { getSearchFromLocalStorage } from '../utils/helpers';
 
 function Search() {
   let navigate = useNavigate();
-  const { searchPageState, setSearchPageState } = useContext(AppContext);
+  const {
+    searchResultState,
+    setSearchResultState,
+    searchPageMessage,
+    setSearchPageMessage,
+  } = useContext(AppContext);
   const [fromLocal, setFromLocal] = useState(true);
+  const [showNumberOfResults, setShowNumberOfResults] = useState(false);
+
+  useEffect(() => {
+    document.getElementById('search-input')?.focus();
+    getSearchFromLocalStorage(setSearchResultState);
+    setFromLocal(true);
+    setSearchPageMessage('');
+  }, []);
 
   const navigateBack = () => {
     navigate(-1);
   };
 
-  useEffect(() => {
-    document.getElementById('search-input')?.focus();
-    getSearchFromLocalStorage(setSearchPageState);
-  }, []);
+  const renderResults = () => {
+    if (searchResultState.length > 0)
+      return <Cards recipes={searchResultState} />;
+    if (searchPageMessage)
+      return <p className="ta-center">{searchPageMessage}</p>;
+    return <p className="ta-center">Nothing here 🤔. Give it a try 👍</p>;
+  };
 
   return (
     <main className="page-container">
@@ -31,18 +47,25 @@ function Search() {
             Search recipes
           </h3>
         </div>
-        <SearchBar filterIcon={false} filters={true} />
+        <SearchBar
+          filterIcon={false}
+          filters={true}
+          callbacksSearchPage={{ setFromLocal, setShowNumberOfResults }}
+        />
       </section>
       <section className="results">
-        <h4 className="fs-18">
-          {fromLocal ? 'Recent Search' : 'Search results'}
-        </h4>
+        <div className="flex flex-jc-sb flex-align">
+          <h4 className="fs-18">
+            {fromLocal ? 'Recent Search' : 'Search results'}
+          </h4>
+          <p className="fs-12 color-grey-dark-2">
+            {!fromLocal || showNumberOfResults
+              ? `${searchResultState.length} results`
+              : null}
+          </p>
+        </div>
         <div className="flex flex-center flex-wrap flex-gap-10">
-          {searchPageState.length > 0 ? (
-            <Cards recipes={searchPageState} />
-          ) : (
-            <p>No results 🤔. Give it a try 👍</p>
-          )}
+          {renderResults()}
         </div>
       </section>
     </main>

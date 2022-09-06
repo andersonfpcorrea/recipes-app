@@ -2,7 +2,7 @@
 // SEARCH PAGE INTERFACES
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // searchPageState:
-export type SearchPageStateInterface = RecipesType;
+export type SearchResultStateInterface = RecipesType;
 // ===============================
 // ===============================
 

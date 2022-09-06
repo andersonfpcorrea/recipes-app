@@ -8,6 +8,5 @@ export const setSearchOnLocalStorage = (value: Array<Object>) => {
 export const getSearchFromLocalStorage = (setter: Function) => {
   const json = localStorage.getItem('search');
   const data = json ? JSON.parse(json) : null;
-  console.log(data);
   data && setter(data);
 };

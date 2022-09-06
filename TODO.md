@@ -19,6 +19,6 @@
 
 ## Next task:
 
-- Adjust subheading according to the origin of the recipes data: "Last search" if from localstorage, "Search results" if from API (there must be an element to display the total amount of results)
+- Create the details page.
 
 - Fix ESLint
