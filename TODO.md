@@ -1,6 +1,6 @@
 # My to do list:
 
-## Front-end
+## Front-end summary
 
 - Authentication:
   - [ ] Create a component for handling "forgot password";
@@ -13,15 +13,20 @@
   - [ ] Create a "new recipes" component to render newly added recipes (cards with name, photo, rating, author and duration)
   - [ ] Create a Footer containing 5 icons: home, bookmarks, upload new recipe, notifications and profile
 
-## Back-end
+## Back-end summary
 
 - Implemenent RESTFul API using Node.js, Express.js, Mongoose and MongoDB, in order to use Brazilian recipes and Portuguese language.
 
-## Next tasks:
+## Next immediate tasks:
 
-- Create the details page:
-  - Implement filterObj helper function to render.
-  - Continue from rendering the ingredients list on details page.
+- Implement the details page:
+
+  - Render the ingredients list on details page;
+  - Render ingredients images on ingredients list;
+  - Apply styles to details page.
+
 - Implement pagination on search page;
+
+- Fix type of context provider on AppProvider.tsx
 
 - Fix ESLint
