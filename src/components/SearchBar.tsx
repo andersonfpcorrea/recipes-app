@@ -40,7 +40,7 @@ async function handleSubmit(
     if (meals === null) {
       searchResultStateSetter([]);
       return searchMessageStateSetter(
-        'Sorry! We could not find any recipes 🤔. Please try again.'
+        `Sorry! We could not find any recipes with "${query}" 🤔. Please try again.`
       );
     }
     searchResultStateSetter(meals);
