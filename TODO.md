@@ -23,6 +23,7 @@
 
   - Apply styles to details page; OK
   - Implement tabs functionality on Details page; OK
+  - Implement the menu btn functionality of Details page;
   - Implement saving to Details state and to localstorage the recipe progress;
   - Implement plus/minus btns to increase/decrease servings and update ingredients on details page;
   - Implement "add to shopping list" btn, that adds ingredients into a unique list or to a separate one.
