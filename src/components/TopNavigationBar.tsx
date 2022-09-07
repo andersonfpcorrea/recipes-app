@@ -10,7 +10,6 @@ interface TopBarProps {
 
 function TopNavigationBar(props: TopBarProps) {
   const { backgroundHandler, menuAndBackground } = props;
-  const [showMenu, setShowMenu] = useState(false);
   let navigate = useNavigate();
 
   function navigateBack() {
