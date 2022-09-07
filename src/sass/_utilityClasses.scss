@@ -121,11 +121,15 @@
 .bg-color-main {
   background-color: $color-primary;
 }
+.bg-fade {
+  filter: blur(5px);
+}
 // %%%%%%%%%%%%%%
 // Layout
 // %%%%%%%%%%%%%%
 // Containers
 .page-container {
+  z-index: -1;
   padding: 2rem;
 }
 // Paddings

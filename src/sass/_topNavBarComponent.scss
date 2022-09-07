@@ -1,0 +1,38 @@
+.nav-menu-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0),
+    rgba(0, 0, 0, 0.5)
+  );
+  z-index: 98;
+  height: 100vh;
+  width: 100vw;
+  animation: entrance 0.3s normal;
+}
+
+.nav-menu {
+  background-color: $color-white-1;
+  border-radius: 1rem 0 1rem 1rem;
+  color: $color-black-1;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 1rem;
+  position: absolute;
+  top: 4.5rem;
+  right: 3rem;
+  z-index: 99;
+  animation: entrance 0.3s normal;
+  filter: none;
+}
+
+@keyframes entrance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

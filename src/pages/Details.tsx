@@ -4,10 +4,8 @@ import { getMeals } from '../utils/fetch';
 import { getFlag, mapObjValuesToArray, objForEach } from '../utils/helpers';
 import { ObjForEach } from '../utils/interfaces';
 import { GiHotMeal } from 'react-icons/gi';
-import { BsThreeDots } from 'react-icons/bs';
-import Icons from '../assets/icons.svg';
-import { useNavigate } from 'react-router-dom';
 import Author from '../components/Author';
+import TopNavigationBar from '../components/TopNavigationBar';
 
 interface IngredientsAndMeasures {
   ingredients: Array<string>;
@@ -18,7 +16,6 @@ interface IngredientsAndMeasures {
 const reviews = Math.ceil(Math.random() * 100);
 
 function Details() {
-  let navigate = useNavigate();
   const { id } = useParams();
   const [recipe, setRecipe] = useState<ObjForEach>({});
   const [ingredients, setIngredients] = useState<IngredientsAndMeasures>({
@@ -28,10 +25,7 @@ function Details() {
   const [activeTab, setActiveTab] = useState('Ingredients');
   const [loadVideo, setLoadVideo] = useState(false);
   const [steps, setSteps] = useState(0);
-
-  function navigateBack() {
-    navigate(-1);
-  }
+  const [backgroundFade, setBackgroundFade] = useState(false);
 
   async function getDetails() {
     const [details] = await getMeals(null, null, null, id);
@@ -176,21 +170,57 @@ function Details() {
     return <ul className="details-ing-ul">{renderProceduresList(recipe)}</ul>;
   }
 
+  function backgroundHandler() {
+    setBackgroundFade((prev) => !prev);
+  }
+
+  const menuBarAndBackground = () => {
+    if (backgroundFade)
+      return (
+        <div className="nav-menu-bg">
+          <div
+            className="flex flex-col flex-gap-08 nav-menu"
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+          >
+            <div className="flex flex-gap-06">
+              <p>I</p>
+              <p>Share</p>
+            </div>
+            <div className="flex flex-gap-06">
+              <p>I</p>
+              <p>Rate Recipe</p>
+            </div>
+            <div className="flex flex-gap-06">
+              <p>I</p>
+              <p>Review</p>
+            </div>
+            <div className="flex flex-gap-06">
+              <p>I</p>
+              <p>Bookmark</p>
+            </div>
+          </div>
+        </div>
+      );
+    return <p>{''}</p>;
+  };
   useEffect(() => {
     getDetails();
   }, []);
-
+  /* ${backgroundFade ? 'bg-fade' : ''} */
   return (
-    <section className="page-container flex flex-col flex-gap-14">
+    <section
+      className="page-container flex flex-col flex-gap-20"
+      onClick={() => {
+        if (backgroundFade) setBackgroundFade(false);
+      }}
+    >
       <div className="flex flex-col flex-gap-06">
-        <nav>
-          <div className="flex flex-jc-sb flex-center">
-            <svg className="search--top-left-arrow" onClick={navigateBack}>
-              <use xlinkHref={`${Icons}#icon-arrow-left`} />
-            </svg>
-            <BsThreeDots className="fs-22" />
-          </div>
-        </nav>
+        <TopNavigationBar
+          backgroundHandler={backgroundHandler}
+          menuAndBackground={menuBarAndBackground}
+        />
         <RenderImgOrVideo />
         <div className="flex flex-gap-06">
           {recipe.strTags && renderTags(recipe)}

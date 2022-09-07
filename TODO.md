@@ -21,8 +21,7 @@
 
 - Implement the details page:
 
-  - Implement author component on details page;
-  - Implement the menu btn functionality of Details page;
+  - Implement the menu btn functionality of Details page (it is being rendered. Missing the functionalities);
   - Implement saving to Details state and to localstorage the recipe progress;
   - Implement plus/minus btns to increase/decrease servings and update ingredients on details page;
   - Implement "add to shopping list" btn, that adds ingredients into a unique list or to a separate one.
