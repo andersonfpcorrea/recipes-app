@@ -106,6 +106,9 @@
 .fstyle-i {
   font-style: italic;
 }
+.td-lt {
+  text-decoration: line-through;
+}
 
 // Font align
 .ta-center {
@@ -126,8 +129,14 @@
   padding: 2rem;
 }
 // Paddings
+.pd-reset {
+  padding: 0;
+}
 .pd-all-3 {
   padding: 3rem;
+}
+.pad-2 {
+  padding: 2rem;
 }
 .pad-1 {
   padding: 1rem;
@@ -142,7 +151,7 @@
 .b-all-white-1 {
   border: 1px solid $color-white-1;
 }
-// Widths
+// Widths and heights
 .width-100percent {
   width: 100%;
 }
@@ -161,6 +170,9 @@
 .flex {
   display: flex;
 }
+.flex-col {
+  flex-direction: column;
+}
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -173,6 +185,9 @@
 }
 .flex-align-end {
   align-self: flex-end;
+}
+.flex-jc-c {
+  justify-content: center;
 }
 .flex-jc-sb {
   justify-content: space-between;
@@ -194,6 +209,12 @@
 }
 .flex-gap-10 {
   gap: 1rem;
+}
+.flex-gap-20 {
+  gap: 2rem;
+}
+.flex-gap-24 {
+  gap: 2.4rem;
 }
 // Grids
 .grid-6-cols {

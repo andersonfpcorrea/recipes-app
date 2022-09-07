@@ -1,4 +1,5 @@
 import { PredicateFunction, ObjForEach } from './interfaces';
+import { countries } from '../data/countries.js';
 
 export const setSearchOnLocalStorage = (value: Array<Object>) => {
   // const json = localStorage.getItem('search');
@@ -35,3 +36,6 @@ export const mapObjKeysToArray = (obj: ObjForEach) => {
   keys.forEach((key: string) => results.push(key));
   return results;
 };
+
+export const getFlag = (area: string) =>
+  countries.find((el) => el.demonyms.eng.f === area)?.flags.svg;

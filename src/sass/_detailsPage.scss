@@ -1,0 +1,145 @@
+.details-img {
+  height: 18rem;
+  background-position: center;
+  background-size: cover;
+  border-radius: 1rem;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.details-img--fake-player {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    background-color: $color-grey-light-1;
+    filter: opacity(0.7);
+    z-index: 0;
+  }
+  &::before {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%, -50%);
+    filter: opacity(0.7);
+    border-radius: 3px;
+    height: 0;
+    width: 0;
+    border-top: 1rem solid transparent;
+    border-left: 2rem solid $color-grad-2;
+    border-bottom: 1rem solid transparent;
+  }
+}
+
+.details-video {
+  height: 18rem;
+  width: 100%;
+}
+
+.details-img__flag {
+  height: 2rem;
+  border-radius: 0.3rem;
+  filter: opacity(0.7);
+}
+
+.details-title {
+  display: flex;
+  .details-title--heading {
+    font-weight: 600;
+    flex-grow: 2;
+  }
+  .details-title--reviews {
+    color: $color-grey-dark-2;
+    font-size: 1.2rem;
+    flex-grow: 1;
+    text-align: end;
+  }
+}
+
+.details-tags {
+  background: $color-grad-1;
+  color: $color-grey-dark-1;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 2rem;
+}
+
+.details-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.details-tabs__links {
+  border: none;
+  background-color: inherit;
+  border-radius: 2rem 2rem 0 0;
+  border-bottom: 1px solid $color-grad-1;
+  color: $color-grey-dark-2;
+  font-weight: 600;
+  flex-grow: 1;
+  font-size: 1.4rem;
+  padding: 0.4rem;
+  transition: all 0.4s;
+  &:focus {
+    outline: none;
+  }
+}
+
+.details-tabs__links--active {
+  background-color: $color-primary;
+  color: $color-white-1;
+  border-bottom: 1px solid $color-grad-1;
+}
+
+.details-meal-icon {
+  color: $color-grey-dark-2;
+}
+
+.details-ing-ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.details-ing-li {
+  display: flex;
+  justify-content: space-between;
+  background-color: $color-grey-light-1;
+  border-radius: 1rem;
+  list-style: none;
+  padding: 1.2rem;
+  width: 100%;
+  .details-ing-li--ing {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  .details-ing-li--measure {
+    color: $color-grey-dark-2;
+    font-size: 1.4rem;
+  }
+}
+
+.details-procedures-li {
+  @include flex-column;
+  background-color: $color-grey-light-1;
+  border-radius: 1rem;
+  padding: 1.2rem;
+  .details-proc-li--heading {
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+  .details-proc-li--body {
+    font-size: 1.4rem;
+  }
+}

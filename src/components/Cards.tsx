@@ -1,13 +1,12 @@
 import { Link } from 'react-router-dom';
-import { countries } from '../data/countries.js';
 import { RecipeType, RecipesType, PropsType } from '../utils/interfaces.js';
+import { getFlag } from '../utils/helpers';
 
 function Cards(props: PropsType) {
   const { recipes } = props;
 
   const markup = (recipe: RecipeType) => {
-    const flag = countries.find((el) => el.demonyms.eng.f === recipe.strArea)
-      ?.flags.svg;
+    const flag = getFlag(recipe.strArea);
     return (
       <Link to={`/details/${recipe.idMeal}`} key={recipe.idMeal}>
         <figure

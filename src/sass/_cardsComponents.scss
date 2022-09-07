@@ -17,6 +17,9 @@
   align-self: flex-end;
   width: 2.4rem;
   background-blend-mode: color;
+  border-radius: 0.2rem;
+  filter: opacity(0.7);
+  transition: all 0.3s;
 }
 
 .cards-name--searchPage {

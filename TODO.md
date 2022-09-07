@@ -21,11 +21,14 @@
 
 - Implement the details page:
 
-  - Render the ingredients list on details page;
-  - Render ingredients images on ingredients list;
-  - Apply styles to details page.
+  - Apply styles to details page; OK
+  - Implement tabs functionality on Details page; OK
+  - Implement saving to Details state and to localstorage the recipe progress;
+  - Implement plus/minus btns to increase/decrease servings and update ingredients on details page;
+  - Implement "add to shopping list" btn, that adds ingredients into a unique list or to a separate one.
 
 - Implement pagination on search page;
+- Implement reviews functionality;
 
 - Fix type of context provider on AppProvider.tsx
 
