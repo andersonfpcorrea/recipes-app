@@ -97,7 +97,7 @@ function Details() {
             <input type="checkbox" onChange={handleCheckbox} />
           </div>
         </div>
-        <p className="details-proc-li--body">{inst.slice(3)}</p>
+        <p className="details-proc-li--body">{inst}</p>
       </li>
     ));
     return list;
