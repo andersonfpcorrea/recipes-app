@@ -21,6 +21,7 @@
 
 - Implement the details page:
 
+  - Implement author component on details page;
   - Implement the menu btn functionality of Details page;
   - Implement saving to Details state and to localstorage the recipe progress;
   - Implement plus/minus btns to increase/decrease servings and update ingredients on details page;

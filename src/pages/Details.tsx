@@ -7,6 +7,7 @@ import { GiHotMeal } from 'react-icons/gi';
 import { BsThreeDots } from 'react-icons/bs';
 import Icons from '../assets/icons.svg';
 import { useNavigate } from 'react-router-dom';
+import Author from '../components/Author';
 
 interface IngredientsAndMeasures {
   ingredients: Array<string>;
@@ -180,7 +181,7 @@ function Details() {
   }, []);
 
   return (
-    <section className="page-container flex flex-col flex-gap-20">
+    <section className="page-container flex flex-col flex-gap-14">
       <div className="flex flex-col flex-gap-06">
         <nav>
           <div className="flex flex-jc-sb flex-center">
@@ -191,13 +192,14 @@ function Details() {
           </div>
         </nav>
         <RenderImgOrVideo />
+        <div className="flex flex-gap-06">
+          {recipe.strTags && renderTags(recipe)}
+        </div>
         <div className="details-title">
           <p className="details-title--heading">{recipe.strMeal}</p>
           <p className="details-title--reviews">{`(${reviews} Reviews)`}</p>
         </div>
-        <div className="flex flex-gap-10">
-          {recipe.strTags && renderTags(recipe)}
-        </div>
+        <Author />
       </div>
       <div className="flex flex-col flex-gap-14">
         <div className="details-tabs" onClick={handleTabs}>

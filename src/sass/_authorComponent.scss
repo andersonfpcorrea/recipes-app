@@ -1,0 +1,31 @@
+.author-img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.author-location-mark {
+  color: $color-grad-2;
+}
+
+.author-flw-btn {
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.4rem;
+  border-radius: 2rem;
+  outline: none;
+  width: 8rem;
+  transition: all 0.4s;
+}
+
+.author-flw--false {
+  color: $color-white-1;
+  background-color: $color-primary;
+}
+
+.author-flw--true {
+  background-color: inherit;
+  border: 1px solid $color-primary;
+  color: $color-primary;
+}

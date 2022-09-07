@@ -320,6 +320,14 @@ a {
   padding: 1rem;
 }
 
+.pad-05 {
+  padding: 0.5rem;
+}
+
+.pad-02 {
+  padding: 0.2rem;
+}
+
 .br-1 {
   border-radius: 1rem;
 }
@@ -733,6 +741,7 @@ a {
 .details-tabs {
   display: flex;
   align-items: center;
+  cursor: pointer;
   justify-content: center;
   justify-content: space-between;
   gap: 0.5rem;
@@ -803,6 +812,38 @@ a {
 }
 .details-procedures-li .details-proc-li--body {
   font-size: 1.4rem;
+}
+
+.author-img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.author-location-mark {
+  color: #f48982;
+}
+
+.author-flw-btn {
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.4rem;
+  border-radius: 2rem;
+  outline: none;
+  width: 8rem;
+  transition: all 0.4s;
+}
+
+.author-flw--false {
+  color: #fff;
+  background-color: #f38e82;
+}
+
+.author-flw--true {
+  background-color: inherit;
+  border: 1px solid #f38e82;
+  color: #f38e82;
 }
 
 /*# sourceMappingURL=style.css.map */
