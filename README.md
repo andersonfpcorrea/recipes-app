@@ -1,5 +1,7 @@
 # _[Recipes app](https://recipes-app-andersonfpcorrea.netlify.app/)_
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/388cb50e-e37e-4bc7-ba60-8e4c253d6322/deploy-status)](https://app.netlify.com/sites/recipes-app-andersonfpcorrea/deploys)
+
 <details>
 <summary><strong>Leia a descrição do projeto em português 🇧🇷</strong></summary>
 <br />
