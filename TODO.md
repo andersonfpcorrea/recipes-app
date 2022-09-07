@@ -21,8 +21,6 @@
 
 - Implement the details page:
 
-  - Apply styles to details page; OK
-  - Implement tabs functionality on Details page; OK
   - Implement the menu btn functionality of Details page;
   - Implement saving to Details state and to localstorage the recipe progress;
   - Implement plus/minus btns to increase/decrease servings and update ingredients on details page;

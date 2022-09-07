@@ -406,6 +406,22 @@ a {
   gap: 1rem;
 }
 
+.flex-gap-12 {
+  gap: 1.2rem;
+}
+
+.flex-gap-14 {
+  gap: 1.4rem;
+}
+
+.flex-gap-16 {
+  gap: 1.6rem;
+}
+
+.flex-gap-18 {
+  gap: 1.8rem;
+}
+
 .flex-gap-20 {
   gap: 2rem;
 }
@@ -719,28 +735,30 @@ a {
   align-items: center;
   justify-content: center;
   justify-content: space-between;
+  gap: 0.5rem;
 }
 
 .details-tabs__links {
   border: none;
   background-color: inherit;
-  border-radius: 2rem 2rem 0 0;
-  border-bottom: 1px solid #fbdb89;
+  border-radius: 2rem;
+  box-shadow: 0 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
   color: #918581;
   font-weight: 600;
   flex-grow: 1;
   font-size: 1.4rem;
-  padding: 0.4rem;
-  transition: all 0.4s;
+  padding: 0.8rem;
+  transition: all 0.3s;
 }
 .details-tabs__links:focus {
   outline: none;
 }
 
 .details-tabs__links--active {
+  border-bottom: 1px solid #f38e82;
   background-color: #f38e82;
+  box-shadow: none;
   color: #fff;
-  border-bottom: 1px solid #fbdb89;
 }
 
 .details-meal-icon {
@@ -760,7 +778,7 @@ a {
   background-color: #f9f5f3;
   border-radius: 1rem;
   list-style: none;
-  padding: 1.2rem;
+  padding: 1.6rem;
   width: 100%;
 }
 .details-ing-li .details-ing-li--ing {

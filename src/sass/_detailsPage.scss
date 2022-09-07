@@ -77,28 +77,30 @@
   align-items: center;
   justify-content: center;
   justify-content: space-between;
+  gap: 0.5rem;
 }
 
 .details-tabs__links {
   border: none;
   background-color: inherit;
-  border-radius: 2rem 2rem 0 0;
-  border-bottom: 1px solid $color-grad-1;
+  border-radius: 2rem;
+  @include box-shadow-sm(0.1);
   color: $color-grey-dark-2;
   font-weight: 600;
   flex-grow: 1;
   font-size: 1.4rem;
-  padding: 0.4rem;
-  transition: all 0.4s;
+  padding: 0.8rem;
+  transition: all 0.3s;
   &:focus {
     outline: none;
   }
 }
 
 .details-tabs__links--active {
+  border-bottom: 1px solid $color-primary;
   background-color: $color-primary;
+  box-shadow: none;
   color: $color-white-1;
-  border-bottom: 1px solid $color-grad-1;
 }
 
 .details-meal-icon {
@@ -118,7 +120,7 @@
   background-color: $color-grey-light-1;
   border-radius: 1rem;
   list-style: none;
-  padding: 1.2rem;
+  padding: 1.6rem;
   width: 100%;
   .details-ing-li--ing {
     font-size: 1.4rem;

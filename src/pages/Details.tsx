@@ -199,7 +199,7 @@ function Details() {
           {recipe.strTags && renderTags(recipe)}
         </div>
       </div>
-      <div className="flex flex-col flex-gap-10">
+      <div className="flex flex-col flex-gap-14">
         <div className="details-tabs" onClick={handleTabs}>
           <button
             type="button"
