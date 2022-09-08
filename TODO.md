@@ -27,7 +27,11 @@
   - Implement plus/minus btns to increase/decrease servings and update ingredients on details page;
   - Implement "add to shopping list" btn, that adds ingredients into a unique list or to a separate one.
 
-- Implement pagination on search page;
+- Implement the Search page:
+
+  - Refactor the top nav bar of home page - use the TopNavigationBar componenet.
+  - Implement pagination on search page;
+
 - Implement reviews functionality;
 
 - Fix type of context provider on AppProvider.tsx
