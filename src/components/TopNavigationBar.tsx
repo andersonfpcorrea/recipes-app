@@ -19,11 +19,11 @@ function TopNavigationBar(props: TopBarProps) {
   return (
     <nav>
       <div className="flex flex-jc-sb pos-rel">
-        <svg className="search--top-left-arrow" onClick={navigateBack}>
+        <svg className="top-nav-left-arrow" onClick={navigateBack}>
           <use xlinkHref={`${Icons}#icon-arrow-left`} />
         </svg>
         <BsThreeDots
-          className="fs-22"
+          className="fs-22 top-nav-dots-menu"
           onClick={() => {
             backgroundHandler?.();
           }}

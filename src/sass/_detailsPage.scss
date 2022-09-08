@@ -87,6 +87,7 @@
   border-radius: 2rem;
   @include box-shadow-sm(0.1);
   color: $color-grey-dark-2;
+  cursor: pointer;
   font-weight: 600;
   flex-grow: 1;
   font-size: 1.4rem;

@@ -4,6 +4,12 @@ import { getMeals } from '../utils/fetch';
 import { getFlag, mapObjValuesToArray, objForEach } from '../utils/helpers';
 import { ObjForEach } from '../utils/interfaces';
 import { GiHotMeal } from 'react-icons/gi';
+import {
+  IoIosShareAlt,
+  IoMdStar,
+  IoMdText,
+  IoIosBookmark,
+} from 'react-icons/io';
 import Author from '../components/Author';
 import TopNavigationBar from '../components/TopNavigationBar';
 
@@ -184,20 +190,20 @@ function Details() {
               e.stopPropagation();
             }}
           >
-            <div className="flex flex-gap-06">
-              <p>I</p>
+            <div className="flex flex-gap-06 flex-align">
+              <IoIosShareAlt />
               <p>Share</p>
             </div>
-            <div className="flex flex-gap-06">
-              <p>I</p>
+            <div className="flex flex-gap-06 flex-align">
+              <IoMdStar />
               <p>Rate Recipe</p>
             </div>
-            <div className="flex flex-gap-06">
-              <p>I</p>
+            <div className="flex flex-gap-06 flex-align">
+              <IoMdText />
               <p>Review</p>
             </div>
-            <div className="flex flex-gap-06">
-              <p>I</p>
+            <div className="flex flex-gap-06 flex-align">
+              <IoIosBookmark />
               <p>Bookmark</p>
             </div>
           </div>
@@ -205,10 +211,11 @@ function Details() {
       );
     return <p>{''}</p>;
   };
+
   useEffect(() => {
     getDetails();
   }, []);
-  /* ${backgroundFade ? 'bg-fade' : ''} */
+
   return (
     <section
       className="page-container flex flex-col flex-gap-20"
