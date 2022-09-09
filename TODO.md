@@ -19,6 +19,8 @@
 
 ## Next immediate tasks:
 
+- Start adding framer-motion animations;
+
 - Implement the details page:
 
   - Implement the menu btn functionality of Details page (it is being rendered. Missing the functionalities);

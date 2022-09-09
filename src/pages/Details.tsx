@@ -12,6 +12,7 @@ import {
 } from 'react-icons/io';
 import Author from '../components/Author';
 import TopNavigationBar from '../components/TopNavigationBar';
+import { AnimatePresence, motion } from 'framer-motion';
 
 interface IngredientsAndMeasures {
   ingredients: Array<string>;
@@ -241,20 +242,36 @@ function Details() {
       <div className="flex flex-col flex-gap-14">
         <div className="details-tabs" onClick={handleTabs}>
           <button
+            key="Ingredients"
             type="button"
-            className={`details-tabs__links ${
-              activeTab === 'Ingredients' ? 'details-tabs__links--active' : ''
-            }`}
+            className="details-tabs__links"
+            // className={`details-tabs__links ${
+            //   activeTab === 'Ingredients' ? 'details-tabs__links--active' : ''
+            // }`}
           >
             Ingredients
+            {activeTab === 'Ingredients' ? (
+              <motion.div
+                className="details-tabs__links--active"
+                layoutId="underline"
+              />
+            ) : null}
           </button>
           <button
+            key="Procedures"
             type="button"
-            className={`details-tabs__links ${
-              activeTab === 'Procedures' ? 'details-tabs__links--active' : ''
-            }`}
+            className="details-tabs__links"
+            // className={`details-tabs__links ${
+            //   activeTab === 'Procedures' ? 'details-tabs__links--active' : ''
+            // }`}
           >
             Procedures
+            {activeTab === 'Procedures' ? (
+              <motion.div
+                className="details-tabs__links--active"
+                layoutId="underline"
+              />
+            ) : null}
           </button>
         </div>
         <div className="flex flex-jc-sb color-grey-dark-1">
@@ -268,7 +285,17 @@ function Details() {
             <p className="fs-12">{steps} steps</p>
           )}
         </div>
-        <RenderIngredientsOrProcedures />
+        <AnimatePresence exitBeforeEnter>
+          <motion.div
+            key={activeTab}
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -10, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            <RenderIngredientsOrProcedures />
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   );

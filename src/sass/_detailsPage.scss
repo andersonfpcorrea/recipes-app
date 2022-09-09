@@ -78,20 +78,18 @@
   cursor: pointer;
   justify-content: center;
   justify-content: space-between;
-  gap: 0.5rem;
+  // gap: 0.5rem;
 }
 
 .details-tabs__links {
   border: none;
   background-color: inherit;
-  border-radius: 2rem;
-  @include box-shadow-sm(0.1);
-  color: $color-grey-dark-2;
+  color: $color-grey-dark-1;
   cursor: pointer;
   font-weight: 600;
   flex-grow: 1;
   font-size: 1.4rem;
-  padding: 0.8rem;
+  line-height: 2.5;
   transition: all 0.3s;
   &:focus {
     outline: none;
@@ -99,10 +97,7 @@
 }
 
 .details-tabs__links--active {
-  border-bottom: 1px solid $color-primary;
-  background-color: $color-primary;
-  box-shadow: none;
-  color: $color-white-1;
+  outline: 1px solid $color-primary;
 }
 
 .details-meal-icon {

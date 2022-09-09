@@ -749,20 +749,17 @@ a {
   cursor: pointer;
   justify-content: center;
   justify-content: space-between;
-  gap: 0.5rem;
 }
 
 .details-tabs__links {
   border: none;
   background-color: inherit;
-  border-radius: 2rem;
-  box-shadow: 0 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
-  color: #918581;
+  color: #615551;
   cursor: pointer;
   font-weight: 600;
   flex-grow: 1;
   font-size: 1.4rem;
-  padding: 0.8rem;
+  line-height: 2.5;
   transition: all 0.3s;
 }
 .details-tabs__links:focus {
@@ -770,10 +767,7 @@ a {
 }
 
 .details-tabs__links--active {
-  border-bottom: 1px solid #f38e82;
-  background-color: #f38e82;
-  box-shadow: none;
-  color: #fff;
+  outline: 1px solid #f38e82;
 }
 
 .details-meal-icon {
