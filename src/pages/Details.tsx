@@ -4,15 +4,10 @@ import { getMeals } from '../utils/fetch';
 import { getFlag, mapObjValuesToArray, objForEach } from '../utils/helpers';
 import { ObjForEach } from '../utils/interfaces';
 import { GiHotMeal } from 'react-icons/gi';
-import {
-  IoIosShareAlt,
-  IoMdStar,
-  IoMdText,
-  IoIosBookmark,
-} from 'react-icons/io';
 import Author from '../components/Author';
 import TopNavigationBar from '../components/TopNavigationBar';
 import { AnimatePresence, motion } from 'framer-motion';
+import TopNavMenu from '../components/TopNavMenu';
 
 interface IngredientsAndMeasures {
   ingredients: Array<string>;
@@ -181,38 +176,6 @@ function Details() {
     setBackgroundFade((prev) => !prev);
   }
 
-  const menuBarAndBackground = () => {
-    if (backgroundFade)
-      return (
-        <div className="nav-menu-bg">
-          <div
-            className="flex flex-col flex-gap-08 nav-menu"
-            onClick={(e) => {
-              e.stopPropagation();
-            }}
-          >
-            <div className="flex flex-gap-06 flex-align">
-              <IoIosShareAlt />
-              <p>Share</p>
-            </div>
-            <div className="flex flex-gap-06 flex-align">
-              <IoMdStar />
-              <p>Rate Recipe</p>
-            </div>
-            <div className="flex flex-gap-06 flex-align">
-              <IoMdText />
-              <p>Review</p>
-            </div>
-            <div className="flex flex-gap-06 flex-align">
-              <IoIosBookmark />
-              <p>Bookmark</p>
-            </div>
-          </div>
-        </div>
-      );
-    return <p>{''}</p>;
-  };
-
   useEffect(() => {
     getDetails();
   }, []);
@@ -227,7 +190,7 @@ function Details() {
       <div className="flex flex-col flex-gap-06">
         <TopNavigationBar
           backgroundHandler={backgroundHandler}
-          menuAndBackground={menuBarAndBackground}
+          condition={backgroundFade}
         />
         <RenderImgOrVideo />
         <div className="flex flex-gap-06">

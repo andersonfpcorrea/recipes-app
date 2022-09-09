@@ -19,7 +19,7 @@
 
 ## Next immediate tasks:
 
-- Start adding framer-motion animations;
+- Start adding framer-motion animations [on progress];
 
 - Implement the details page:
 

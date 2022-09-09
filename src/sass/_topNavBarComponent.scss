@@ -3,6 +3,7 @@
 }
 
 .top-nav-left-arrow {
+  cursor: pointer;
   fill: $color-black-1;
   width: $icons-size-1;
   height: $icons-size-1;
@@ -29,7 +30,7 @@
   color: $color-black-1;
   font-size: 1.4rem;
   font-weight: 600;
-  padding: 1rem;
+  padding: 1.4rem;
   position: absolute;
   top: 4.5rem;
   right: 3rem;

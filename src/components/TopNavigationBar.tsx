@@ -2,14 +2,15 @@ import Icons from '../assets/icons.svg';
 import { BsThreeDots } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 import { ReactElement, useState } from 'react';
+import TopNavMenu from '../components/TopNavMenu';
 
 interface TopBarProps {
   backgroundHandler?: Function;
-  menuAndBackground?: Function;
+  condition: boolean;
 }
 
 function TopNavigationBar(props: TopBarProps) {
-  const { backgroundHandler, menuAndBackground } = props;
+  const { backgroundHandler, condition } = props;
   let navigate = useNavigate();
 
   function navigateBack() {
@@ -29,7 +30,7 @@ function TopNavigationBar(props: TopBarProps) {
           }}
         />
       </div>
-      {menuAndBackground?.()}
+      {TopNavMenu?.(condition)}
     </nav>
   );
 }
