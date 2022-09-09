@@ -75,7 +75,6 @@
 .details-tabs {
   display: flex;
   align-items: center;
-  border-bottom: 2px solid $color-grey-light-2;
   cursor: pointer;
   justify-content: space-between;
   div {
@@ -86,6 +85,8 @@
 
 .details-tabs__links {
   border: none;
+  border-bottom: 1px solid $color-grey-light-2;
+  width: 100%;
   background-color: inherit;
   color: $color-grey-dark-1;
   cursor: pointer;

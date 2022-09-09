@@ -752,7 +752,6 @@ a {
 .details-tabs {
   display: flex;
   align-items: center;
-  border-bottom: 2px solid #f2efee;
   cursor: pointer;
   justify-content: space-between;
 }
@@ -763,6 +762,8 @@ a {
 
 .details-tabs__links {
   border: none;
+  border-bottom: 1px solid #f2efee;
+  width: 100%;
   background-color: inherit;
   color: #615551;
   cursor: pointer;
