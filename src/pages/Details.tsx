@@ -203,38 +203,42 @@ function Details() {
       </div>
       <div className="flex flex-col flex-gap-14">
         <div className="details-tabs" onClick={handleTabs}>
-          <button
-            key="Ingredients"
-            type="button"
-            className="details-tabs__links"
-            // className={`details-tabs__links ${
-            //   activeTab === 'Ingredients' ? 'details-tabs__links--active' : ''
-            // }`}
-          >
-            Ingredients
+          <div>
+            <button
+              key="Ingredients"
+              type="button"
+              className="details-tabs__links"
+              // className={`details-tabs__links ${
+              //   activeTab === 'Ingredients' ? 'details-tabs__links--active' : ''
+              // }`}
+            >
+              Ingredients
+            </button>
             {activeTab === 'Ingredients' ? (
               <motion.div
                 className="details-tabs__links--active"
                 layoutId="underline"
               />
             ) : null}
-          </button>
-          <button
-            key="Procedures"
-            type="button"
-            className="details-tabs__links"
-            // className={`details-tabs__links ${
-            //   activeTab === 'Procedures' ? 'details-tabs__links--active' : ''
-            // }`}
-          >
-            Procedures
+          </div>
+          <div>
+            <button
+              key="Procedures"
+              type="button"
+              className="details-tabs__links"
+              // className={`details-tabs__links ${
+              //   activeTab === 'Procedures' ? 'details-tabs__links--active' : ''
+              // }`}
+            >
+              Procedures
+            </button>
             {activeTab === 'Procedures' ? (
               <motion.div
                 className="details-tabs__links--active"
                 layoutId="underline"
               />
             ) : null}
-          </button>
+          </div>
         </div>
         <div className="flex flex-jc-sb color-grey-dark-1">
           <div className="flex flex-gap-08">

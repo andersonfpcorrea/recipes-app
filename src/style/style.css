@@ -752,9 +752,13 @@ a {
 .details-tabs {
   display: flex;
   align-items: center;
+  border-bottom: 2px solid #f2efee;
   cursor: pointer;
-  justify-content: center;
   justify-content: space-between;
+}
+.details-tabs div {
+  flex-grow: 1;
+  text-align: center;
 }
 
 .details-tabs__links {
@@ -765,7 +769,8 @@ a {
   font-weight: 600;
   flex-grow: 1;
   font-size: 1.4rem;
-  line-height: 2.5;
+  padding: 1rem 2rem;
+  flex-basis: 1;
   transition: all 0.3s;
 }
 .details-tabs__links:focus {

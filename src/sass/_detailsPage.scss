@@ -75,10 +75,13 @@
 .details-tabs {
   display: flex;
   align-items: center;
+  border-bottom: 2px solid $color-grey-light-2;
   cursor: pointer;
-  justify-content: center;
   justify-content: space-between;
-  // gap: 0.5rem;
+  div {
+    flex-grow: 1;
+    text-align: center;
+  }
 }
 
 .details-tabs__links {
@@ -89,7 +92,8 @@
   font-weight: 600;
   flex-grow: 1;
   font-size: 1.4rem;
-  line-height: 2.5;
+  padding: 1rem 2rem;
+  flex-basis: 1;
   transition: all 0.3s;
   &:focus {
     outline: none;
