@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   IoIosShareAlt,
   IoMdStar,
@@ -5,8 +6,13 @@ import {
   IoIosBookmark,
 } from 'react-icons/io';
 
-function TopNavMenu(props: boolean) {
-  if (props)
+// function renderModal() {}   Createa function for rendering a modal for share and rate
+// Create a link for the review page
+// Createa functionality of bookmarking
+
+function TopNavMenu(condition: boolean) {
+  const [clicked, setClicked] = useState('');
+  if (condition)
     return (
       <div className="nav-menu-bg">
         <div
@@ -15,11 +21,17 @@ function TopNavMenu(props: boolean) {
             e.stopPropagation();
           }}
         >
-          <div className="flex flex-gap-06 flex-align">
+          <div
+            className="flex flex-gap-06 flex-align"
+            onClick={() => setClicked('share')}
+          >
             <IoIosShareAlt className="fs-20" />
             <p>Share</p>
           </div>
-          <div className="flex flex-gap-06 flex-align">
+          <div
+            className="flex flex-gap-06 flex-align"
+            onClick={() => setClicked('rate')}
+          >
             <IoMdStar className="fs-20" />
             <p>Rate Recipe</p>
           </div>

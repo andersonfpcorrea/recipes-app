@@ -10,23 +10,23 @@ import Tessa from '../assets/faces/tessa-wilson-1KuiLuha2aU-unsplash.jpg';
 export const persons = [
   {
     photoUrl: Art,
-    name: 'Art Hauntington',
-    place: 'Bogota, Colombia',
+    name: 'Art Haut',
+    place: 'Colombia',
   },
   {
     photoUrl: Erik,
-    name: 'Erik Lucatero',
-    place: 'Paris, France',
+    name: 'Erik Luc',
+    place: 'France',
   },
   {
     photoUrl: Houcine,
     name: 'Houcine Houssain',
-    place: 'Lisbon, Portugal',
+    place: 'Portugal',
   },
   {
     photoUrl: Jake,
     name: 'Jake Nackros',
-    place: 'Rome, Italy',
+    place: 'Italy',
   },
   {
     photoUrl: James,
@@ -35,18 +35,18 @@ export const persons = [
   },
   {
     photoUrl: Radu,
-    name: 'Radu Florin',
-    place: 'Rio de Janeiro, Brazil',
+    name: 'Radu Drake',
+    place: 'Brazil',
   },
   {
     photoUrl: Taylor,
     name: 'Taylor Vatem',
-    place: 'Buenos Aires, Argentina',
+    place: 'Buenos Aires',
   },
   {
     photoUrl: Tessa,
     name: 'Tessa Wilson',
-    place: 'Moscow, Russia',
+    place: 'England',
   },
 ];
 

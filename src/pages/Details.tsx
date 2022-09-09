@@ -7,7 +7,6 @@ import { GiHotMeal } from 'react-icons/gi';
 import Author from '../components/Author';
 import TopNavigationBar from '../components/TopNavigationBar';
 import { AnimatePresence, motion } from 'framer-motion';
-import TopNavMenu from '../components/TopNavMenu';
 
 interface IngredientsAndMeasures {
   ingredients: Array<string>;
