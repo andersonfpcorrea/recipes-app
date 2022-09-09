@@ -60,12 +60,19 @@ $border-radius-6: 6px;
 
 $icons-size-1: 2.4rem;
 
+// GLOBAL CSS RESET:
 /*
 1. Use a more-intuitive box-sizing model. */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+// Remove blue highligh on mobile view:
+*,
+*::before,
+*::after {
+  -webkit-tap-highlight-color: transparent;
 }
 /*
   2. Remove default margin
