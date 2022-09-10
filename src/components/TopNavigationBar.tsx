@@ -1,7 +1,6 @@
 import Icons from '../assets/icons.svg';
 import { BsThreeDots } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
-import { ReactElement, useState } from 'react';
 import TopNavMenu from '../components/TopNavMenu';
 
 interface TopBarProps {
@@ -11,7 +10,7 @@ interface TopBarProps {
 
 function TopNavigationBar(props: TopBarProps) {
   const { backgroundHandler, condition } = props;
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   function navigateBack() {
     navigate(-1);

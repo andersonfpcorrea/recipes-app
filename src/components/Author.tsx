@@ -33,7 +33,7 @@ function Author() {
       </div>
       <button
         type="button"
-        className={`author-flw-btn author-flw--${follow}`}
+        className={`author-flw-btn author-flw--${follow ? 'true' : 'false'}`}
         onClick={handleFollow}
       >
         {follow ? 'Unfollow' : 'Follow'}
