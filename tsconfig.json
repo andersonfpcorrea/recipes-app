@@ -16,6 +16,12 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "vite.config.ts", ".storybook", "jest.config.js"],
+  "include": [
+    "src",
+    "vite.config.ts",
+    ".storybook",
+    "jest.config.js",
+    "__mocks__"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
