@@ -12,7 +12,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "compile:sass": "sass --watch src/sass/main.scss src/style/style.css",
-    "lint:scripts": "eslint --ext .ts,.tsx src"
+    "lint:scripts": "eslint --ext .ts,.tsx src",
+    "lint:styles": "stylelint \"src/**/*.scss\""
   },
   "dependencies": {
     "@fontsource/nunito-sans": "^4.5.9",
@@ -31,9 +32,16 @@
     "@typescript-eslint/parser": "^5.36.2",
     "@vitejs/plugin-react": "^2.0.1",
     "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.7.1",
     "sass": "^1.54.7",
+    "stylelint": "^14.11.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-standard-scss": "^5.0.0",
     "typescript": "^4.8.2",
     "vite": "^3.0.7"
   }
