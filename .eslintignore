@@ -1,3 +1,6 @@
 node_modules
 dist
 !.storybook
+jest.config.js 
+__mocks__
+cypress

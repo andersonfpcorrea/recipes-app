@@ -21,7 +21,9 @@
     "vite.config.ts",
     ".storybook",
     "jest.config.js",
-    "__mocks__"
+    "__mocks__",
+    "cypress.config.ts",
+    "cypress/tsconfig.json"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
