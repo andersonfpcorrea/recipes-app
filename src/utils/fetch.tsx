@@ -30,7 +30,7 @@ const searchMealsdb = {
 const fetchFromMealdb = async (url: string) =>
   await fetch(url)
     .then((res) => res.json())
-    .then((data) => data.meals)
+    .then((data: { meals: [{ [key: string]: string | null }] }) => data.meals)
     .catch((err) =>
       console.log('Sonthing went wrong during fetching of data! 💣🤯:', err)
     );

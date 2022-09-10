@@ -5,9 +5,9 @@ import { SearchResultStateInterface } from '../utils/interfaces';
 
 export type AppContextInterface = {
   searchResultState: SearchResultStateInterface;
-  setSearchResultState: Function;
+  setSearchResultState: (value: SearchResultStateInterface) => undefined;
   searchPageMessage: string;
-  setSearchPageMessage: Function;
+  setSearchPageMessage: (value: string) => undefined;
 };
 
 export const AppContext = createContext<any>(null);

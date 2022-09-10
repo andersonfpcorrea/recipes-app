@@ -12,7 +12,7 @@ export type RecipeType = {
   strCategory: string;
   strArea: string;
   idMeal: string;
-  [propName: string]: any;
+  [propName: string]: string | null;
 };
 export interface PropsType {
   recipes: [RecipeType] | [];
