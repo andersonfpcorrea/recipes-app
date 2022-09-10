@@ -7,7 +7,7 @@ import { AppContext } from '../context/AppProvider';
 import { getSearchFromLocalStorage } from '../utils/helpers';
 
 function Search() {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   const {
     searchResultState,
     setSearchResultState,

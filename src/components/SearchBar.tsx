@@ -13,8 +13,8 @@ interface propsType {
 }
 
 type CallBacksSearchPage = {
-  setFromLocal: (boolean: boolean) => undefined;
-  setShowNumberOfResults: (boolean: boolean) => undefined;
+  setFromLocal: Dispatch<boolean>;
+  setShowNumberOfResults: Dispatch<boolean>;
 };
 
 // type SetInput = (value: string) => undefined;
