@@ -13,7 +13,9 @@
     "preview": "vite preview",
     "compile:sass": "sass --watch src/sass/main.scss src/style/style.css",
     "lint:scripts": "eslint --ext .ts,.tsx src",
-    "lint:styles": "stylelint \"src/**/*.scss\""
+    "lint:styles": "stylelint \"src/**/*.scss\"",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@fontsource/nunito-sans": "^4.5.9",
@@ -26,16 +28,26 @@
     "validator": "^13.7.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.19.0",
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/builder-vite": "^0.2.2",
+    "@storybook/react": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
     "@vitejs/plugin-react": "^2.0.1",
+    "babel-loader": "^8.2.5",
     "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.4",
     "prettier": "^2.7.1",
     "sass": "^1.54.7",
     "stylelint": "^14.11.0",
