@@ -26,6 +26,9 @@
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
     "ecmaVersion": "latest",
     "sourceType": "module",
     "project": "./tsconfig.json"
@@ -33,6 +36,11 @@
   "plugins": ["react", "@typescript-eslint", "jest"],
   "ignorePatterns": ["cypress/**/*"],
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error"
+  },
+  "settings": {
+    "version": "detect"
   }
 }
