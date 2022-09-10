@@ -2,7 +2,7 @@ import { PredicateFunction, ObjForEach } from './interfaces';
 import { countries } from '../data/countries';
 import { Dispatch } from 'react';
 
-type ArrayOfObjects = [Record<string, unknown>];
+export type ArrayOfObjects = [Record<string, unknown>];
 
 export const setSearchOnLocalStorage = (value: ArrayOfObjects) => {
   // const json = localStorage.getItem('search');

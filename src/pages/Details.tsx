@@ -1,7 +1,12 @@
 import { SyntheticEvent, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMeals } from '../utils/fetch';
-import { getFlag, mapObjValuesToArray, objForEach } from '../utils/helpers';
+import {
+  ArrayOfObjects,
+  getFlag,
+  mapObjValuesToArray,
+  objForEach,
+} from '../utils/helpers';
 import { ObjForEach } from '../utils/interfaces';
 import { GiHotMeal } from 'react-icons/gi';
 import Author from '../components/Author';
@@ -55,7 +60,7 @@ function Details() {
   }
 
   function getRecipeSteps(recipe: ObjForEach) {
-    return recipe.strInstructions.split('\r\n').length;
+    return recipe.strInstructions?.split('\r\n').length;
   }
 
   function renderIngredientsList(ing: IngredientsAndMeasures) {
@@ -80,9 +85,9 @@ function Details() {
 
   function renderProceduresList(ing: ObjForEach) {
     const { strInstructions } = ing;
-    const instructions = strInstructions.split('\r\n');
+    const instructions = strInstructions?.split('\r\n');
 
-    const list = instructions.map((inst: string, i: number) => (
+    const list = instructions?.map((inst: string, i: number) => (
       <li key={i} className="details-procedures-li">
         <div className="flex flex-jc-sb flex-align">
           <p className="details-proc-li--heading">{`Step ${i + 1}`}</p>
@@ -100,8 +105,8 @@ function Details() {
   }
 
   function renderTags(recipe: ObjForEach) {
-    const tags = recipe.strTags.split(',');
-    const markup = tags.map((tag: string) => (
+    const tags = recipe.strTags?.split(',');
+    const markup = tags?.map((tag: string) => (
       <p key={tag} className="details-tags">
         {tag.toUpperCase()}
       </p>
@@ -150,9 +155,9 @@ function Details() {
           className="details-video"
           width="560"
           height="315"
-          src={`https://www.youtube.com/embed/${recipe.strYoutube
-            .split('=')
-            .at(1)}`}
+          src={`https://www.youtube.com/embed/${
+            recipe.strYoutube?.split('=').at(1) as string
+          }`}
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -176,7 +181,7 @@ function Details() {
   }
 
   useEffect(() => {
-    getDetails();
+    void getDetails();
   }, []);
 
   return (
@@ -188,7 +193,7 @@ function Details() {
     >
       <div className="flex flex-col flex-gap-06">
         <TopNavigationBar
-          backgroundHandler={backgroundHandler}
+          backgroundHandler={void backgroundHandler}
           condition={backgroundFade}
         />
         <RenderImgOrVideo />
