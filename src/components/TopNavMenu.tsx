@@ -6,9 +6,18 @@ import {
   IoIosBookmark,
 } from 'react-icons/io';
 
-// function renderModal() {}   Createa function for rendering a modal for share and rate
 // Create a link for the review page
 // Createa functionality of bookmarking
+function ShareOrRateModal(modal: string) {
+  const shareMarkup = <p>share</p>;
+  const rateMarkup = <p>Rate</p>;
+  switch (modal) {
+    case 'share':
+      return shareMarkup;
+    case 'rate':
+      return rateMarkup;
+  }
+}
 
 function TopNavMenu(condition: boolean) {
   const [clicked, setClicked] = useState('');
