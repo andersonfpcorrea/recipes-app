@@ -1,3 +1,6 @@
 /node_modules
 /config.env
+/cypress/downloads
+/cypress/e2e/1-getting-started
+/cypress/e2e/1-advanced-examples
 
