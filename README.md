@@ -1,6 +1,4 @@
-# _[Recipes app](https://recipes-app-andersonfpcorrea.netlify.app/)_
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/388cb50e-e37e-4bc7-ba60-8e4c253d6322/deploy-status)](https://app.netlify.com/sites/recipes-app-andersonfpcorrea/deploys)
+# _[Recipes app](https://recipes-app.pages.dev/)_
 
 <details>
 <summary><strong>Leia a descrição do projeto em português 🇧🇷</strong></summary>
@@ -8,7 +6,7 @@
 
 ### Descrição
 
-Este projeto será um app de receitas. Clique aqui _[aqui](https://recipes-app-andersonfpcorrea.netlify.app/)_ para conferir o progresso até o momento.
+Este projeto será um app de receitas. Clique aqui _[aqui](https://recipes-app.pages.dev/)_ para conferir o progresso até o momento.
 
 São consumidos dados das seguintes APIs: _[spoonacular API](https://spoonacular.com/food-api/)_, _[mealdb API](https://www.themealdb.com/api.php)_, e _[REST Countries API](https://restcountries.com/#rest-countries)_.
 
@@ -30,7 +28,7 @@ São consumidos dados das seguintes APIs: _[spoonacular API](https://spoonacular
 
 ### Description
 
-This project is going to be a recipes app. Click _[here](https://recipes-app-andersonfpcorrea.netlify.app/)_ to check the progress so far.
+This project is going to be a recipes app. Click _[here](https://recipes-app.pages.dev/)_ to check the progress so far.
 
 Data are consumed from _[spoonacular API](https://spoonacular.com/food-api/)_, _[mealdb API](https://www.themealdb.com/api.php)_, and _[REST Countries API](https://restcountries.com/#rest-countries)_.
 
