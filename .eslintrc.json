@@ -39,8 +39,5 @@
     "prettier/prettier": "error",
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error"
-  },
-  "settings": {
-    "version": "detect"
   }
 }

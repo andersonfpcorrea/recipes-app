@@ -4,3 +4,5 @@ dist
 jest.config.js 
 __mocks__
 cypress
+.storybook
+src/tests
