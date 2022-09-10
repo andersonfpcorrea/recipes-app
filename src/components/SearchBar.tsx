@@ -1,6 +1,6 @@
 import { Dispatch, SyntheticEvent, useContext, useState } from 'react';
 import { IoOptionsOutline } from 'react-icons/io5';
-import { AppContext, AppContextInterface } from '../context/AppProvider';
+import { AppContext } from '../context/AppProvider';
 import { basicFilters } from '../data/mealsCategories';
 import { getMeals } from '../utils/fetch';
 import { setSearchOnLocalStorage } from '../utils/helpers';
@@ -96,13 +96,13 @@ function SearchBar(props: propsType) {
     <form
       className="search-bar"
       onSubmit={(e) =>
-        handleSubmit(
+        void handleSubmit(
           e,
           setSearchInput,
           searchInput,
           filter,
-          setSearchResultState,
-          setSearchPageMessage,
+          setSearchResultState as SetSearchResult,
+          setSearchPageMessage as SetInput,
           callbacksSearchPage
         )
       }

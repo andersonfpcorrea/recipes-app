@@ -1,16 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { Dispatch, useState } from 'react';
 import { createContext } from 'react';
-import { getSearchFromLocalStorage } from '../utils/helpers';
 import { SearchResultStateInterface } from '../utils/interfaces';
 
 export type AppContextInterface = {
   searchResultState: SearchResultStateInterface;
-  setSearchResultState: (value: SearchResultStateInterface) => undefined;
+  setSearchResultState: Dispatch<[]>;
   searchPageMessage: string;
-  setSearchPageMessage: (value: string) => undefined;
+  setSearchPageMessage: Dispatch<string>;
 };
 
-export const AppContext = createContext<any>(null);
+export const AppContext = createContext<AppContextInterface>({
+  searchResultState: [],
+  setSearchResultState: () => undefined,
+  searchPageMessage: '',
+  setSearchPageMessage: () => undefined,
+});
 
 // FIXME: Fix the type of AppProvider.
 export const AppProvider: React.FC | any = ({
