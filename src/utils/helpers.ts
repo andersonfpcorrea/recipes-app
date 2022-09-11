@@ -1,4 +1,8 @@
-import { PredicateFunction, ObjForEach } from './interfaces';
+import {
+  PredicateFunction,
+  ObjForEach,
+  ObjectWithStrKeysAndStrNullValues,
+} from './interfaces';
 import { countries } from '../data/countries';
 import { Dispatch } from 'react';
 
@@ -12,10 +16,12 @@ export const setSearchOnLocalStorage = (value: ArrayOfObjects) => {
 };
 
 export const getSearchFromLocalStorage = (
-  setter: Dispatch<ArrayOfObjects | null>
+  setter: Dispatch<[ObjectWithStrKeysAndStrNullValues]>
 ) => {
   const json = localStorage.getItem('search');
-  const data = json ? (JSON.parse(json) as ArrayOfObjects) : null;
+  const data = json
+    ? (JSON.parse(json) as [ObjectWithStrKeysAndStrNullValues])
+    : null;
   data && setter(data);
 };
 

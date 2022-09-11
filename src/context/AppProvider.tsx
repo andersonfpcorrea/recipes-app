@@ -1,10 +1,13 @@
 import React, { Dispatch, useState } from 'react';
 import { createContext } from 'react';
-import { SearchResultStateInterface } from '../utils/interfaces';
+import {
+  ObjectWithStrKeysAndStrNullValues,
+  SearchResultStateInterface,
+} from '../utils/interfaces';
 
 export type AppContextInterface = {
-  searchResultState: SearchResultStateInterface;
-  setSearchResultState: Dispatch<[]>;
+  searchResultState: SearchResultStateInterface | [];
+  setSearchResultState: Dispatch<[ObjectWithStrKeysAndStrNullValues]>;
   searchPageMessage: string;
   setSearchPageMessage: Dispatch<string>;
 };

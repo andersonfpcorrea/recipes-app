@@ -1,7 +1,9 @@
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // SEARCH PAGE INTERFACES
 // searchPageState:
-export type SearchResultStateInterface = RecipesType;
+export type SearchResultStateInterface =
+  | [ObjectWithStrKeysAndStrNullValues]
+  | [];
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -15,7 +17,7 @@ export type RecipeType = {
   [propName: string]: string | null;
 };
 export interface PropsType {
-  recipes: [RecipeType] | [];
+  recipes: [ObjectWithStrKeysAndStrNullValues] | [];
 }
 export type RecipesType = [RecipeType] | [];
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
