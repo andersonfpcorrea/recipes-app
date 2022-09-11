@@ -83,8 +83,14 @@ export interface fullMealDetails {
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // HELPER FUNCTIONS INTERFACES
 // objForEach():
-export type PredicateFunction = (key: string, value: any) => boolean;
+export type PredicateFunction = (key: string, value: string | null) => boolean;
 export type ObjForEach =
   | RecipeType
   | { [key: string | number | symbol]: string };
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// GENERIC INTERFACES
+// Object with key:string and value: string | null (which is the share of the returned data from mealdb)
+export type ObjectWithStrKeysAndStrNullValues = Record<string, string | null>;
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

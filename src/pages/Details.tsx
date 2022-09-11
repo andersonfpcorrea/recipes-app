@@ -1,13 +1,8 @@
 import { SyntheticEvent, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMeals } from '../utils/fetch';
-import {
-  ArrayOfObjects,
-  getFlag,
-  mapObjValuesToArray,
-  objForEach,
-} from '../utils/helpers';
-import { ObjForEach } from '../utils/interfaces';
+import { getFlag, mapObjValuesToArray, objForEach } from '../utils/helpers';
+import { ObjectWithStrKeysAndStrNullValues } from '../utils/interfaces';
 import { GiHotMeal } from 'react-icons/gi';
 import Author from '../components/Author';
 import TopNavigationBar from '../components/TopNavigationBar';
@@ -23,7 +18,7 @@ const reviews = Math.ceil(Math.random() * 100);
 
 function Details() {
   const { id } = useParams();
-  const [recipe, setRecipe] = useState<ObjForEach>({});
+  const [recipe, setRecipe] = useState<ObjectWithStrKeysAndStrNullValues>({});
   const [ingredients, setIngredients] = useState<IngredientsAndMeasures>({
     ingredients: [''],
     measures: [''],
@@ -34,22 +29,22 @@ function Details() {
   const [backgroundFade, setBackgroundFade] = useState(false);
 
   async function getDetails() {
-    const [details] = await getMeals(null, null, null, id);
+    const [details] = (await getMeals(null, null, null, id)) as [
+      ObjectWithStrKeysAndStrNullValues
+    ];
 
     setRecipe(details);
     setIngredients(getIngredientsList(details));
     setSteps(getRecipeSteps(details));
   }
 
-  function getIngredientsList(recipe: ObjForEach) {
-    const ingredients = objForEach(
-      recipe,
-      (key, value) => key.includes('strIngredient') && value
+  function getIngredientsList(recipe: ObjectWithStrKeysAndStrNullValues) {
+    const ingredients = objForEach(recipe, (key, value: string | null) =>
+      Boolean(key.includes('strIngredient') && value)
     );
     const ingArray = mapObjValuesToArray(ingredients);
-    const measures = objForEach(
-      recipe,
-      (key, value) => key.includes('strMeasure') && value
+    const measures = objForEach(recipe, (key, value: string | null) =>
+      Boolean(key.includes('strMeasure') && value)
     );
     const measuresArray = mapObjValuesToArray(measures);
 
@@ -59,8 +54,11 @@ function Details() {
     };
   }
 
-  function getRecipeSteps(recipe: ObjForEach) {
-    return recipe.strInstructions?.split('\r\n').length;
+  function getRecipeSteps(recipe: ObjectWithStrKeysAndStrNullValues) {
+    // return recipe.strInstructions?.split('\r\n').length;
+    if (recipe.strInstructions)
+      return recipe.strInstructions?.split('\r\n').length;
+    return 0;
   }
 
   function renderIngredientsList(ing: IngredientsAndMeasures) {
@@ -83,7 +81,7 @@ function Details() {
       ?.classList.toggle('td-lt');
   }
 
-  function renderProceduresList(ing: ObjForEach) {
+  function renderProceduresList(ing: ObjectWithStrKeysAndStrNullValues) {
     const { strInstructions } = ing;
     const instructions = strInstructions?.split('\r\n');
 
@@ -104,7 +102,7 @@ function Details() {
     return list;
   }
 
-  function renderTags(recipe: ObjForEach) {
+  function renderTags(recipe: ObjectWithStrKeysAndStrNullValues) {
     const tags = recipe.strTags?.split(',');
     const markup = tags?.map((tag: string) => (
       <p key={tag} className="details-tags">
@@ -126,11 +124,11 @@ function Details() {
       return (
         <div
           className="details-img flex"
-          style={{ backgroundImage: `url('${recipe.strMealThumb}')` }}
+          style={{ backgroundImage: `url('${recipe.strMealThumb as string}')` }}
         >
           <img
-            src={getFlag(recipe.strArea)}
-            alt={recipe.strMeal}
+            src={getFlag(recipe.strArea as string)}
+            alt={recipe.strMeal as string}
             className="details-img__flag"
           />
         </div>
@@ -139,12 +137,12 @@ function Details() {
       return (
         <div
           className="details-img details-img--fake-player flex pos-rel"
-          style={{ backgroundImage: `url('${recipe.strMealThumb}')` }}
+          style={{ backgroundImage: `url('${recipe.strMealThumb as string}')` }}
           onClick={() => setLoadVideo(true)}
         >
           <img
-            src={getFlag(recipe.strArea)}
-            alt={recipe.strMeal}
+            src={getFlag(recipe.strArea as string)}
+            alt={recipe.strMeal as string}
             className="details-img__flag"
           />
         </div>

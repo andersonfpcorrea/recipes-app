@@ -1,3 +1,5 @@
+import { ArrayOfObjects } from './helpers';
+
 const searchMealsdb = {
   byName: (name: string) =>
     `https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`,
@@ -24,13 +26,13 @@ const searchMealsdb = {
    * @returns
    */
   getIngredientImg: (ing: string) =>
-    `https://www.themealdb.com/images/ingredients/`,
+    `https://www.themealdb.com/images/ingredients/${ing}`,
 };
 
 const fetchFromMealdb = async (url: string) =>
   await fetch(url)
     .then((res) => res.json())
-    .then((data: { meals: [{ [key: string]: string | null }] }) => data.meals)
+    .then((data: { meals: ArrayOfObjects }) => data.meals)
     .catch((err) =>
       console.log('Sonthing went wrong during fetching of data! 💣🤯:', err)
     );

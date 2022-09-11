@@ -19,7 +19,10 @@ export const getSearchFromLocalStorage = (
   data && setter(data);
 };
 
-export const objForEach = (obj: ObjForEach, predicate: PredicateFunction) => {
+export const objForEach = (
+  obj: Record<string, string | null>,
+  predicate: PredicateFunction
+) => {
   const results: Record<string, unknown> = {};
   const keys = Object.keys(obj);
   keys.forEach((key: string) => {
