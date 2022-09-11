@@ -41,8 +41,7 @@ async function handleSubmit(
   try {
     const cleanedQuery =
       filter === 'First Letter' ? query.trim().at(0) : query.trim();
-    const meals: [{ [propName: string]: string | null }] | void | RecipesType =
-      await getMeals(filter, null, cleanedQuery);
+    const meals = await getMeals(filter, null, cleanedQuery);
     if (meals === null) {
       searchResultStateSetter([]);
       return searchMessageStateSetter(
