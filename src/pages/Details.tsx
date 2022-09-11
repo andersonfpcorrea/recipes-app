@@ -191,7 +191,7 @@ function Details() {
     >
       <div className="flex flex-col flex-gap-06">
         <TopNavigationBar
-          backgroundHandler={void backgroundHandler}
+          backgroundHandler={backgroundHandler}
           condition={backgroundFade}
         />
         <RenderImgOrVideo />

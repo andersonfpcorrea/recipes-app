@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import TopNavMenu from '../components/TopNavMenu'
 
 interface TopBarProps {
-  backgroundHandler?: () => undefined
+  backgroundHandler?: () => void
   condition: boolean
 }
 
