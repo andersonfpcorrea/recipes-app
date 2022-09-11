@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useState } from 'react'
 import {
   IoIosShareAlt,
   IoMdStar,
   IoMdText,
   IoIosBookmark,
-} from 'react-icons/io';
+} from 'react-icons/io'
 
 // Create a link for the review page
 // Createa functionality of bookmarking
@@ -21,8 +21,8 @@ import {
 // }
 
 function TopNavMenu(condition: boolean) {
-  const [clicked, setClicked] = useState('');
-  console.log(clicked); // FIXME: Remove this console.log and continue implementation.
+  const [clicked, setClicked] = useState('')
+  console.log(clicked) // FIXME: Remove this console.log and continue implementation.
 
   if (condition)
     return (
@@ -30,7 +30,7 @@ function TopNavMenu(condition: boolean) {
         <div
           className="flex flex-col flex-gap-16 nav-menu"
           onClick={(e) => {
-            e.stopPropagation();
+            e.stopPropagation()
           }}
         >
           <div
@@ -57,8 +57,8 @@ function TopNavMenu(condition: boolean) {
           </div>
         </div>
       </div>
-    );
-  return <p>{''}</p>;
+    )
+  return <p>{''}</p>
 }
 
-export default TopNavMenu;
+export default TopNavMenu

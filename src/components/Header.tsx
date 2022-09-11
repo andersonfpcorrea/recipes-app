@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import Icons from '../assets/icons.svg'; //icon-user
-import SearchBar from './SearchBar';
+import { Link } from 'react-router-dom'
+import Icons from '../assets/icons.svg' //icon-user
+import SearchBar from './SearchBar'
 
 function Header() {
   return (
@@ -20,7 +20,7 @@ function Header() {
         </Link>
       </div>
     </header>
-  );
+  )
 }
 
-export default Header;
+export default Header

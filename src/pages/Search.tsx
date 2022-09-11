@@ -1,40 +1,40 @@
-import SearchBar from '../components/SearchBar';
-import Icons from '../assets/icons.svg';
-import { useNavigate } from 'react-router-dom';
-import Cards from '../components/Cards';
-import { useContext, useEffect, useState } from 'react';
-import { AppContext } from '../context/AppProvider';
-import { getSearchFromLocalStorage } from '../utils/helpers';
+import SearchBar from '../components/SearchBar'
+import Icons from '../assets/icons.svg'
+import { useNavigate } from 'react-router-dom'
+import Cards from '../components/Cards'
+import { useContext, useEffect, useState } from 'react'
+import { AppContext } from '../context/AppProvider'
+import { getSearchFromLocalStorage } from '../utils/helpers'
 
 function Search() {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   const {
     searchResultState,
     setSearchResultState,
     searchPageMessage,
     setSearchPageMessage,
-  } = useContext(AppContext);
-  const [fromLocal, setFromLocal] = useState(true);
-  const [showNumberOfResults, setShowNumberOfResults] = useState(false);
+  } = useContext(AppContext)
+  const [fromLocal, setFromLocal] = useState(true)
+  const [showNumberOfResults, setShowNumberOfResults] = useState(false)
 
   useEffect(() => {
-    document.getElementById('search-input')?.focus();
-    getSearchFromLocalStorage(setSearchResultState);
-    setFromLocal(true);
-    setSearchPageMessage('');
-  }, []);
+    document.getElementById('search-input')?.focus()
+    getSearchFromLocalStorage(setSearchResultState)
+    setFromLocal(true)
+    setSearchPageMessage('')
+  }, [])
 
   const navigateBack = () => {
-    navigate(-1);
-  };
+    navigate(-1)
+  }
 
   const renderResults = () => {
     if (searchResultState.length > 0)
-      return <Cards recipes={searchResultState} />;
+      return <Cards recipes={searchResultState} />
     if (searchPageMessage)
-      return <p className="ta-center">{searchPageMessage}</p>;
-    return <p className="ta-center">Nothing here 🤔. Give it a try 👍</p>;
-  };
+      return <p className="ta-center">{searchPageMessage}</p>
+    return <p className="ta-center">Nothing here 🤔. Give it a try 👍</p>
+  }
 
   return (
     <main className="page-container">
@@ -69,7 +69,7 @@ function Search() {
         </div>
       </section>
     </main>
-  );
+  )
 }
 
-export default Search;
+export default Search

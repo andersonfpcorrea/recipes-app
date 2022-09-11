@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import Logo from '../assets/favicon.png';
-import Icons from '../assets/icons.svg';
+import { Link } from 'react-router-dom'
+import Logo from '../assets/favicon.png'
+import Icons from '../assets/icons.svg'
 
 function Hero() {
   return (
@@ -21,7 +21,7 @@ function Hero() {
         </Link>
       </div>
     </section>
-  );
+  )
 }
 
-export default Hero;
+export default Hero

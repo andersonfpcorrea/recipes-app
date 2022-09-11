@@ -1,31 +1,31 @@
-import Icon from '../assets/favicon.png';
-import { BsGoogle, BsFacebook, BsTwitter } from 'react-icons/bs';
-import isEmail from 'validator/lib/isEmail';
-import { SyntheticEvent, useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import Icon from '../assets/favicon.png'
+import { BsGoogle, BsFacebook, BsTwitter } from 'react-icons/bs'
+import isEmail from 'validator/lib/isEmail'
+import { SyntheticEvent, useState } from 'react'
+import { useNavigate, Link } from 'react-router-dom'
 
 function LoginForm() {
-  const [user, setUser] = useState({ email: '', password: '' });
-  const [validationError, setValidationError] = useState(false);
-  const navigate = useNavigate();
+  const [user, setUser] = useState({ email: '', password: '' })
+  const [validationError, setValidationError] = useState(false)
+  const navigate = useNavigate()
 
   const handleInput = ({ target }: SyntheticEvent) => {
-    const { value, type } = target as HTMLInputElement;
-    setUser((prevState) => ({ ...prevState, [type]: value }));
-  };
+    const { value, type } = target as HTMLInputElement
+    setUser((prevState) => ({ ...prevState, [type]: value }))
+  }
 
   const handleSubmit = (e: SyntheticEvent) => {
-    e.preventDefault();
-    isEmail(user.email) && user.password.length > 7 && navigate('/home');
-    setValidationError(true);
-  };
+    e.preventDefault()
+    isEmail(user.email) && user.password.length > 7 && navigate('/home')
+    setValidationError(true)
+  }
 
   const renderValidationError = (msg: string) => {
     if (validationError) {
       // setTimeout(() => setValidationError(false), 5000);
-      return <p className="error-el-login-inputs">{msg}</p>;
+      return <p className="error-el-login-inputs">{msg}</p>
     }
-  };
+  }
 
   return (
     <form className="form-login" onSubmit={handleSubmit}>
@@ -110,7 +110,7 @@ function LoginForm() {
         </p>
       </div>
     </form>
-  );
+  )
 }
 
-export default LoginForm;
+export default LoginForm
