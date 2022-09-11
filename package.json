@@ -8,8 +8,8 @@
     "npm": ">=8.1.0"
   },
   "scripts": {
-    "test": "jest --watch",
-    "test:coverage": "jest --coverage --watch",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "dev": "vite",
