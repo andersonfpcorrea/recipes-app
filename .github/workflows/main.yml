@@ -1,5 +1,5 @@
 name: 'Main'
-on: [push]
+on: push
 jobs:
   lint-and-test:
     name: Run linters and then tests
@@ -21,9 +21,11 @@ jobs:
         run: npm test
         env:
           CI: true
-       - name: Checkout
-        uses: actions/checkout@v2
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v4
+      - name: Run Cypress
+        uses: cypress-io/github-action@v2
+        with:
+          build: npm run build
+          start: npm run serve -- --port=3000
+          wait-on: http://localhost:3000
+          browser: chrome
+          headless: true
