@@ -17,7 +17,7 @@ export type RecipeType = {
   [propName: string]: string | null;
 };
 export interface PropsType {
-  recipes: [ObjectWithStrKeysAndStrNullValues] | [];
+  recipes: [ObjectWithStrKeysAndStrNullValues | RecipeType] | [];
 }
 export type RecipesType = [RecipeType] | [];
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

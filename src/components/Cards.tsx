@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { RecipeType, RecipesType, PropsType } from '../utils/interfaces.js';
+import { RecipeType, PropsType } from '../utils/interfaces.js';
 import { getFlag } from '../utils/helpers';
 
 function Cards(props: PropsType) {
@@ -35,10 +35,10 @@ function Cards(props: PropsType) {
     );
   };
 
-  const renderCards = (recipes: RecipesType | []) =>
+  const renderCards = (recipes: [RecipeType]) =>
     recipes.map((recipe) => markup(recipe));
 
-  return <>{renderCards(recipes)}</>;
+  return <>{renderCards(recipes as [RecipeType])}</>;
 }
 
 export default Cards;
