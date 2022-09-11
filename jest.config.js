@@ -7,4 +7,5 @@ export default {
     '\\.(css|less)$': 'identity-obj-proxy',
   },
   testEnvironment: 'jest-environment-jsdom',
-};
+  setupFilesAfterEnv: ['<rootDir>/jest-dom.d.ts'],
+}
