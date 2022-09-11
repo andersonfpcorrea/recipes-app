@@ -8,14 +8,15 @@
     "npm": ">=8.1.0"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --watch",
+    "test:coverage": "jest --coverage --watch",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "compile:sass": "sass --watch src/sass/main.scss src/style/style.css",
     "lint:scripts": "eslint --ext .ts,.tsx src",
     "lint:scss": "stylelint \"src/**/*.scss\"",
-    "lint:css": "stylelint \"src/**/*.css\"",
+    "lint:styles": "stylelint \"src/**/*.css\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "cypress:open": "cypress open",

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   preset: 'ts-jest',
   testMatch: ['**/src/**/?(*.)+(spec|test).[jt]s?(x)'],
   moduleNameMapper: {
