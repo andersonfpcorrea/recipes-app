@@ -10,6 +10,8 @@
   "scripts": {
     "test": "jest --watch",
     "test:coverage": "jest --coverage --watch",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
@@ -19,7 +21,6 @@
     "lint:styles": "stylelint \"src/**/*.css\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "cypress:open": "cypress open",
     "prepare": "husky install"
   },
   "dependencies": {

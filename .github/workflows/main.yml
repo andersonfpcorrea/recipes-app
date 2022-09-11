@@ -21,11 +21,9 @@ jobs:
         run: npm test
         env:
           CI: true
-      - name: Run Cypress
-        uses: cypress-io/github-action@v2
-        with:
-          build: npm run build
-          start: npm run serve -- --port=5173
-          wait-on: http://localhost:5173
-          browser: chrome
-          headless: true
+       - name: Checkout
+        uses: actions/checkout@v2
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v4
