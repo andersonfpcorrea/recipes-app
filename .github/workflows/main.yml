@@ -21,11 +21,11 @@ jobs:
         run: npm test
         env:
           CI: true
-      - name: Run Cypress
-        uses: cypress-io/github-action@v2
+      - name: Cypress.io
+        uses: cypress-io/github-action@v4.2.0
         with:
-          build: npm run build
-          start: npm run serve -- --port=5173
-          wait-on: http://localhost:5173
+          #     build: npm run build
+          # start: npm run serve -- --port=5173
+          start: npm run dev
+          wait-on: 'http://localhost:5173'
           browser: chrome
-          headless: true
