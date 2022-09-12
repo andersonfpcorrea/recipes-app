@@ -1,3 +1,9 @@
 /node_modules
 /config.env
-
+/cypress/downloads
+/cypress/screenshots
+/cypress/videos
+/cypress/e2e/1-getting-started
+/cypress/e2e/1-advanced-examples
+/coverage
+/e2e_Cypress_examples

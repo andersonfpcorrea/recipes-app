@@ -13,7 +13,7 @@ export const mealsCategoriesObj = {
   STARTER: 'Starter',
   VEGAN: 'Vegan',
   VEGETARIAN: 'Vegetarian',
-};
+}
 
 export const mealsCategoryArray = [
   'Beef',
@@ -30,6 +30,6 @@ export const mealsCategoryArray = [
   'Starter',
   'Vegan',
   'Vegetarian',
-];
+]
 
-export const basicFilters = ['Name', 'First Letter', 'Main Ingredient'];
+export const basicFilters = ['Name', 'First Letter', 'Main Ingredient']

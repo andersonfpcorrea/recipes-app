@@ -1,12 +1,12 @@
-import { Link } from 'react-router-dom';
-import { RecipeType, RecipesType, PropsType } from '../utils/interfaces.js';
-import { getFlag } from '../utils/helpers';
+import { Link } from 'react-router-dom'
+import { RecipeType, PropsType } from '../utils/interfaces.js'
+import { getFlag } from '../utils/helpers'
 
 function Cards(props: PropsType) {
-  const { recipes } = props;
+  const { recipes } = props
 
   const markup = (recipe: RecipeType) => {
-    const flag = getFlag(recipe.strArea);
+    const flag = getFlag(recipe.strArea)
     return (
       <Link to={`/details/${recipe.idMeal}`} key={recipe.idMeal}>
         <figure
@@ -32,13 +32,13 @@ function Cards(props: PropsType) {
           </div>
         </figure>
       </Link>
-    );
-  };
+    )
+  }
 
-  const renderCards = (recipes: RecipesType | []) =>
-    recipes.map((recipe) => markup(recipe));
+  const renderCards = (recipes: [RecipeType]) =>
+    recipes.map((recipe) => markup(recipe))
 
-  return <>{renderCards(recipes)}</>;
+  return <>{renderCards(recipes as [RecipeType])}</>
 }
 
-export default Cards;
+export default Cards

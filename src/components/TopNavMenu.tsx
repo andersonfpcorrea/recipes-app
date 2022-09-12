@@ -1,33 +1,36 @@
-import { useState } from 'react';
+import { useState } from 'react'
 import {
   IoIosShareAlt,
   IoMdStar,
   IoMdText,
   IoIosBookmark,
-} from 'react-icons/io';
+} from 'react-icons/io'
 
 // Create a link for the review page
 // Createa functionality of bookmarking
-function ShareOrRateModal(modal: string) {
-  const shareMarkup = <p>share</p>;
-  const rateMarkup = <p>Rate</p>;
-  switch (modal) {
-    case 'share':
-      return shareMarkup;
-    case 'rate':
-      return rateMarkup;
-  }
-}
+// TODO: Continue from here:
+// function ShareOrRateModal(modal: string) {
+//   const shareMarkup = <p>share</p>;
+//   const rateMarkup = <p>Rate</p>;
+//   switch (modal) {
+//     case 'share':
+//       return shareMarkup;
+//     case 'rate':
+//       return rateMarkup;
+//   }
+// }
 
 function TopNavMenu(condition: boolean) {
-  const [clicked, setClicked] = useState('');
+  const [clicked, setClicked] = useState('')
+  console.log(clicked) // FIXME: Remove this console.log and continue implementation.
+
   if (condition)
     return (
       <div className="nav-menu-bg">
         <div
           className="flex flex-col flex-gap-16 nav-menu"
           onClick={(e) => {
-            e.stopPropagation();
+            e.stopPropagation()
           }}
         >
           <div
@@ -54,8 +57,8 @@ function TopNavMenu(condition: boolean) {
           </div>
         </div>
       </div>
-    );
-  return <p>{''}</p>;
+    )
+  return <p>{''}</p>
 }
 
-export default TopNavMenu;
+export default TopNavMenu

@@ -39,3 +39,8 @@
 - Fix type of context provider on AppProvider.tsx
 
 - Fix ESLint
+
+============
+
+- SETUP BRANCH:
+- Continue from setting up Cypress

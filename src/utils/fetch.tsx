@@ -1,3 +1,5 @@
+import { ArrayOfObjects } from './helpers'
+
 const searchMealsdb = {
   byName: (name: string) =>
     `https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`,
@@ -24,40 +26,40 @@ const searchMealsdb = {
    * @returns
    */
   getIngredientImg: (ing: string) =>
-    `https://www.themealdb.com/images/ingredients/`,
-};
+    `https://www.themealdb.com/images/ingredients/${ing}`,
+}
 
 const fetchFromMealdb = async (url: string) =>
   await fetch(url)
     .then((res) => res.json())
-    .then((data) => data.meals)
+    .then((data: { meals: ArrayOfObjects }) => data.meals)
     .catch((err) =>
       console.log('Sonthing went wrong during fetching of data! 💣🤯:', err)
-    );
+    )
 
 const getMealsByBasicFilter = async (basicFilter: string, query: string) => {
-  const NAME = 'Name';
-  const FIRST_LETTER = 'First Letter';
-  const MAIN_INGREDIENT = 'Main Ingredient';
+  const NAME = 'Name'
+  const FIRST_LETTER = 'First Letter'
+  const MAIN_INGREDIENT = 'Main Ingredient'
   switch (basicFilter) {
     case NAME:
-      return await fetchFromMealdb(searchMealsdb.byName(query));
+      return await fetchFromMealdb(searchMealsdb.byName(query))
     case FIRST_LETTER:
-      return await fetchFromMealdb(searchMealsdb.byFirstLetter(query));
+      return await fetchFromMealdb(searchMealsdb.byFirstLetter(query))
     case MAIN_INGREDIENT:
-      return await fetchFromMealdb(searchMealsdb.filterByMainIng(query));
+      return await fetchFromMealdb(searchMealsdb.filterByMainIng(query))
     default:
-      return await fetchFromMealdb(searchMealsdb.byName(query));
+      return await fetchFromMealdb(searchMealsdb.byName(query))
   }
-};
+}
 
 const getMealsByCategory = async (category: string) => {
-  return await fetchFromMealdb(searchMealsdb.filterByCategory(category));
-};
+  return await fetchFromMealdb(searchMealsdb.filterByCategory(category))
+}
 
 const getMealByID = async (id: string) => {
-  return await fetchFromMealdb(searchMealsdb.byID(id));
-};
+  return await fetchFromMealdb(searchMealsdb.byID(id))
+}
 
 export async function getMeals(
   basicFilter: string | null = null,
@@ -66,7 +68,7 @@ export async function getMeals(
   id: string | null = null
 ) {
   if (basicFilter && query)
-    return await getMealsByBasicFilter(basicFilter, query);
-  if (category) return await getMealsByCategory(category);
-  if (id) return await getMealByID(id);
+    return await getMealsByBasicFilter(basicFilter, query)
+  if (category) return await getMealsByCategory(category)
+  if (id) return await getMealByID(id)
 }

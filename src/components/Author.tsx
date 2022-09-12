@@ -1,23 +1,23 @@
-import { useEffect, useState } from 'react';
-import { getRandomPerson } from '../data/persons';
-import { HiLocationMarker } from 'react-icons/hi';
+import { useEffect, useState } from 'react'
+import { getRandomPerson } from '../data/persons'
+import { HiLocationMarker } from 'react-icons/hi'
 
 function Author() {
-  const [photo, setPhoto] = useState('');
-  const [name, setName] = useState('');
-  const [place, setPlace] = useState('');
-  const [follow, setFollow] = useState(false);
+  const [photo, setPhoto] = useState('')
+  const [name, setName] = useState('')
+  const [place, setPlace] = useState('')
+  const [follow, setFollow] = useState(false)
 
   useEffect(() => {
-    const author = getRandomPerson();
-    setPhoto(author.photoUrl);
-    setName(author.name);
-    setPlace(author.place);
-  }, []);
+    const author = getRandomPerson()
+    setPhoto(author.photoUrl)
+    setName(author.name)
+    setPlace(author.place)
+  }, [])
 
   const handleFollow = () => {
-    setFollow((prev) => !prev);
-  };
+    setFollow((prev) => !prev)
+  }
 
   return (
     <div className="flex flex-jc-sb flex-align">
@@ -33,13 +33,13 @@ function Author() {
       </div>
       <button
         type="button"
-        className={`author-flw-btn author-flw--${follow}`}
+        className={`author-flw-btn author-flw--${follow ? 'true' : 'false'}`}
         onClick={handleFollow}
       >
         {follow ? 'Unfollow' : 'Follow'}
       </button>
     </div>
-  );
+  )
 }
 
-export default Author;
+export default Author
