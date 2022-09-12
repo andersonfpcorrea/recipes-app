@@ -8,6 +8,8 @@
 
 Este projeto será um app de receitas. Clique aqui _[aqui](https://recipes-app.pages.dev/)_ para conferir o progresso até o momento.
 
+Meu objetivo é fazer um tipo de rede social em que o usuário tenha instruções de receitas, contador de calorias e gerador de lista de compras. O app está em progresso: para uma melhor experiência ajuste o tamanho da tela para 640px.
+
 São consumidos dados das seguintes APIs: _[spoonacular API](https://spoonacular.com/food-api/)_, _[mealdb API](https://www.themealdb.com/api.php)_, e _[REST Countries API](https://restcountries.com/#rest-countries)_.
 
 ### Setup do projeto
@@ -36,6 +38,7 @@ São consumidos dados das seguintes APIs: _[spoonacular API](https://spoonacular
 
 </details>
 <br />
+<br />
 <details open>
 <summary><strong>Read the project's description in English 🇬🇧</strong></summary>
 <br />
@@ -43,6 +46,8 @@ São consumidos dados das seguintes APIs: _[spoonacular API](https://spoonacular
 ### Description
 
 This project is going to be a recipes app. Click _[here](https://recipes-app.pages.dev/)_ to check the progress so far.
+
+My goal is to make a kind of social network on which the user can find recipes turorials with calories counter and a grocery list generator. It is in progress and yet no fully responsive: for a better experience, adjust your screen size to 640px.
 
 Data are consumed from _[spoonacular API](https://spoonacular.com/food-api/)_, _[mealdb API](https://www.themealdb.com/api.php)_, and _[REST Countries API](https://restcountries.com/#rest-countries)_.
 
