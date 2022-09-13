@@ -26,7 +26,7 @@ function ShareModal(props: Props) {
           Copy the recipe link and share it with friends and family.
         </p>
         <div
-          className={`share-modal__link-bar flex flex-jc-sb flex-align ${
+          className={`share-modal__link-bar flex flex-jc-sb flex-align flex-gap-04 ${
             copied ? 'off' : 'on'
           }`}
         >

@@ -10,11 +10,10 @@
   .share-modal__link-bar {
     background-color: $color-grey-light-2;
     border-radius: 1rem;
-    // padding-left: 1rem;
     border-left: 1rem solid $color-grey-light-2;
     & p {
       white-space: nowrap;
-      width: 15rem;
+      width: 100%;
       overflow: hidden;
     }
     & span {
@@ -32,6 +31,7 @@
     font-weight: 600;
     font-size: 1.2rem;
     padding: 1rem;
+    width: 10rem;
   }
 }
 
