@@ -1,12 +1,12 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import React from 'react'
 import Author from '../components/Author'
 import '../style/style.css'
 
 export default {
   title: 'Components/Author',
   component: Author,
-} as ComponentMeta<typeof Author>
+}
 
-const Template: ComponentStory<typeof Author> = () => <Author />
+const Template = () => <Author />
 
 export const Default = Template.bind({})

@@ -34,7 +34,7 @@
     "project": "./tsconfig.json"
   },
   "plugins": ["react", "@typescript-eslint", "jest"],
-  "ignorePatterns": ["cypress/**/*"],
+  "ignorePatterns": ["cypress/**/*", "src/stories/**/*"],
   "rules": {
     "prettier/prettier": "error",
     "react/jsx-uses-react": "error",
