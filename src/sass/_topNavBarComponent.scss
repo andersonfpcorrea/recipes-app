@@ -37,6 +37,9 @@
   z-index: 99;
   animation: entrance 0.3s normal;
   filter: none;
+  & div {
+    cursor: pointer;
+  }
 }
 
 @keyframes entrance {

@@ -60,6 +60,7 @@ function RateModal(props: PropsModal) {
               stars ? 'on' : 'off'
             }`}
             onClick={() => {
+              if (stars === 0) return null
               setRated(true)
               setTimeout(() => closeModal((prev) => !prev), 2500)
             }}
