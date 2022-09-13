@@ -1,5 +1,6 @@
 import copy from 'clipboard-copy'
 import { Dispatch, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
 interface Props {
   closeModal: Dispatch<(prev: boolean) => boolean>

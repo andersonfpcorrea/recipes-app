@@ -12,9 +12,10 @@
     border-radius: 1rem;
     // padding-left: 1rem;
     border-left: 1rem solid $color-grey-light-2;
-    overflow-x: hidden;
     & p {
-      transform: translateX(-9rem);
+      white-space: nowrap;
+      width: 15rem;
+      overflow: hidden;
     }
     & span {
       margin: 0 auto;
