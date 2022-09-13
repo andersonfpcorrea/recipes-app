@@ -7,6 +7,7 @@ import { GiHotMeal } from 'react-icons/gi'
 import Author from '../components/Author'
 import TopNavigationBar from '../components/TopNavigationBar'
 import { AnimatePresence, motion } from 'framer-motion'
+import RateTag from '../components/RateTag'
 
 interface IngredientsAndMeasures {
   ingredients: Array<string>
@@ -126,11 +127,14 @@ function Details() {
           className="details-img flex"
           style={{ backgroundImage: `url('${recipe.strMealThumb as string}')` }}
         >
-          <img
-            src={getFlag(recipe.strArea as string)}
-            alt={recipe.strMeal as string}
-            className="details-img__flag"
-          />
+          <div className="flex flex-col flex-jc-sb flex-a-end">
+            <img
+              src={getFlag(recipe.strArea as string)}
+              alt={recipe.strMeal as string}
+              className="details-img__flag"
+            />
+            <RateTag />
+          </div>
         </div>
       )
     if (!loadVideo)

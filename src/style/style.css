@@ -179,6 +179,20 @@ a {
   right: 0.7rem;
 }
 
+.rate-tag {
+  display: flex;
+  align-items: center;
+  background-color: #fdeaba;
+  border-radius: 1rem;
+  gap: 0.6rem;
+  padding: 0.2rem 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.rate-tag svg {
+  color: #f7b50e;
+}
+
 .link {
   color: #f38e82;
   font-weight: 600;
@@ -390,6 +404,10 @@ a {
 
 .flex-align-end {
   align-self: flex-end;
+}
+
+.flex-a-end {
+  align-items: flex-end;
 }
 
 .flex-jc-c {

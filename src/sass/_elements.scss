@@ -92,3 +92,18 @@
   bottom: 0.2rem;
   right: 0.7rem;
 }
+
+// Rate tags
+.rate-tag {
+  display: flex;
+  align-items: center;
+  background-color: lighten($color-grad-1, 10%);
+  border-radius: 1rem;
+  gap: 0.6rem;
+  padding: 0.2rem 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  & svg {
+    color: darken($color-grad-1, 25%);
+  }
+}

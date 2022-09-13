@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom'
 import { RecipeType, PropsType } from '../utils/interfaces.js'
-import { getFlag } from '../utils/helpers'
+import RateTag from './RateTag.js'
 
 function Cards(props: PropsType) {
   const { recipes } = props
 
   const markup = (recipe: RecipeType) => {
-    const flag = getFlag(recipe.strArea)
     return (
       <Link to={`/details/${recipe.idMeal}`} key={recipe.idMeal}>
         <figure
@@ -17,15 +16,9 @@ function Cards(props: PropsType) {
             backgroundSize: 'cover',
           }}
         >
-          {flag ? (
-            <img
-              src={flag}
-              alt={recipe.strMeal}
-              className={`cards-img--searchPage`}
-            />
-          ) : (
-            <p className="flex-align-end color-white-1">?</p>
-          )}
+          <div className="flex-align-end">
+            <RateTag />
+          </div>
           <div>
             <h4 className="cards-name--searchPage">{recipe.strMeal}</h4>
             <p className="cards-category--searchPage">{recipe.strCategory}</p>

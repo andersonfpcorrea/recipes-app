@@ -5,6 +5,7 @@ import {
   IoMdText,
   IoIosBookmark,
 } from 'react-icons/io'
+import { Link, useParams } from 'react-router-dom'
 import RateModal from './RateModal'
 import ShareModal from './ShareModal'
 
@@ -15,6 +16,8 @@ interface Props {
 function TopNavMenu({ condition }: Props) {
   const [share, setShare] = useState(false)
   const [rate, setRate] = useState(false)
+  const { id } = useParams()
+
   if (condition)
     return (
       <div className="nav-menu-bg">
@@ -44,10 +47,12 @@ function TopNavMenu({ condition }: Props) {
             <IoMdStar className="fs-20" />
             <p>Rate Recipe</p>
           </div>
-          <div className="flex flex-gap-06 flex-align">
-            <IoMdText className="fs-20" />
-            <p>Review</p>
-          </div>
+          <Link to={`/reviews/${id as string}`}>
+            <div className="flex flex-gap-06 flex-align">
+              <IoMdText className="fs-20" />
+              <p>Review</p>
+            </div>
+          </Link>
           <div className="flex flex-gap-06 flex-align">
             <IoIosBookmark className="fs-20" />
             <p>Bookmark</p>
