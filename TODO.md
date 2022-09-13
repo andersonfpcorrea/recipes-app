@@ -23,8 +23,7 @@
 
 - Implement the details page:
 
-  - [OK] Implement the share btn modal markup and functionality;
-  - [NOK] Implement the rate btn modal markup and functionality;
+  - [NOK] Implement the bookmark feature;
   - [NOK] Fix bug of procedures (sometimes it is rendered an empty step);
   - [NOK] Implement saving to Details state and to localstorage the recipe progress;
   - [NOK] Implement plus/minus btns to increase/decrease servings and update ingredients on details page;

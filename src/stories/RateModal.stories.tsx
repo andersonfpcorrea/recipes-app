@@ -7,10 +7,13 @@ export default {
   component: RateModal,
 } as ComponentMeta<typeof RateModal>
 
-const Template: ComponentStory<typeof RateModal> = () => <RateModal />
+const Template: ComponentStory<typeof RateModal> = (args) => (
+  <RateModal {...args} />
+)
 
 export const FirstStory = Template.bind({})
 
-// FirstStory.args = {
-/*👇 The args you need here will depend on your component */
-// }
+FirstStory.args = {
+  /*👇 The args you need here will depend on your component */
+  closeModal: () => {},
+}
