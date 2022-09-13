@@ -5,7 +5,8 @@
   width: 90%;
   position: absolute;
   top: 40%;
-  right: 5%;
+  right: 50%;
+  transform: translateX(50%);
 
   .share-modal__link-bar {
     background-color: $color-grey-light-2;

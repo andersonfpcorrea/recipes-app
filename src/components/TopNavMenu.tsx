@@ -5,6 +5,7 @@ import {
   IoMdText,
   IoIosBookmark,
 } from 'react-icons/io'
+import RateModal from './RateModal'
 import ShareModal from './ShareModal'
 
 interface Props {
@@ -13,6 +14,7 @@ interface Props {
 
 function TopNavMenu({ condition }: Props) {
   const [share, setShare] = useState(false)
+  const [rate, setRate] = useState(false)
   if (condition)
     return (
       <div className="nav-menu-bg">
@@ -24,12 +26,21 @@ function TopNavMenu({ condition }: Props) {
         >
           <div
             className="flex flex-gap-06 flex-align"
-            onClick={() => setShare((prev) => !prev)}
+            onClick={() => {
+              if (rate) setRate(false)
+              setShare((prev) => !prev)
+            }}
           >
             <IoIosShareAlt className="fs-20" />
             <p>Share</p>
           </div>
-          <div className="flex flex-gap-06 flex-align">
+          <div
+            className="flex flex-gap-06 flex-align"
+            onClick={() => {
+              if (share) setShare(false)
+              setRate((prev) => !prev)
+            }}
+          >
             <IoMdStar className="fs-20" />
             <p>Rate Recipe</p>
           </div>
@@ -43,6 +54,7 @@ function TopNavMenu({ condition }: Props) {
           </div>
         </div>
         {share && <ShareModal closeModal={setShare} />}
+        {rate && <RateModal closeModal={setRate} />}
       </div>
     )
   return <></>

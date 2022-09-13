@@ -1,12 +1,8 @@
 import copy from 'clipboard-copy'
-import { Dispatch, useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useState } from 'react'
+import { PropsModal } from '../utils/interfaces'
 
-interface Props {
-  closeModal: Dispatch<(prev: boolean) => boolean>
-}
-
-function ShareModal(props: Props) {
+function ShareModal(props: PropsModal) {
   const { closeModal } = props
   const link = window.location.href
   const [copied, setCopied] = useState(false)
@@ -18,7 +14,7 @@ function ShareModal(props: Props) {
     >
       <div className="flex flex-jc-sb">
         <span></span>
-        <span onClick={() => closeModal((prev: boolean) => !prev)}>x</span>
+        <span onClick={() => closeModal((prev) => !prev)}>x</span>
       </div>
       <div className="flex flex-col flex-gap-10">
         <h3 className="fs-18">Recipe Link</h3>
@@ -37,6 +33,7 @@ function ShareModal(props: Props) {
             onClick={() => {
               void copy(link)
               setCopied(true)
+              setTimeout(() => closeModal((prev) => !prev), 2500)
             }}
           >
             Copy link
