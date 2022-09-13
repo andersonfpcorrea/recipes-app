@@ -29,7 +29,7 @@ function TopNavigationBar(props: TopBarProps) {
           }}
         />
       </div>
-      {TopNavMenu?.(condition)}
+      {condition && <TopNavMenu condition={condition} />}
     </nav>
   )
 }

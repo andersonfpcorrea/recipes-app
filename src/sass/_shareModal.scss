@@ -1,0 +1,59 @@
+.share-modal {
+  padding: 0.6rem 2rem 3rem;
+  border-radius: 2rem;
+  background-color: $color-white-1;
+  width: 90%;
+  position: absolute;
+  top: 40%;
+  right: 5%;
+
+  .share-modal__link-bar {
+    background-color: $color-grey-light-2;
+    border-radius: 1rem;
+    // padding-left: 1rem;
+    border-left: 1rem solid $color-grey-light-2;
+    overflow-x: hidden;
+    & p {
+      transform: translateX(-9rem);
+    }
+    & span {
+      margin: 0 auto;
+      display: inline-block;
+      padding: 1rem;
+    }
+  }
+
+  .share-modal__btn {
+    background-color: $color-primary;
+    border-radius: 1rem;
+    border: none;
+    color: $color-white-1;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+}
+
+.on {
+  transition: all 1s;
+}
+
+.on-link {
+  animation: entry 0.3s ease;
+}
+
+.off {
+  transition: all 1s;
+  display: none;
+}
+
+@keyframes entry {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -5,25 +5,14 @@ import {
   IoMdText,
   IoIosBookmark,
 } from 'react-icons/io'
+import ShareModal from './ShareModal'
 
-// Create a link for the review page
-// Createa functionality of bookmarking
-// TODO: Continue from here:
-// function ShareOrRateModal(modal: string) {
-//   const shareMarkup = <p>share</p>;
-//   const rateMarkup = <p>Rate</p>;
-//   switch (modal) {
-//     case 'share':
-//       return shareMarkup;
-//     case 'rate':
-//       return rateMarkup;
-//   }
-// }
+interface Props {
+  condition: boolean
+}
 
-function TopNavMenu(condition: boolean) {
-  const [clicked, setClicked] = useState('')
-  console.log(clicked) // FIXME: Remove this console.log and continue implementation.
-
+function TopNavMenu({ condition }: Props) {
+  const [share, setShare] = useState(false)
   if (condition)
     return (
       <div className="nav-menu-bg">
@@ -35,15 +24,12 @@ function TopNavMenu(condition: boolean) {
         >
           <div
             className="flex flex-gap-06 flex-align"
-            onClick={() => setClicked('share')}
+            onClick={() => setShare((prev) => !prev)}
           >
             <IoIosShareAlt className="fs-20" />
             <p>Share</p>
           </div>
-          <div
-            className="flex flex-gap-06 flex-align"
-            onClick={() => setClicked('rate')}
-          >
+          <div className="flex flex-gap-06 flex-align">
             <IoMdStar className="fs-20" />
             <p>Rate Recipe</p>
           </div>
@@ -56,9 +42,10 @@ function TopNavMenu(condition: boolean) {
             <p>Bookmark</p>
           </div>
         </div>
+        {share && <ShareModal closeModal={setShare} />}
       </div>
     )
-  return <p>{''}</p>
+  return <></>
 }
 
 export default TopNavMenu
