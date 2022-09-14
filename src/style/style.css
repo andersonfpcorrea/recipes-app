@@ -624,6 +624,15 @@ a {
   gap: 1rem;
   width: 100%;
 }
+.search-bar .search-bar__icon-search {
+  position: absolute;
+  fill: #918581;
+  top: 50%;
+  left: 0.6rem;
+  height: 1.8rem;
+  width: 1.8rem;
+  transform: translateY(-50%);
+}
 .search-bar .search-bar-input {
   width: 100%;
   border: 1px solid #d3c7c3;
@@ -633,6 +642,7 @@ a {
   color: #918581;
   font-size: 1.3rem;
   font-style: italic;
+  padding-left: 1.8rem;
 }
 .search-bar .search-bar-icon {
   background-color: #f38e82;
