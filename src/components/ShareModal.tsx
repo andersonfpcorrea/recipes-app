@@ -33,7 +33,7 @@ function ShareModal(props: PropsModal) {
             onClick={() => {
               void copy(link)
               setCopied(true)
-              setTimeout(() => closeModal((prev) => !prev), 2500)
+              setTimeout(() => closeModal(() => false), 1500)
             }}
           >
             Copy link

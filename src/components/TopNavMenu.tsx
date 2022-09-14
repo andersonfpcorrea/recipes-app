@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { props } from 'cypress/types/bluebird'
+import { Dispatch, useState } from 'react'
 import {
   IoIosShareAlt,
   IoMdStar,
@@ -11,9 +12,13 @@ import ShareModal from './ShareModal'
 
 interface Props {
   condition: boolean
+  bookmark?: {
+    bookmark: boolean
+    setBookmark: Dispatch<boolean>
+  }
 }
 
-function TopNavMenu({ condition }: Props) {
+function TopNavMenu({ condition, bookmark }: Props) {
   const [share, setShare] = useState(false)
   const [rate, setRate] = useState(false)
   const { id } = useParams()
@@ -53,9 +58,12 @@ function TopNavMenu({ condition }: Props) {
               <p>Review</p>
             </div>
           </Link>
-          <div className="flex flex-gap-06 flex-align">
+          <div
+            className="flex flex-gap-06 flex-align"
+            onClick={() => bookmark?.setBookmark(!bookmark.bookmark)}
+          >
             <IoIosBookmark className="fs-20" />
-            <p>Bookmark</p>
+            <p>{bookmark?.bookmark ? 'Unbookmark' : 'Bookmark'}</p>
           </div>
         </div>
         {share && <ShareModal closeModal={setShare} />}

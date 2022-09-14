@@ -8,6 +8,8 @@ import Author from '../components/Author'
 import TopNavigationBar from '../components/TopNavigationBar'
 import { AnimatePresence, motion } from 'framer-motion'
 import RateTag from '../components/RateTag'
+import Unbookmarked from '../components/Unbookmarked'
+import Bookmarked from '../components/Bookmarked'
 
 interface IngredientsAndMeasures {
   ingredients: Array<string>
@@ -28,6 +30,8 @@ function Details() {
   const [loadVideo, setLoadVideo] = useState(false)
   const [steps, setSteps] = useState(0)
   const [backgroundFade, setBackgroundFade] = useState(false)
+  const [flag, setFlag] = useState('')
+  const [bookmark, setBookmark] = useState(false)
 
   async function getDetails() {
     const [details] = (await getMeals(null, null, null, id)) as [
@@ -37,6 +41,7 @@ function Details() {
     setRecipe(details)
     setIngredients(getIngredientsList(details))
     setSteps(getRecipeSteps(details))
+    setFlag(getFlag(details.strArea as string) as string)
   }
 
   function getIngredientsList(recipe: ObjectWithStrKeysAndStrNullValues) {
@@ -128,12 +133,21 @@ function Details() {
           style={{ backgroundImage: `url('${recipe.strMealThumb as string}')` }}
         >
           <div className="flex flex-col flex-jc-sb flex-a-end">
-            <img
-              src={getFlag(recipe.strArea as string)}
-              alt={recipe.strMeal as string}
-              className="details-img__flag"
-            />
-            <RateTag />
+            {flag ? (
+              <img
+                src={flag}
+                alt={recipe.strMeal as string}
+                className="details-img__flag"
+              />
+            ) : (
+              <p></p>
+            )}
+            <div className="flex flex-gap-10 flex-align">
+              <RateTag />
+              <div onClick={() => setBookmark((prev) => !prev)}>
+                {bookmark ? <Bookmarked /> : <Unbookmarked />}
+              </div>
+            </div>
           </div>
         </div>
       )
@@ -143,13 +157,7 @@ function Details() {
           className="details-img details-img--fake-player flex pos-rel"
           style={{ backgroundImage: `url('${recipe.strMealThumb as string}')` }}
           onClick={() => setLoadVideo(true)}
-        >
-          <img
-            src={getFlag(recipe.strArea as string)}
-            alt={recipe.strMeal as string}
-            className="details-img__flag"
-          />
-        </div>
+        ></div>
       )
     else
       return (
@@ -197,6 +205,7 @@ function Details() {
         <TopNavigationBar
           backgroundHandler={backgroundHandler}
           condition={backgroundFade}
+          bookmark={{ bookmark, setBookmark }}
         />
         <RenderImgOrVideo />
         <div className="flex flex-gap-06">

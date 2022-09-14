@@ -62,7 +62,7 @@ function RateModal(props: PropsModal) {
             onClick={() => {
               if (stars === 0) return null
               setRated(true)
-              setTimeout(() => closeModal((prev) => !prev), 2500)
+              setTimeout(() => closeModal(() => false), 1500)
             }}
           >
             Send
