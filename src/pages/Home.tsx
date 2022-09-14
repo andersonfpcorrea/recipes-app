@@ -18,17 +18,21 @@ function Home() {
       idMeal: '',
     },
   ])
+  const [category, setCategory] = useState('Beef')
+
   useEffect(() => {
-    getMealsByCategory('Beef')
+    getMealsByCategory(category)
       .then((data) => setRecipes(data as [RecipesByCategory]))
-      .catch((err) =>
-        console.error('Somethin wrong during fetching mealsdb by category')
+      .catch((err: Error) =>
+        console.error(
+          `Somethin wrong during fetching mealsdb by category: ${err.message}`
+        )
       )
-  }, [])
+  }, [category])
 
   return (
     <section className="home">
-      <CategoriesScroll />
+      <CategoriesScroll onClick={setCategory} />
       <div className="flex flex-gap-12 hor-scroll home-cards-container">
         {recipes.map((recipe) => (
           <HomeCards

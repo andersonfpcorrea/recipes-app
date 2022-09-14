@@ -5,7 +5,8 @@ export interface CatScrollProps {
   onClick: Dispatch<string>
 }
 
-function CategoriesScroll() {
+function CategoriesScroll(props: CatScrollProps) {
+  const { onClick } = props
   const [btnOn, setBtnOn] = useState('Beef')
 
   function renderCategories() {
@@ -16,7 +17,10 @@ function CategoriesScroll() {
         className={`categories-btn categories-btn-${
           cat === btnOn ? 'true' : 'false'
         }`}
-        onClick={() => setBtnOn(cat)}
+        onClick={() => {
+          setBtnOn(cat)
+          onClick(cat)
+        }}
       >
         {cat}
       </button>
