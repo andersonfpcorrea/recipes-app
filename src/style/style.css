@@ -786,6 +786,7 @@ a {
   font-size: 1.8rem;
   font-weight: 600;
   flex-grow: 2;
+  line-height: 1;
 }
 .details-title .details-title--reviews {
   color: #918581;

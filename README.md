@@ -1,5 +1,7 @@
 # _[Recipes app](https://home-page.recipes-app.pages.dev)_
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=andersonfpcorrea_recipes-app&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=andersonfpcorrea_recipes-app)
+
 <details>
 <summary><strong>Leia a descrição do projeto em português 🇧🇷</strong></summary>
 <br />
