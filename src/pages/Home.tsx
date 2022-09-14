@@ -1,5 +1,11 @@
+import CategoriesScroll from '../components/CategoriesScroll'
+
 function Home() {
-  return <h1>Home page</h1>
+  return (
+    <section className="home">
+      <CategoriesScroll />
+    </section>
+  )
 }
 
 export default Home

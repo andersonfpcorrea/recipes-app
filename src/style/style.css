@@ -1061,5 +1061,41 @@ a {
     transform: scale(1);
   }
 }
+.categories-scroll {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.categories-scroll::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.categories-btn {
+  border-radius: 1rem;
+  border: none;
+  font-weight: 600;
+  font-size: 1.4rem;
+  padding: 0.4rem 1rem;
+  transition: all 0.3s;
+}
+.categories-btn:focus {
+  outline: 1px solid #fbdb89;
+}
+
+.categories-btn-true {
+  background-color: #f38e82;
+  color: #fff;
+}
+
+.categories-btn-false {
+  background-color: #fff;
+  color: #f38e82;
+}
+
+.home {
+  height: 100%;
+  padding: 2rem;
+  overflow-x: scroll;
+}
 
 /*# sourceMappingURL=style.css.map */
