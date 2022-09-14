@@ -20,7 +20,7 @@ function Author() {
   }
 
   return (
-    <div className="flex flex-jc-sb flex-align">
+    <div className="flex flex-jc-sb flex-align heigth-40">
       <div className="flex flex-gap-10 flex-align">
         <img src={photo} alt={name} className="author-img" />
         <div className="flex flex-col fs-12">

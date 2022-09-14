@@ -1,5 +1,8 @@
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // SEARCH PAGE INTERFACES
+
+import { Dispatch } from 'react'
+
 // searchPageState:
 export type SearchResultStateInterface =
   | [ObjectWithStrKeysAndStrNullValues]
@@ -95,4 +98,12 @@ export type ObjForEach =
 // GENERIC INTERFACES
 // Object with key:string and value: string | null (which is the share of the returned data from mealdb)
 export type ObjectWithStrKeysAndStrNullValues = Record<string, string | null>
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// MODAL INTERFACES
+// Object with key:string and value: string | null (which is the share of the returned data from mealdb)
+export interface PropsModal {
+  closeModal: Dispatch<(prev: boolean) => boolean>
+}
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -15,8 +15,6 @@ jobs:
         run: npm install
       - name: Run ESLint
         run: npm run lint:scripts
-      - name: Run Stylelint
-        run: npm run lint:styles
       - name: Run Tests
         run: npm test
         env:
@@ -24,8 +22,6 @@ jobs:
       - name: Cypress.io
         uses: cypress-io/github-action@v4.2.0
         with:
-          #     build: npm run build
-          # start: npm run serve -- --port=5173
           start: npm run dev
           wait-on: 'http://localhost:5173'
           browser: chrome

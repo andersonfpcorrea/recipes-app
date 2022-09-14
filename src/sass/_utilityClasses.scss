@@ -169,6 +169,9 @@
   width: 2rem;
   height: 2rem;
 }
+.heigth-40 {
+  height: 4rem;
+}
 // Positions
 .pos-abs {
   position: absolute;
@@ -195,6 +198,9 @@
 }
 .flex-align-end {
   align-self: flex-end;
+}
+.flex-a-end {
+  align-items: flex-end;
 }
 .flex-jc-c {
   justify-content: center;

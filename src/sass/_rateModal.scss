@@ -1,0 +1,43 @@
+.rate-modal {
+  padding: 1rem 1.4rem 1.4rem;
+  border-radius: 2rem;
+  background-color: $color-white-1;
+  position: absolute;
+  top: 40%;
+  right: 50%;
+  transform: translateX(50%);
+  .rate-modal__btn {
+    border: none;
+    font-weight: 600;
+    color: $color-white-1;
+    cursor: pointer;
+    padding: 0.2rem 3rem;
+    border-radius: 2rem;
+    transition: all 0.3s;
+  }
+  .rate-modal__btn--on {
+    background-color: darken($color-grad-1, 10%);
+  }
+  .rate-modal__btn--off {
+    background-color: $color-grey-light-2;
+  }
+}
+
+.rate-modal__btn-container {
+  height: 3rem;
+}
+
+.rate-on-link {
+  animation: entry 0.3s ease;
+}
+
+@keyframes entry {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

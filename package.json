@@ -26,6 +26,7 @@
   "dependencies": {
     "@fontsource/nunito-sans": "^4.5.9",
     "@types/validator": "^13.7.6",
+    "clipboard-copy": "^4.0.1",
     "framer-motion": "^7.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

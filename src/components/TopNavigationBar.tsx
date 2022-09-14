@@ -2,14 +2,20 @@ import Icons from '../assets/icons.svg'
 import { BsThreeDots } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
 import TopNavMenu from '../components/TopNavMenu'
+import { Dispatch } from 'react'
 
 interface TopBarProps {
   backgroundHandler?: () => void
   condition: boolean
+  bookmark?: {
+    bookmark: boolean
+    setBookmark: Dispatch<boolean>
+  }
 }
 
 function TopNavigationBar(props: TopBarProps) {
-  const { backgroundHandler, condition } = props
+  const { backgroundHandler, condition, bookmark } = props
+
   const navigate = useNavigate()
 
   function navigateBack() {
@@ -29,7 +35,7 @@ function TopNavigationBar(props: TopBarProps) {
           }}
         />
       </div>
-      {TopNavMenu?.(condition)}
+      {condition && <TopNavMenu condition={condition} bookmark={bookmark} />}
     </nav>
   )
 }

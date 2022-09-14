@@ -1,5 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import Author from '../components/Author'
+import '../style/style.css'
 
 export default {
   title: 'Components/Author',
