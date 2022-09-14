@@ -1,7 +1,7 @@
 .header {
   @include flex-column;
-  gap: 3rem;
-  padding: 3rem;
+  gap: 2rem;
+  padding: 2rem;
 
   .header--user {
     display: flex;
