@@ -1,5 +1,9 @@
-import { useState } from 'react'
+import { Dispatch, useState } from 'react'
 import { mealsCategoryArray } from '../data/mealsCategories'
+
+export interface CatScrollProps {
+  onClick: Dispatch<string>
+}
 
 function CategoriesScroll() {
   const [btnOn, setBtnOn] = useState('Beef')

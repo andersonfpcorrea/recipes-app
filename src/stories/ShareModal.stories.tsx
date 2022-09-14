@@ -5,6 +5,9 @@ import '../style/style.css'
 export default {
   title: 'Components/ShareModal',
   component: ShareModal,
+  argTypes: {
+    closeModal: () => {},
+  },
 } as ComponentMeta<typeof ShareModal>
 
 const Template: ComponentStory<typeof ShareModal> = (args) => (

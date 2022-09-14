@@ -53,7 +53,7 @@ const getMealsByBasicFilter = async (basicFilter: string, query: string) => {
   }
 }
 
-const getMealsByCategory = async (category: string) => {
+export const getMealsByCategory = async (category: string) => {
   return await fetchFromMealdb(searchMealsdb.filterByCategory(category))
 }
 

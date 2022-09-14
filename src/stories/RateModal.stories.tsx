@@ -5,6 +5,9 @@ import '../style/style.css'
 export default {
   title: 'Components/RateModal',
   component: RateModal,
+  argTypes: {
+    closeModal: () => {},
+  },
 } as ComponentMeta<typeof RateModal>
 
 const Template: ComponentStory<typeof RateModal> = (args) => (
@@ -15,5 +18,4 @@ export const FirstStory = Template.bind({})
 
 FirstStory.args = {
   /*👇 The args you need here will depend on your component */
-  closeModal: () => {},
 }
