@@ -1,4 +1,3 @@
-import { props } from 'cypress/types/bluebird'
 import { Dispatch, useState } from 'react'
 import {
   IoIosShareAlt,
