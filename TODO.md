@@ -19,7 +19,14 @@
 
 ## Next immediate tasks:
 
+- Implement the home page:
+
+  - [NOK] Create cards to render categories sample meals
+  - [NOK] Create the "New Recipes" component
+
 - Start adding framer-motion animations [in progress];
+
+- Implement the footer
 
 - Implement the details page:
 

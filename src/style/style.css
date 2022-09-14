@@ -390,6 +390,10 @@ a {
   height: 2rem;
 }
 
+.heigth-19 {
+  height: 1.9rem;
+}
+
 .heigth-40 {
   height: 4rem;
 }
@@ -1074,7 +1078,7 @@ a {
   border-radius: 1rem;
   border: none;
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   padding: 0.4rem 1rem;
   transition: all 0.3s;
 }
