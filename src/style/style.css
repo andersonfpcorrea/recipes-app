@@ -24,8 +24,8 @@ html,
 body {
   height: 100%;
   font-size: 1.6rem;
-  font-family: "Nunito Sans", sans-serif;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   color: #222;
 }
 
@@ -519,7 +519,13 @@ a {
   align-items: center;
   justify-content: center;
   min-height: 100%;
-  background-image: linear-gradient(to right top, rgba(244, 136, 128, 0.6), rgba(244, 136, 128, 0.1), rgba(251, 218, 137, 0.4)), url("../assets/pablo-merchan-montes-Orz90t6o0e4-unsplash.webp");
+  background-image: linear-gradient(
+      to right top,
+      rgba(244, 136, 128, 0.6),
+      rgba(244, 136, 128, 0.1),
+      rgba(251, 218, 137, 0.4)
+    ),
+    url('../assets/pablo-merchan-montes-Orz90t6o0e4-unsplash.webp');
   background-position: center;
   background-size: cover;
 }
@@ -564,7 +570,10 @@ a {
   gap: 1.2rem;
   padding-top: 1.8rem;
 }
-.form-login .form-login__body .form-login__actions-btns .form-login__remember-forgot {
+.form-login
+  .form-login__body
+  .form-login__actions-btns
+  .form-login__remember-forgot {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
@@ -587,7 +596,10 @@ a {
   font-size: 1.4rem;
   white-space: nowrap;
 }
-.form-login .form-login__body .form-login__actions-btns .form-login__socialBtns {
+.form-login
+  .form-login__body
+  .form-login__actions-btns
+  .form-login__socialBtns {
   display: flex;
   justify-content: space-between;
   gap: 0.5rem;
@@ -603,7 +615,13 @@ a {
   align-items: center;
   text-align: center;
   padding: 10rem 1rem 14rem;
-  background-image: linear-gradient(to right top, rgba(244, 136, 128, 0.6), rgba(244, 136, 128, 0.1), rgba(251, 218, 137, 0.4)), url("../assets/pablo-merchan-montes-Orz90t6o0e4-unsplash.webp");
+  background-image: linear-gradient(
+      to right top,
+      rgba(244, 136, 128, 0.6),
+      rgba(244, 136, 128, 0.1),
+      rgba(251, 218, 137, 0.4)
+    ),
+    url('../assets/pablo-merchan-montes-Orz90t6o0e4-unsplash.webp');
   background-position: center;
   background-size: cover;
 }
@@ -766,8 +784,8 @@ a {
 }
 
 .details-img--fake-player::after {
-  content: "";
-  content: "";
+  content: '';
+  content: '';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -780,9 +798,9 @@ a {
 }
 .details-img--fake-player::before {
   z-index: 1;
-  content: "";
+  content: '';
   z-index: 1;
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -974,8 +992,16 @@ a {
   position: absolute;
   top: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5));
-  background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5));
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0),
+    rgba(0, 0, 0, 0.5)
+  );
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0),
+    rgba(0, 0, 0, 0.5)
+  );
   z-index: 98;
   height: 100vh;
   width: 100vw;
@@ -1117,7 +1143,6 @@ a {
     transform: scale(1);
   }
 }
-<<<<<<< HEAD
 .share-modal {
   padding: 0.6rem 2rem 3rem;
   border-radius: 2rem;
@@ -1221,8 +1246,6 @@ a {
     transform: scale(1);
   }
 }
-=======
->>>>>>> master
 
 /*# sourceMappingURL=style.css.map */
 
