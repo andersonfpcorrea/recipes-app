@@ -72,6 +72,9 @@
 .color-grad-1 {
   color: $color-grad-1;
 }
+.color-grad-1-dark20 {
+  color: darken($color-grad-1, 20%);
+}
 .color-grad-2 {
   color: $color-grad-2;
 }
@@ -187,6 +190,9 @@
 .heigth-50 {
   height: 5rem;
 }
+.heigth-100pc {
+  height: 100%;
+}
 // Positions
 .pos-abs {
   position: absolute;
@@ -222,6 +228,9 @@
 }
 .flex-jc-c {
   justify-content: center;
+}
+.flex-jc-end {
+  justify-content: flex-end;
 }
 .flex-jc-sb {
   justify-content: space-between;

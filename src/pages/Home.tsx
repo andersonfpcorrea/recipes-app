@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import CategoriesScroll from '../components/CategoriesScroll'
 import HomeCards from '../components/HomeCards'
+import NewRecipesCards from '../components/NewRecipesCards'
 import { getMealsByCategory } from '../utils/fetch'
 
 export interface RecipesByCategory {
@@ -42,6 +43,14 @@ function Home() {
             id={recipe.idMeal}
           />
         ))}
+      </div>
+      <div className="flex flex-col">
+        <h3 className="fs-18">New Recipes</h3>
+        <div className="new-recipes-container">
+          <NewRecipesCards />
+          <NewRecipesCards />
+          <NewRecipesCards />
+        </div>
       </div>
     </section>
   )

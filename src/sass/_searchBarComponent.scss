@@ -20,12 +20,13 @@
     width: 100%;
     border: 1px solid $color-grey-light-3;
     border-radius: 1rem;
+    padding-left: 3rem;
+    font-size: 1.4rem;
 
     &::placeholder {
       color: $color-grey-dark-2;
       font-size: 1.3rem;
       font-style: italic;
-      padding-left: 1.8rem;
     }
   }
 

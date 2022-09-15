@@ -284,6 +284,10 @@ a {
   color: #fbdb89;
 }
 
+.color-grad-1-dark20 {
+  color: #f8bd26;
+}
+
 .color-grad-2 {
   color: #f48982;
 }
@@ -414,6 +418,10 @@ a {
   height: 5rem;
 }
 
+.heigth-100pc {
+  height: 100%;
+}
+
 .pos-abs {
   position: absolute;
 }
@@ -457,6 +465,10 @@ a {
 
 .flex-jc-c {
   justify-content: center;
+}
+
+.flex-jc-end {
+  justify-content: flex-end;
 }
 
 .flex-jc-sb {
@@ -661,12 +673,13 @@ a {
   width: 100%;
   border: 1px solid #d3c7c3;
   border-radius: 1rem;
+  padding-left: 3rem;
+  font-size: 1.4rem;
 }
 .search-bar .search-bar-input::placeholder {
   color: #918581;
   font-size: 1.3rem;
   font-style: italic;
-  padding-left: 1.8rem;
 }
 .search-bar .search-bar-icon {
   background-color: #f38e82;
@@ -720,7 +733,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 25vh;
+  height: 19rem;
   padding: 1rem;
   transition: all 0.3s;
   width: 42vw;
@@ -1121,7 +1134,7 @@ a {
 .home {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
   height: 100%;
   padding: 2rem;
 }
@@ -1161,6 +1174,53 @@ a {
 }
 
 .home-cards-container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.new-recipes {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 2rem;
+  box-shadow: 0 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.05);
+  margin-top: 3rem;
+  padding: 1rem 1.6rem;
+  min-width: 27rem;
+}
+
+.new-recipes-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.new-recipes__img--author {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+
+.new-recipes__img--meal {
+  position: absolute;
+  right: 1rem;
+  top: -3rem;
+  box-shadow: 0 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  width: 9.4rem;
+  height: 9.4rem;
+}
+
+.new-recipes-container {
+  display: flex;
+  padding: 0.4rem;
+  gap: 1.6rem;
+  white-space: nowrap;
+  overflow-x: auto;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.new-recipes-container::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
 

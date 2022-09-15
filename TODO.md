@@ -21,7 +21,8 @@
 
 - Implement the home page:
 
-  - [NOK] Create cards to render categories sample meals
+  - [OK] Create cards to render categories sample meals
+  - [NOK] Implement drag effect on cards and category buttons for large screens
   - [NOK] Create the "New Recipes" component
 
 - Start adding framer-motion animations [in progress];
