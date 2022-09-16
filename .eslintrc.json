@@ -15,12 +15,12 @@
   ],
   "overrides": [
     {
-      "files": ["src/**/*.test.ts", "src/**/*.test.tsx"],
-      "env": {
-        "jest": true
-      },
-      "extends": ["plugin:jest/recommended"],
-      "plugins": ["jest"]
+      // 3) enable eslint-plugin-testing-library rules or preset only for matching testing files!
+      "files": [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
+      ],
+      "extends": ["plugin:testing-library/react"]
     }
   ],
   "parser": "@typescript-eslint/parser",
@@ -32,7 +32,7 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": ["react", "@typescript-eslint"],
+  "plugins": ["react", "@typescript-eslint", "testing-library"],
   "ignorePatterns": ["cypress/**/*", "src/stories/**/*"],
   "rules": {
     "prettier/prettier": "error",
