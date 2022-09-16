@@ -15,3 +15,11 @@ const Template: ComponentStory<typeof HomeCards> = (args) => (
 )
 
 export const Default = Template.bind({})
+
+Default.args = {
+  /*👇 The args you need here will depend on your component */
+  image:
+    'https://www.diabetesfoodhub.org/system/user_files/Images/1837-diabetic-pecan-crusted-chicken-breast_JulAug20DF_clean-simple_061720.jpg',
+  name: 'Carré com fritas',
+  id: '0000',
+}

@@ -14,8 +14,8 @@ const Template: ComponentStory<typeof RateModal> = (args) => (
   <RateModal {...args} />
 )
 
-export const FirstStory = Template.bind({})
+export const Default = Template.bind({})
 
-FirstStory.args = {
+Default.args = {
   /*👇 The args you need here will depend on your component */
 }
