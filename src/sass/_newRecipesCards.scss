@@ -5,7 +5,7 @@
   border-radius: 2rem;
   @include box-shadow-sm(0.05);
   margin-top: 3rem;
-  padding: 1rem 1.6rem;
+  padding: 1rem 2.8rem 1rem 1.6rem;
   min-width: 27rem;
 }
 
@@ -24,17 +24,22 @@
 .new-recipes__img--meal {
   position: absolute;
   right: 1rem;
-  top: -3rem;
+  top: -3.4rem;
   @include box-shadow-sm(0.3);
   border-radius: 50%;
   width: 9.4rem;
   height: 9.4rem;
 }
 
+.new-recipes__clock {
+  height: 1.4rem;
+  width: 1.4rem;
+}
+
 // home page container:
 .new-recipes-container {
   display: flex;
-  padding: 0.4rem;
+  padding: 0.4rem 0.4rem 0.4rem 2rem;
   gap: 1.6rem;
   white-space: nowrap;
   overflow-x: auto;
