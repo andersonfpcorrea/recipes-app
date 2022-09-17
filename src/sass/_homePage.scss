@@ -1,0 +1,6 @@
+.home {
+  @include flex-column;
+  gap: 3rem;
+  height: fit-content;
+  padding: 2rem 0;
+}

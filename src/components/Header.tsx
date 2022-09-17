@@ -7,7 +7,7 @@ function Header() {
     <header className="header width-100percent">
       <div className="header--user">
         <div className="header--user--text">
-          <p className="fs-20 fw-600">Hello, user</p>
+          <p className="fs-24 fw-600">Hello, user</p>
           <p className="color-grey-dark-2 fs-13">What are you cooking today?</p>
         </div>
         <svg className="header--user--img">

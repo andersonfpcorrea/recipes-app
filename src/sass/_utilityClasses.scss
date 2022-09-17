@@ -60,6 +60,15 @@
 .fs-24 {
   font-size: 2.4rem;
 }
+.fs-26 {
+  font-size: 2.6rem;
+}
+.fs-28 {
+  font-size: 2.8rem;
+}
+.fs-30 {
+  font-size: 3rem;
+}
 
 .fs-32 {
   font-size: 3.2rem;
@@ -71,6 +80,9 @@
 }
 .color-grad-1 {
   color: $color-grad-1;
+}
+.color-grad-1-dark20 {
+  color: darken($color-grad-1, 20%);
 }
 .color-grad-2 {
   color: $color-grad-2;
@@ -142,6 +154,9 @@
 .pad-2 {
   padding: 2rem;
 }
+.pad-left-2 {
+  padding-left: 2rem;
+}
 .pad-1 {
   padding: 1rem;
 }
@@ -150,6 +165,9 @@
 }
 .pad-02 {
   padding: 0.2rem;
+}
+.pad-top-1 {
+  padding-top: 1rem;
 }
 // BORDERS
 .br-1 {
@@ -169,8 +187,23 @@
   width: 2rem;
   height: 2rem;
 }
+.heigth-0 {
+  height: 0;
+}
+.heigth-19 {
+  height: 1.9rem;
+}
+.heigth-30 {
+  height: 3rem;
+}
 .heigth-40 {
   height: 4rem;
+}
+.heigth-50 {
+  height: 5rem;
+}
+.heigth-100pc {
+  height: 100%;
 }
 // Positions
 .pos-abs {
@@ -202,8 +235,14 @@
 .flex-a-end {
   align-items: flex-end;
 }
+.flex-aself-c {
+  align-self: center;
+}
 .flex-jc-c {
   justify-content: center;
+}
+.flex-jc-end {
+  justify-content: flex-end;
 }
 .flex-jc-sb {
   justify-content: space-between;
@@ -243,6 +282,21 @@
 }
 .flex-gap-24 {
   gap: 2.4rem;
+}
+.flex-gap-26 {
+  gap: 2.6rem;
+}
+.flex-gap-28 {
+  gap: 2.8rem;
+}
+.flex-gap-30 {
+  gap: 3rem;
+}
+.flex-gap-32 {
+  gap: 3.2rem;
+}
+.flex-gap-8vw {
+  gap: 8vw;
 }
 // Grids
 .grid-6-cols {
