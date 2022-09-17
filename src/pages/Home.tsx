@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import CategoriesScroll from '../components/CategoriesScroll'
+import Footer from '../components/Footer'
+import Header from '../components/Header'
 import HomeCards from '../components/HomeCards'
 import NewRecipesCards from '../components/NewRecipesCards'
 import { getMealByArea, getMealsByCategory } from '../utils/fetch'
@@ -43,33 +45,37 @@ function Home() {
   }, [])
 
   return (
-    <section className="home">
-      <CategoriesScroll onClick={setCategory} />
-      <div className="flex flex-gap-12 hor-scroll home-cards-container">
-        {recipes.map((recipe) => (
-          <HomeCards
-            key={recipe.idMeal}
-            image={recipe.strMealThumb}
-            name={recipe.strMeal}
-            id={recipe.idMeal}
-          />
-        ))}
-      </div>
-      <div className="flex flex-col ">
-        <h3 className="fs-18 pad-left-2">New Recipes</h3>
-        <div className="new-recipes-container">
-          {newRecipes?.map((recipe, i) => (
-            <NewRecipesCards
-              meal={recipe.strMeal}
+    <div className="home-container">
+      <Header />
+      <section className="home">
+        <CategoriesScroll onClick={setCategory} />
+        <div className="flex flex-gap-12 hor-scroll home-cards-container">
+          {recipes.map((recipe) => (
+            <HomeCards
+              key={recipe.idMeal}
               image={recipe.strMealThumb}
+              name={recipe.strMeal}
               id={recipe.idMeal}
-              index={i}
-              key={`${recipe.strMeal.slice(0, 5)}`}
             />
           ))}
         </div>
-      </div>
-    </section>
+        <div className="flex flex-col ">
+          <h3 className="fs-18 pad-left-2">New Recipes</h3>
+          <div className="new-recipes-container">
+            {newRecipes?.map((recipe, i) => (
+              <NewRecipesCards
+                meal={recipe.strMeal}
+                image={recipe.strMealThumb}
+                id={recipe.idMeal}
+                index={i}
+                key={`${recipe.strMeal.slice(0, 5)}`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </div>
   )
 }
 

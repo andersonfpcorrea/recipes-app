@@ -30,7 +30,7 @@ body {
 
 /* Allow consistently using rem istead of px for accessibility reasons */
 html {
-  font-size: 62.5%; /* 100% = 16px; 62.5% = 10px = 1rem */
+  font-size: 70%; /* 100% = 16px; 62.5% = 10px = 1rem */
 }
 
 /*
@@ -270,6 +270,18 @@ a {
 
 .fs-24 {
   font-size: 2.4rem;
+}
+
+.fs-26 {
+  font-size: 2.6rem;
+}
+
+.fs-28 {
+  font-size: 2.8rem;
+}
+
+.fs-30 {
+  font-size: 3rem;
 }
 
 .fs-32 {
@@ -525,6 +537,26 @@ a {
 
 .flex-gap-24 {
   gap: 2.4rem;
+}
+
+.flex-gap-26 {
+  gap: 2.6rem;
+}
+
+.flex-gap-28 {
+  gap: 2.8rem;
+}
+
+.flex-gap-30 {
+  gap: 3rem;
+}
+
+.flex-gap-32 {
+  gap: 3.2rem;
+}
+
+.flex-gap-8vw {
+  gap: 8vw;
 }
 
 .grid-6-cols {
@@ -1140,7 +1172,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  height: 100%;
+  height: fit-content;
   padding: 2rem 0;
 }
 
@@ -1189,7 +1221,7 @@ a {
   justify-content: space-between;
   border-radius: 2rem;
   box-shadow: 0 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.05);
-  margin-top: 3rem;
+  margin-top: 3.4rem;
   padding: 1rem 2.8rem 1rem 1.6rem;
   min-width: 27rem;
 }
@@ -1233,6 +1265,58 @@ a {
 
 .new-recipes-container::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  justify-self: flex-end;
+  position: relative;
+  margin-top: 4rem;
+  padding: 3rem 2rem;
+  font-size: 3.4rem;
+  box-shadow: 0 0.3rem 1rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  transform: translate(-50%, 50%);
+  background-color: #fff;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  box-shadow: 0 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.05);
+}
+
+.footer__add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f38e82;
+  border: none;
+  border-radius: 50%;
+  width: 65%;
+  height: 65%;
+  color: #fff;
+  font-weight: 600;
+}
+
+.footer-icon-deact {
+  color: #d3c7c3;
+}
+
+.footer-icon-active {
+  color: #f38e82;
 }
 
 /*# sourceMappingURL=style.css.map */
