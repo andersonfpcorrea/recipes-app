@@ -1,4 +1,4 @@
-# _[Recipes app](https://home-page.recipes-app.pages.dev)_
+# _[Recipes app](https://recipes-app.pages.dev)_
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=andersonfpcorrea_recipes-app&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=andersonfpcorrea_recipes-app)
 
@@ -8,7 +8,7 @@
 
 ### Descrição
 
-Este projeto será um app de receitas. Clique aqui _[aqui](https://home-page.recipes-app.pages.dev)_ para conferir o progresso até o momento.
+Este projeto será um app de receitas. Clique aqui _[aqui](https://recipes-app.pages.dev)_ para conferir o progresso até o momento.
 
 Meu objetivo é fazer um tipo de rede social em que o usuário tenha instruções de receitas, contador de calorias e gerador de lista de compras. O app está em progresso: para uma melhor experiência acesse o app pelo celular ou pelo DevTools (pelo Chrome: Control + Shift + C, Control + Shift + M; pelo Firefox: Control + Shift + M).
 
@@ -47,7 +47,7 @@ São consumidos dados das seguintes APIs: _[spoonacular API](https://spoonacular
 
 ### Description
 
-This project is going to be a recipes app. Click _[here](https://home-page.recipes-app.pages.dev)_ to check the progress so far.
+This project is going to be a recipes app. Click _[here](https://recipes-app.pages.dev)_ to check the progress so far.
 
 My goal is to make a kind of social network on which the user can find recipes turorials with calories counter and a grocery list generator. It is in progress and yet no fully responsive: for a better experience access the app with a smartphone or simulate a mobile screen (with Chrome: Ctrl + Shift + C, Ctrl + Shift + M; with Firefox: Cntrl + Shift + M).
 
