@@ -1,4 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { MemoryRouter } from 'react-router-dom'
 import HomeCards from '../components/HomeCards'
 import '../style/style.css'
 
@@ -11,15 +12,16 @@ export default {
 } as ComponentMeta<typeof HomeCards>
 
 const Template: ComponentStory<typeof HomeCards> = (args) => (
-  <HomeCards {...args} />
+  <MemoryRouter>
+    <HomeCards {...args} />
+  </MemoryRouter>
 )
 
 export const Default = Template.bind({})
 
 Default.args = {
   /*👇 The args you need here will depend on your component */
-  image:
-    'https://www.diabetesfoodhub.org/system/user_files/Images/1837-diabetic-pecan-crusted-chicken-breast_JulAug20DF_clean-simple_061720.jpg',
+  image: 'https://www.themealdb.com/images/media/meals/45xxr21593348847.jpg',
   name: 'Carré com fritas',
   id: '0000',
 }
