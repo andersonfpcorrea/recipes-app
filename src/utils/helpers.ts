@@ -2,6 +2,7 @@ import {
   PredicateFunction,
   ObjForEach,
   ObjectWithStrKeysAndStrNullValues,
+  RecipeType,
 } from './interfaces'
 import { countries } from '../data/countries'
 import { Dispatch } from 'react'
@@ -23,6 +24,49 @@ export const getSearchFromLocalStorage = (
     ? (JSON.parse(json) as [ObjectWithStrKeysAndStrNullValues])
     : null
   data && setter(data)
+}
+
+export const getBookmarksFromLocalStrg = () => {
+  const defaultReturn = [
+    {
+      strMeal: '',
+      strMealThumb: '',
+      strCategory: '',
+      strArea: '',
+      idMeal: '',
+    },
+  ] as [RecipeType]
+  const data = localStorage.getItem('bookmarks')
+  if (!data) return defaultReturn
+  return JSON.parse(data) as [RecipeType]
+}
+
+// TODO: continue from here: It is storoing the same data twice at every call:
+export const setRecipeToLocalStorage = (recipe: RecipeType) => {
+  const current = localStorage.getItem('bookmarks')
+  if (!current)
+    return localStorage.setItem('bookmarks', JSON.stringify([recipe]))
+  const type = JSON.parse(current) as [RecipeType]
+  const distinct = type.filter((r) => r.idMeal === recipe.idMeal)
+
+  if (distinct.length > 0) {
+    const noDups = [...new Set(distinct)]
+
+    localStorage.setItem('bookmarks', JSON.stringify(noDups))
+  }
+  localStorage.setItem('bookmarks', JSON.stringify([...type, recipe]))
+}
+
+export const removeRecipeFromLocalStorage = (recipe: RecipeType) => {
+  const current = localStorage.getItem('bookmarks')
+  if (!current) return null
+  const retrived = JSON.parse(current) as [RecipeType]
+  const newBookmarks = retrived.filter((b) => b.idMeal !== recipe.idMeal)
+  if (newBookmarks.length === 0) {
+    localStorage.setItem('bookmarks', '')
+    return null
+  }
+  localStorage.setItem('bookmarks', JSON.stringify(newBookmarks))
 }
 
 export const objForEach = (

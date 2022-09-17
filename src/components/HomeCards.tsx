@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
+import Bookmarked from './Bookmarked'
 import RateTag from './RateTag'
-import Unbookmarked from './Unbookmarked'
 
 export interface HomeCardsPropsType {
   image: string
@@ -30,7 +30,7 @@ function HomeCards(props: HomeCardsPropsType) {
             <p className="color-grey-dark-2 fs-12">Time</p>
             <p className="fs-14 fw-600">15 min</p>
           </div>
-          <Unbookmarked />
+          <Bookmarked bookmarked={false} />
         </div>
       </div>
     </Link>

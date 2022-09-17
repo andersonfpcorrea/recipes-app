@@ -3,7 +3,7 @@ import { RecipeType, PropsType } from '../utils/interfaces.js'
 import RateTag from './RateTag.js'
 
 function Cards(props: PropsType) {
-  const { recipes } = props
+  const { recipes, width } = props
 
   const markup = (recipe: RecipeType) => {
     return (
@@ -14,6 +14,7 @@ function Cards(props: PropsType) {
             backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5)), url('${recipe.strMealThumb}')`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
+            [width ? 'width' : '']: width,
           }}
         >
           <div className="flex-align-end">
