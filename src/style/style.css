@@ -30,7 +30,7 @@ body {
 
 /* Allow consistently using rem istead of px for accessibility reasons */
 html {
-  font-size: 70%; /* 100% = 16px; 62.5% = 10px = 1rem */
+  font-size: 62.5%; /* 100% = 16px; 62.5% = 10px = 1rem */
 }
 
 /*
@@ -1291,11 +1291,6 @@ a {
   left: 50%;
   bottom: 100%;
   transform: translate(-50%, 50%);
-  background-color: #fff;
-  width: 8rem;
-  height: 8rem;
-  border-radius: 50%;
-  box-shadow: 0 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.05);
 }
 
 .footer__add-btn {
@@ -1305,10 +1300,11 @@ a {
   background-color: #f38e82;
   border: none;
   border-radius: 50%;
-  width: 65%;
-  height: 65%;
+  width: 5rem;
+  height: 5rem;
   color: #fff;
   font-weight: 600;
+  box-shadow: 0 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
 }
 
 .footer-icon-deact {

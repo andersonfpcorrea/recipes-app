@@ -4,8 +4,6 @@
   background-color: $color-white-1;
   justify-self: flex-end;
   position: relative;
-  // bottom: 0;
-  // width: 100%;
   margin-top: 4rem;
   padding: 3rem 2rem;
   font-size: 3.4rem;
@@ -25,11 +23,6 @@
   left: 50%;
   bottom: 100%;
   transform: translate(-50%, 50%);
-  background-color: $color-white-1;
-  width: 8rem;
-  height: 8rem;
-  border-radius: 50%;
-  @include box-shadow-sm(0.05);
 }
 
 .footer__add-btn {
@@ -39,10 +32,11 @@
   background-color: $color-primary;
   border: none;
   border-radius: 50%;
-  width: 65%;
-  height: 65%;
+  width: 5rem;
+  height: 5rem;
   color: $color-white-1;
   font-weight: 600;
+  @include box-shadow-sm(0.2);
 }
 
 .footer-icon-deact {

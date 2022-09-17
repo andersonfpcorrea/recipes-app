@@ -60,7 +60,7 @@ function Home() {
           ))}
         </div>
         <div className="flex flex-col ">
-          <h3 className="fs-18 pad-left-2">New Recipes</h3>
+          <h3 className="fs-18 pad-left-2 fw-600">New Recipes</h3>
           <div className="new-recipes-container">
             {newRecipes?.map((recipe, i) => (
               <NewRecipesCards

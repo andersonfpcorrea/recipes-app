@@ -52,9 +52,11 @@ function Footer() {
         </li>
       </ul>
       <div className="footer__btn-container">
-        <button type="button" className="footer__add-btn">
-          +
-        </button>
+        <NavLink to="/recipes">
+          <button type="button" className="footer__add-btn">
+            +
+          </button>
+        </NavLink>
       </div>
     </nav>
   )

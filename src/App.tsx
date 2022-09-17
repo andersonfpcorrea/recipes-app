@@ -8,6 +8,7 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Notifications from './pages/Notifications'
 import Profile from './pages/Profile'
+import Recipes from './pages/Recipes'
 import Reviews from './pages/Reviews'
 import Search from './pages/Search'
 
@@ -23,6 +24,7 @@ function App() {
       <Route path="/bookmarks" element={<Bookmarks />} />
       <Route path="/notifications" element={<Notifications />} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/recipes" element={<Recipes />} />
     </Routes>
   )
 }
