@@ -1,0 +1,48 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: $color-white-1;
+  justify-self: flex-end;
+  position: relative;
+  margin-top: 4rem;
+  padding: 3rem 2rem;
+  font-size: 3.4rem;
+  @include box-shadow-bg(0.1);
+
+  & ul {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+.footer__btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  transform: translate(-50%, 50%);
+}
+
+.footer__add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-primary;
+  border: none;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  color: $color-white-1;
+  font-weight: 600;
+  @include box-shadow-sm(0.2);
+}
+
+.footer-icon-deact {
+  color: $color-grey-light-3;
+}
+
+.footer-icon-active {
+  color: $color-primary;
+}

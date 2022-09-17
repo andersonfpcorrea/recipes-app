@@ -209,7 +209,7 @@ function Details() {
         />
         <RenderImgOrVideo />
         <div className="flex flex-gap-06">
-          {recipe.strTags && renderTags(recipe)}
+          {recipe.strTags ? renderTags(recipe) : <p className="heigth-19"></p>}
         </div>
         <div className="details-title">
           <p className="details-title--heading">{recipe.strMeal}</p>

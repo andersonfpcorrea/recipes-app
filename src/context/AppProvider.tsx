@@ -19,8 +19,7 @@ export const AppContext = createContext<AppContextInterface>({
   setSearchPageMessage: () => undefined,
 })
 
-// FIXME: Fix the type of AppProvider.
-export const AppProvider: React.FC | any = ({
+export const AppProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }: React.PropsWithChildren) => {
   const [searchResultState, setSearchResultState] =

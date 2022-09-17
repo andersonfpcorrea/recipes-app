@@ -5,6 +5,7 @@ import { basicFilters } from '../data/mealsCategories'
 import { getMeals } from '../utils/fetch'
 import { setSearchOnLocalStorage } from '../utils/helpers'
 import { RecipesType, SearchResultStateInterface } from '../utils/interfaces'
+import Icons from '../assets/icons.svg'
 
 interface propsType {
   filterIcon: boolean
@@ -106,14 +107,19 @@ function SearchBar(props: propsType) {
         )
       }
     >
-      <input
-        type="text"
-        id="search-input"
-        placeholder="Search recipe"
-        className="inputs search-bar-input"
-        value={searchInput}
-        onChange={(e) => setSearchInput(e.target.value)}
-      />
+      <div className="width-100percent pos-rel">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search recipe"
+          className="inputs search-bar-input"
+          value={searchInput}
+          onChange={(e) => setSearchInput(e.target.value)}
+        />
+        <svg className="search-bar__icon-search ">
+          <use xlinkHref={`${Icons}#icon-search`} />
+        </svg>
+      </div>
       {/* TODO: Delete or update the implementation of the filter icon: */}
       {filterIcon && <IoOptionsOutline className="search-bar-icon" />}
 

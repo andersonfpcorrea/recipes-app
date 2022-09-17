@@ -1,0 +1,32 @@
+.categories-scroll {
+  padding-left: 2rem;
+  overflow-x: auto;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.categories-scroll::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.categories-btn {
+  border-radius: 1rem;
+  border: none;
+  font-weight: 600;
+  font-size: 1.6rem;
+  padding: 0.4rem 1rem;
+  transition: all 0.3s;
+  &:focus {
+    outline: 1px solid $color-grad-1;
+  }
+}
+
+.categories-btn-true {
+  background-color: $color-primary;
+  color: $color-white-1;
+}
+
+.categories-btn-false {
+  background-color: $color-white-1;
+  color: $color-primary;
+}
