@@ -491,6 +491,10 @@ a {
   justify-content: space-between;
 }
 
+.flex-jc-sa {
+  justify-content: space-around;
+}
+
 .flex-jc-self-center {
   justify-self: flex-start;
 }
@@ -1269,14 +1273,10 @@ a {
 }
 
 .footer {
-  display: flex;
-  justify-content: space-between;
   background-color: #fff;
-  justify-self: flex-end;
   position: relative;
   margin-top: 4rem;
-  padding: 3rem 2rem;
-  font-size: 3.4rem;
+  padding: 1.6rem 2rem;
   box-shadow: 0 0.3rem 1rem 0.2rem rgba(0, 0, 0, 0.1);
 }
 .footer ul {
@@ -1284,25 +1284,12 @@ a {
   padding: 0;
 }
 
-.footer__btn-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  left: 50%;
-  bottom: 100%;
-  transform: translate(-50%, 50%);
-}
-
 .footer__add-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #f38e82;
   border: none;
   border-radius: 50%;
-  width: 5rem;
-  height: 5rem;
+  width: 6rem;
+  height: 6rem;
   color: #fff;
   font-weight: 600;
   box-shadow: 0 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.2);

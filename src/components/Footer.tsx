@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom'
 function Footer() {
   return (
     <nav className="footer">
-      <ul className="flex flex-jc-sb flex-gap-8vw fs-30">
+      <ul className="flex flex-jc-sa flex-align fs-32">
         <li>
           <NavLink
             to="/home"
@@ -28,8 +28,13 @@ function Footer() {
             <HiOutlineBookmark />
           </NavLink>
         </li>
-      </ul>
-      <ul className="flex flex-jc-sb flex-gap-8vw fs-30">
+        <li>
+          <NavLink to="/recipes">
+            <button type="button" className="footer__add-btn">
+              +
+            </button>
+          </NavLink>
+        </li>
         <li>
           <NavLink
             to="/notifications"
@@ -51,13 +56,6 @@ function Footer() {
           </NavLink>
         </li>
       </ul>
-      <div className="footer__btn-container">
-        <NavLink to="/recipes">
-          <button type="button" className="footer__add-btn">
-            +
-          </button>
-        </NavLink>
-      </div>
     </nav>
   )
 }
