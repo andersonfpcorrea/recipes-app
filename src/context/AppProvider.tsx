@@ -7,7 +7,7 @@ import {
 
 export type AppContextInterface = {
   searchResultState: SearchResultStateInterface | []
-  setSearchResultState: Dispatch<[ObjectWithStrKeysAndStrNullValues]>
+  setSearchResultState: Dispatch<[ObjectWithStrKeysAndStrNullValues] | []>
   searchPageMessage: string
   setSearchPageMessage: Dispatch<string>
 }

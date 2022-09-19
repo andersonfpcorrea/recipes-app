@@ -2,19 +2,15 @@ import Icons from '../assets/icons.svg'
 import { BsThreeDots } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
 import TopNavMenu from '../components/TopNavMenu'
-import { Dispatch } from 'react'
 
 interface TopBarProps {
   backgroundHandler?: () => void
   condition: boolean
-  bookmark?: {
-    bookmark: boolean
-    setBookmark: Dispatch<boolean>
-  }
+  withTitle?: { title: string }
 }
 
 function TopNavigationBar(props: TopBarProps) {
-  const { backgroundHandler, condition, bookmark } = props
+  const { backgroundHandler, condition, withTitle } = props
 
   const navigate = useNavigate()
 
@@ -22,7 +18,7 @@ function TopNavigationBar(props: TopBarProps) {
     navigate(-1)
   }
 
-  return (
+  const NoTitleMarkup = () => (
     <nav>
       <div className="flex flex-jc-sb pos-rel">
         <svg className="top-nav-left-arrow" onClick={navigateBack}>
@@ -35,9 +31,22 @@ function TopNavigationBar(props: TopBarProps) {
           }}
         />
       </div>
-      {condition && <TopNavMenu condition={condition} bookmark={bookmark} />}
+      {condition && <TopNavMenu condition={condition} />}
     </nav>
   )
+
+  const WithTitleMarkup = () => (
+    <nav className="grid-6-cols">
+      <svg className="search--top-left-arrow" onClick={navigateBack}>
+        <use xlinkHref={`${Icons}#icon-arrow-left`} />
+      </svg>
+      <h3 className="ta-center fs-24 center-on-grid-6-cols">
+        {withTitle?.title}
+      </h3>
+    </nav>
+  )
+
+  return withTitle ? <WithTitleMarkup /> : <NoTitleMarkup />
 }
 
 export default TopNavigationBar

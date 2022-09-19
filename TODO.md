@@ -19,6 +19,10 @@
 
 ## Next immediate tasks:
 
+- Implement the bookmarks page:
+
+  - [NOK] Fix the helper function to add an item to local storage;
+
 - Implement the home page:
 
   - [OK] Create cards to render categories sample meals

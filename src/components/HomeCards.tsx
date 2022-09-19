@@ -1,6 +1,12 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { RecipesByCategory } from '../pages/Home'
+import {
+  checkIfBookmarked,
+  toggleFromLocalStorageBookmarks,
+} from '../utils/helpers'
+import Bookmarked from './Bookmarked'
 import RateTag from './RateTag'
-import Unbookmarked from './Unbookmarked'
 
 export interface HomeCardsPropsType {
   image: string
@@ -8,10 +14,12 @@ export interface HomeCardsPropsType {
   id: string
   time?: string
   bookmark?: boolean
+  recipe: RecipesByCategory
 }
 
 function HomeCards(props: HomeCardsPropsType) {
-  const { image, name, id } = props
+  const { image, name, id, recipe } = props
+  const [bookmark, setBookmark] = useState(checkIfBookmarked(id))
   return (
     <Link to={`/details/${id}`}>
       <div className="home-card pos-rel color-grey-dark-1">
@@ -30,7 +38,17 @@ function HomeCards(props: HomeCardsPropsType) {
             <p className="color-grey-dark-2 fs-12">Time</p>
             <p className="fs-14 fw-600">15 min</p>
           </div>
-          <Unbookmarked />
+          <div
+            onClick={(e) => {
+              e.preventDefault()
+              setBookmark((prev) => {
+                toggleFromLocalStorageBookmarks(!prev, recipe)
+                return !prev
+              })
+            }}
+          >
+            <Bookmarked bookmarked={bookmark} />
+          </div>
         </div>
       </div>
     </Link>

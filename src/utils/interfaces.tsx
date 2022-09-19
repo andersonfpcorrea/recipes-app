@@ -21,6 +21,8 @@ export type RecipeType = {
 }
 export interface PropsType {
   recipes: [ObjectWithStrKeysAndStrNullValues | RecipeType] | []
+  width?: string
+  onSavedList?: boolean
 }
 export type RecipesType = [RecipeType] | []
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

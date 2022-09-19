@@ -112,6 +112,7 @@
 // Bookmark btn
 .bookmark-btn {
   display: flex;
+  justify-content: center;
   align-items: center;
   background-color: $color-grey-light-1;
   border-radius: 50%;
@@ -120,11 +121,9 @@
   height: 2.4rem;
   width: 2.4rem;
   & svg {
-    height: 2rem;
-    width: 2rem;
-    transform: scale(1.3);
+    height: 1.6 rem;
+    width: 1.6rem;
     use {
-      height: 8rem;
       fill: $color-primary;
     }
   }

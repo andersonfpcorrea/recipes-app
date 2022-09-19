@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { persons } from '../data/persons'
 import FiveStars from './FiveStars'
-import Icons from '../assets/icons.svg'
+import RecipeTime from './RecipeTime'
 
 export interface NewRecCardsProps {
   meal: string
@@ -29,12 +29,7 @@ function NewRecipesCards(props: NewRecCardsProps) {
         </div>
         <div className="flex flex-col flex-jc-end">
           <img src={image} alt={meal} className="new-recipes__img--meal" />
-          <div className="color-grey-dark-2 heigth-30 flex flex-align flex-gap-04">
-            <svg className="new-recipes__clock">
-              <use xlinkHref={`${Icons}#icon-clock`} />
-            </svg>
-            <p className="fs-12 ">20 mins</p>
-          </div>
+          <RecipeTime />
         </div>
       </div>
     </Link>

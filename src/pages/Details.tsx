@@ -1,14 +1,21 @@
 import { SyntheticEvent, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { getMeals } from '../utils/fetch'
-import { getFlag, mapObjValuesToArray, objForEach } from '../utils/helpers'
-import { ObjectWithStrKeysAndStrNullValues } from '../utils/interfaces'
+import {
+  checkIfBookmarked,
+  getFlag,
+  mapObjValuesToArray,
+  objForEach,
+} from '../utils/helpers'
+import {
+  ObjectWithStrKeysAndStrNullValues,
+  RecipeType,
+} from '../utils/interfaces'
 import { GiHotMeal } from 'react-icons/gi'
 import Author from '../components/Author'
 import TopNavigationBar from '../components/TopNavigationBar'
 import { AnimatePresence, motion } from 'framer-motion'
 import RateTag from '../components/RateTag'
-import Unbookmarked from '../components/Unbookmarked'
 import Bookmarked from '../components/Bookmarked'
 
 interface IngredientsAndMeasures {
@@ -21,7 +28,13 @@ const reviews = Math.ceil(Math.random() * 100)
 
 function Details() {
   const { id } = useParams()
-  const [recipe, setRecipe] = useState<ObjectWithStrKeysAndStrNullValues>({})
+  const [recipe, setRecipe] = useState<RecipeType>({
+    strMeal: '',
+    strMealThumb: '',
+    strCategory: '',
+    strArea: '',
+    idMeal: '',
+  })
   const [ingredients, setIngredients] = useState<IngredientsAndMeasures>({
     ingredients: [''],
     measures: [''],
@@ -34,14 +47,13 @@ function Details() {
   const [bookmark, setBookmark] = useState(false)
 
   async function getDetails() {
-    const [details] = (await getMeals(null, null, null, id)) as [
-      ObjectWithStrKeysAndStrNullValues
-    ]
+    const [details] = (await getMeals(null, null, null, id)) as [RecipeType]
 
     setRecipe(details)
+    setBookmark(checkIfBookmarked(details.idMeal))
     setIngredients(getIngredientsList(details))
     setSteps(getRecipeSteps(details))
-    setFlag(getFlag(details.strArea as string) as string)
+    setFlag(getFlag(details.strArea) as string)
   }
 
   function getIngredientsList(recipe: ObjectWithStrKeysAndStrNullValues) {
@@ -130,13 +142,13 @@ function Details() {
       return (
         <div
           className="details-img flex"
-          style={{ backgroundImage: `url('${recipe.strMealThumb as string}')` }}
+          style={{ backgroundImage: `url('${recipe.strMealThumb}')` }}
         >
           <div className="flex flex-col flex-jc-sb flex-a-end">
             {flag ? (
               <img
                 src={flag}
-                alt={recipe.strMeal as string}
+                alt={recipe.strMeal}
                 className="details-img__flag"
               />
             ) : (
@@ -145,7 +157,7 @@ function Details() {
             <div className="flex flex-gap-10 flex-align">
               <RateTag />
               <div onClick={() => setBookmark((prev) => !prev)}>
-                {bookmark ? <Bookmarked /> : <Unbookmarked />}
+                <Bookmarked recipe={recipe} bookmarked={bookmark} />
               </div>
             </div>
           </div>
@@ -155,7 +167,7 @@ function Details() {
       return (
         <div
           className="details-img details-img--fake-player flex pos-rel"
-          style={{ backgroundImage: `url('${recipe.strMealThumb as string}')` }}
+          style={{ backgroundImage: `url('${recipe.strMealThumb}')` }}
           onClick={() => setLoadVideo(true)}
         ></div>
       )
@@ -205,7 +217,6 @@ function Details() {
         <TopNavigationBar
           backgroundHandler={backgroundHandler}
           condition={backgroundFade}
-          bookmark={{ bookmark, setBookmark }}
         />
         <RenderImgOrVideo />
         <div className="flex flex-gap-06">
