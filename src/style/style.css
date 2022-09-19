@@ -206,7 +206,7 @@ a {
   width: 2.4rem;
 }
 .bookmark-btn svg {
-  height: 1.6 rem;
+  height: 1.6rem;
   width: 1.6rem;
 }
 .bookmark-btn svg use {
@@ -435,6 +435,10 @@ a {
 
 .heigth-100pc {
   height: 100%;
+}
+
+.heigth-auto {
+  height: fit-content;
 }
 
 .pos-abs {
@@ -1180,6 +1184,10 @@ a {
   padding: 2rem 0;
 }
 
+.home-cards-container {
+  height: fit-content;
+}
+
 .home-card {
   display: flex;
   flex-direction: column;
@@ -1269,7 +1277,7 @@ a {
 .footer {
   background-color: #fff;
   position: relative;
-  margin-top: 4rem;
+  margin-top: 2rem;
   padding: 1.6rem 2rem;
   box-shadow: 0 0.3rem 1rem 0.2rem rgba(0, 0, 0, 0.1);
 }
