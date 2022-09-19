@@ -41,20 +41,18 @@ export const getBookmarksFromLocalStrg = () => {
   return JSON.parse(data) as [RecipeType]
 }
 
-// TODO: continue from here: It is storoing the same data twice at every call:
 export const setRecipeToLocalStorage = (recipe: RecipeType) => {
   const current = localStorage.getItem('bookmarks')
-  if (!current)
+  if (!current) {
     return localStorage.setItem('bookmarks', JSON.stringify([recipe]))
-  const type = JSON.parse(current) as [RecipeType]
-  const distinct = type.filter((r) => r.idMeal === recipe.idMeal)
-
-  if (distinct.length > 0) {
-    const noDups = [...new Set(distinct)]
-
-    localStorage.setItem('bookmarks', JSON.stringify(noDups))
   }
-  localStorage.setItem('bookmarks', JSON.stringify([...type, recipe]))
+  const bookmarks = [...(JSON.parse(current) as [RecipeType]), recipe]
+  const allIDs = bookmarks.map((el) => el.idMeal)
+  const uniqueIDS = [...new Set(allIDs)]
+  const newBookmarks = uniqueIDS.map((id) =>
+    bookmarks.find((el) => el.idMeal === id)
+  )
+  localStorage.setItem('bookmarks', JSON.stringify(newBookmarks))
 }
 
 export const removeRecipeFromLocalStorage = (recipe: RecipeType) => {
