@@ -1,13 +1,11 @@
 import SearchBar from '../components/SearchBar'
-import Icons from '../assets/icons.svg'
-import { useNavigate } from 'react-router-dom'
 import Cards from '../components/Cards'
 import { useContext, useEffect, useState } from 'react'
 import { AppContext } from '../context/AppProvider'
 import { getSearchFromLocalStorage } from '../utils/helpers'
+import TopNavigationBar from '../components/TopNavigationBar'
 
 function Search() {
-  const navigate = useNavigate()
   const {
     searchResultState,
     setSearchResultState,
@@ -24,12 +22,8 @@ function Search() {
     setSearchPageMessage('')
   }, [])
 
-  const navigateBack = () => {
-    navigate(-1)
-  }
-
   const renderResults = () => {
-    if (searchResultState.length > 0)
+    if (searchResultState?.length > 0)
       return <Cards recipes={searchResultState} />
     if (searchPageMessage)
       return <p className="ta-center">{searchPageMessage}</p>
@@ -39,14 +33,10 @@ function Search() {
   return (
     <main className="page-container">
       <section className="search">
-        <div className="grid-6-cols">
-          <svg className="search--top-left-arrow" onClick={navigateBack}>
-            <use xlinkHref={`${Icons}#icon-arrow-left`} />
-          </svg>
-          <h3 className="ta-center fs-24 center-on-grid-6-cols">
-            Search recipes
-          </h3>
-        </div>
+        <TopNavigationBar
+          withTitle={{ title: 'Search recipes' }}
+          condition={false}
+        />
         <SearchBar
           filterIcon={false}
           filters={true}
@@ -60,7 +50,7 @@ function Search() {
           </h4>
           <p className="fs-12 color-grey-dark-2">
             {!fromLocal || showNumberOfResults
-              ? `${searchResultState.length} results`
+              ? `${searchResultState?.length} results`
               : null}
           </p>
         </div>

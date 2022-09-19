@@ -6,23 +6,22 @@ import {
 } from './interfaces'
 import { countries } from '../data/countries'
 import { Dispatch } from 'react'
+import { RecipesByCategory } from '../pages/Home'
 
 export type ArrayOfObjects = [Record<string, unknown>]
 
 export const setSearchOnLocalStorage = (value: ArrayOfObjects) => {
-  // const json = localStorage.getItem('search');
-  // const prevData = json ? JSON.parse(json) : undefined;
-  // const newData = prevData ? [...prevData, ...value] : [...value];
   localStorage.setItem('search', JSON.stringify(value))
 }
 
 export const getSearchFromLocalStorage = (
-  setter: Dispatch<[ObjectWithStrKeysAndStrNullValues]>
+  setter: Dispatch<[ObjectWithStrKeysAndStrNullValues] | []>
 ) => {
   const json = localStorage.getItem('search')
-  const data = json
-    ? (JSON.parse(json) as [ObjectWithStrKeysAndStrNullValues])
-    : null
+  const data =
+    json && json !== 'undefined'
+      ? (JSON.parse(json) as [ObjectWithStrKeysAndStrNullValues])
+      : ([] as [])
   data && setter(data)
 }
 
@@ -41,7 +40,9 @@ export const getBookmarksFromLocalStrg = () => {
   return JSON.parse(data) as [RecipeType]
 }
 
-export const setRecipeToLocalStorage = (recipe: RecipeType) => {
+export const setRecipeToLocalStorage = (
+  recipe: RecipeType | RecipesByCategory
+) => {
   const current = localStorage.getItem('bookmarks')
   if (!current) {
     return localStorage.setItem('bookmarks', JSON.stringify([recipe]))
@@ -55,7 +56,9 @@ export const setRecipeToLocalStorage = (recipe: RecipeType) => {
   localStorage.setItem('bookmarks', JSON.stringify(newBookmarks))
 }
 
-export const removeRecipeFromLocalStorage = (recipe: RecipeType) => {
+export const removeRecipeFromLocalStorage = (
+  recipe: RecipeType | RecipesByCategory
+) => {
   const current = localStorage.getItem('bookmarks')
   if (!current) return null
   const retrived = JSON.parse(current) as [RecipeType]
@@ -65,6 +68,21 @@ export const removeRecipeFromLocalStorage = (recipe: RecipeType) => {
     return null
   }
   localStorage.setItem('bookmarks', JSON.stringify(newBookmarks))
+}
+
+export const toggleFromLocalStorageBookmarks = (
+  action: boolean,
+  recipe: RecipesByCategory | RecipeType
+) => {
+  if (action) return setRecipeToLocalStorage(recipe)
+  return removeRecipeFromLocalStorage(recipe)
+}
+
+export const checkIfBookmarked = (id: string) => {
+  const current = localStorage.getItem('bookmarks')
+  if (!current) return false
+  const bookmarks = JSON.parse(current) as RecipeType[]
+  return bookmarks.find((el) => el.idMeal === id) ? true : false
 }
 
 export const objForEach = (

@@ -1,4 +1,4 @@
-import { Dispatch, useState } from 'react'
+import { useState } from 'react'
 import {
   IoIosShareAlt,
   IoMdStar,
@@ -11,13 +11,9 @@ import ShareModal from './ShareModal'
 
 interface Props {
   condition: boolean
-  bookmark?: {
-    bookmark: boolean
-    setBookmark: Dispatch<boolean>
-  }
 }
 
-function TopNavMenu({ condition, bookmark }: Props) {
+function TopNavMenu({ condition }: Props) {
   const [share, setShare] = useState(false)
   const [rate, setRate] = useState(false)
   const { id } = useParams()
@@ -57,13 +53,12 @@ function TopNavMenu({ condition, bookmark }: Props) {
               <p>Review</p>
             </div>
           </Link>
-          <div
-            className="flex flex-gap-06 flex-align"
-            onClick={() => bookmark?.setBookmark(!bookmark.bookmark)}
-          >
-            <IoIosBookmark className="fs-20" />
-            <p>{bookmark?.bookmark ? 'Unbookmark' : 'Bookmark'}</p>
-          </div>
+          <Link to="/bookmarks">
+            <div className="flex flex-gap-06 flex-align">
+              <IoIosBookmark className="fs-20" />
+              <p>Bookmarks</p>
+            </div>
+          </Link>
         </div>
         {share && <ShareModal closeModal={setShare} />}
         {rate && <RateModal closeModal={setRate} />}

@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom'
 function Footer() {
   return (
     <nav className="footer">
-      <ul className="flex flex-jc-sa flex-align fs-32">
+      <ul className="flex flex-jc-sa flex-align fs-28">
         <li>
           <NavLink
             to="/home"

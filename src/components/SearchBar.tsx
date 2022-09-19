@@ -95,7 +95,9 @@ function SearchBar(props: propsType) {
   return (
     <form
       className="search-bar"
-      onSubmit={(e) =>
+      onSubmit={(e: SyntheticEvent) => {
+        e.preventDefault()
+        if (searchInput.trim() === '') return null
         void handleSubmit(
           e,
           setSearchInput,
@@ -105,7 +107,7 @@ function SearchBar(props: propsType) {
           setSearchPageMessage as SetInput,
           callbacksSearchPage
         )
-      }
+      }}
     >
       <div className="width-100percent pos-rel">
         <input

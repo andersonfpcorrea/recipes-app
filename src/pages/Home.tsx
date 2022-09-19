@@ -56,6 +56,7 @@ function Home() {
               image={recipe.strMealThumb}
               name={recipe.strMeal}
               id={recipe.idMeal}
+              recipe={recipe}
             />
           ))}
         </div>

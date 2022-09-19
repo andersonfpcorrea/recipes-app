@@ -1,7 +1,12 @@
 import { SyntheticEvent, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { getMeals } from '../utils/fetch'
-import { getFlag, mapObjValuesToArray, objForEach } from '../utils/helpers'
+import {
+  checkIfBookmarked,
+  getFlag,
+  mapObjValuesToArray,
+  objForEach,
+} from '../utils/helpers'
 import {
   ObjectWithStrKeysAndStrNullValues,
   RecipeType,
@@ -45,6 +50,7 @@ function Details() {
     const [details] = (await getMeals(null, null, null, id)) as [RecipeType]
 
     setRecipe(details)
+    setBookmark(checkIfBookmarked(details.idMeal))
     setIngredients(getIngredientsList(details))
     setSteps(getRecipeSteps(details))
     setFlag(getFlag(details.strArea) as string)
@@ -211,7 +217,6 @@ function Details() {
         <TopNavigationBar
           backgroundHandler={backgroundHandler}
           condition={backgroundFade}
-          bookmark={{ bookmark, setBookmark }}
         />
         <RenderImgOrVideo />
         <div className="flex flex-gap-06">
