@@ -347,6 +347,10 @@ a {
   text-align: center;
 }
 
+.l-h-20 {
+  line-height: 2rem;
+}
+
 .bg-color-main {
   background-color: #f38e82;
 }
@@ -574,6 +578,10 @@ a {
 
 .center-on-grid-6-cols {
   grid-column: 2/6;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
 }
 
 .login-page {

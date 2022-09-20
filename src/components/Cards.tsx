@@ -14,7 +14,11 @@ function Cards(props: PropsType) {
 
   const LessDetails = (recipe: RecipeType) => (
     <>
-      <h4 className="cards-name--searchPage">{recipe.strMeal}</h4>
+      <h4 className="cards-name--searchPage">
+        {recipe.strMeal.length > 30
+          ? `${recipe.strMeal.slice(0, 30)}...`
+          : recipe.strMeal}
+      </h4>
       <p className="cards-category--searchPage">{recipe.strCategory}</p>
     </>
   )
@@ -62,8 +66,6 @@ function Cards(props: PropsType) {
             <RateTag />
           </div>
           <div className={onSavedList ? 'flex flex-jc-sb' : ''}>
-            {/* <h4 className="cards-name--searchPage">{recipe.strMeal}</h4>
-            <p className="cards-category--searchPage">{recipe.strCategory}</p> */}
             {onSavedList ? (
               <MoreDetails {...recipe} />
             ) : (

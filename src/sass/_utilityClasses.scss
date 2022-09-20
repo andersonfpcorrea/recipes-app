@@ -127,6 +127,11 @@
   text-align: center;
 }
 
+// Line heights
+.l-h-20 {
+  line-height: 2rem;
+}
+
 // %%%%%%%%%%%%%%
 // Colors
 // %%%%%%%%%%%%%%
@@ -312,4 +317,9 @@
 }
 .center-on-grid-6-cols {
   grid-column: 2 / 6;
+}
+
+// Scrolls
+.overflow-y-scroll {
+  overflow-y: scroll;
 }
