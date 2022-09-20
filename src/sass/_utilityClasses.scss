@@ -127,6 +127,11 @@
   text-align: center;
 }
 
+// Line heights
+.l-h-20 {
+  line-height: 2rem;
+}
+
 // %%%%%%%%%%%%%%
 // Colors
 // %%%%%%%%%%%%%%
@@ -204,6 +209,15 @@
 }
 .heigth-100pc {
   height: 100%;
+}
+.heigth-100vh {
+  height: 100vh;
+}
+.heigth-min-90vh {
+  min-height: 90vh;
+}
+.heigth-auto {
+  height: fit-content;
 }
 // Positions
 .pos-abs {
@@ -309,4 +323,9 @@
 }
 .center-on-grid-6-cols {
   grid-column: 2 / 6;
+}
+
+// Scrolls
+.overflow-y-scroll {
+  overflow-y: scroll;
 }
