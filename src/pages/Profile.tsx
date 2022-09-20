@@ -7,8 +7,8 @@ import { getBookmarksFromLocalStrg } from '../utils/helpers'
 function Profile() {
   const recipes = getBookmarksFromLocalStrg()
   return (
-    <main className="heigth-min-100vh fle flex-col">
-      <div className="page-container flex flex-col flex-gap-20">
+    <div>
+      <div className="page-container flex flex-col flex-gap-20 heigth-min-90vh">
         <TopNavigationBar withTitle={{ title: 'Profile' }} condition={false} />
         <ProfileSummary
           numberOfRecipes={!recipes[0].strMeal ? 0 : recipes.length}
@@ -27,7 +27,7 @@ function Profile() {
       <div style={{ position: 'sticky', bottom: '0', width: '100%' }}>
         <Footer />
       </div>
-    </main>
+    </div>
   )
 }
 export default Profile
