@@ -20,7 +20,7 @@ function Bookmarks() {
   }, [])
   return (
     <main>
-      <div className="page-container flex flex-col flex-gap-30 ">
+      <div className="page-container flex flex-col flex-gap-30 heigth-min-100vh">
         <TopNavigationBar
           withTitle={{ title: 'Saved recipes' }}
           condition={false}
