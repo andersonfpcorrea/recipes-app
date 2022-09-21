@@ -19,8 +19,8 @@ function Bookmarks() {
     setRecipes(getBookmarksFromLocalStrg())
   }, [])
   return (
-    <main>
-      <div className="page-container flex flex-col flex-gap-30 heigth-min-90vh">
+    <main className="page-container-with-footer">
+      <div className="page-container flex flex-col flex-gap-30">
         <TopNavigationBar
           withTitle={{ title: 'Saved recipes' }}
           condition={false}
@@ -33,11 +33,11 @@ function Bookmarks() {
           )}
         </div>
       </div>
-      <div style={{ position: 'sticky', bottom: '0', width: '100%' }}>
-        <Footer />
-      </div>
+      <Footer />
     </main>
   )
 }
 
 export default Bookmarks
+
+// heigth-min-90vh
