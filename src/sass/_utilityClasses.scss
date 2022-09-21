@@ -131,6 +131,9 @@
 .l-h-20 {
   line-height: 2rem;
 }
+.l-h-14 {
+  line-height: 1.2;
+}
 
 // %%%%%%%%%%%%%%
 // Colors
@@ -151,7 +154,7 @@
 .page-container-with-footer {
   @include flex-column;
   justify-content: space-between;
-  height: 100vh;
+  height: 100%;
 }
 // Paddings
 .pd-reset {

@@ -19,32 +19,25 @@
 
 ## Next immediate tasks:
 
-- Implement the bookmarks page:
+- Implement the notifications page:
 
-  - [NOK] Fix the helper function to add an item to local storage;
+  - Create a tabs component to be used on notifications page;
 
 - Implement the home page:
 
-  - [OK] Create cards to render categories sample meals
-  - [NOK] Implement drag effect on cards and category buttons for large screens
-  - [NOK] Create the "New Recipes" component
+  - Implement drag effect on cards and category buttons for large screens
 
 - Start adding framer-motion animations [in progress];
 
-- Implement the footer
-
 - Implement the details page:
 
-  - [NOK] Fix bug of procedures (sometimes it is rendered an empty step);
-  - [NOK] Implement saving to Details state and to localstorage the recipe progress;
-  - [NOK] Implement plus/minus btns to increase/decrease servings and update ingredients on details page;
-  - [NOK] Implement "add to shopping list" btn, that adds ingredients into a unique list or to a separate one.
+  - Fix bug of procedures (sometimes it is rendered an empty step);
+  - Implement saving to Details state and to localstorage the recipe progress;
+  - Implement plus/minus btns to increase/decrease servings and update ingredients on details page;
+  - Implement "add to shopping list" btn, that adds ingredients into a unique list or to a separate one.
 
 - Implement the Search page:
 
-  - Refactor the top nav bar of home page - use the TopNavigationBar componenet.
   - Implement pagination on search page;
 
 - Implement reviews functionality;
-
-- Fix type of context provider on AppProvider.tsx
