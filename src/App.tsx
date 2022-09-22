@@ -3,23 +3,25 @@ import Bookmarks from './pages/Bookmarks'
 // import Footer from './components/Footer'
 // import Header from './components/Header'
 import Details from './pages/Details'
-import Hero from './pages/Hero'
+// import Hero from './pages/Hero'
 import Home from './pages/Home'
-import Login from './pages/Login'
-import LoginAuth from './pages/LoginAuth'
+// import Login from './pages/Login'
+// import LoginAuth from './pages/LoginAuth'
 import Notifications from './pages/Notifications'
 import Profile from './pages/Profile'
 import Recipes from './pages/Recipes'
 import Reviews from './pages/Reviews'
 import Search from './pages/Search'
+import '@aws-amplify/ui-react/styles.css'
+import { withAuthenticator } from '@aws-amplify/ui-react'
 
-function App() {
+function App(props: { signOut?: () => void }) {
   return (
     <Routes>
-      <Route path="/" element={<Hero />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/login-auth" element={<LoginAuth />} />
-      <Route path="/home" element={<Home />} />
+      {/* <Route path="/" element={<Hero />} /> */}
+      {/* <Route path="/login" element={<Login />} /> */}
+      {/* <Route path="/login-auth" element={<LoginAuth />} /> */}
+      <Route path="/" element={<Home />} />
       <Route path="/search" element={<Search />} />
       <Route path="/details/:id" element={<Details />} />
       <Route path="/reviews/:id" element={<Reviews />} />
@@ -31,4 +33,4 @@ function App() {
   )
 }
 
-export default App
+export default withAuthenticator(App)

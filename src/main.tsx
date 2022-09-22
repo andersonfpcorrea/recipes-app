@@ -7,13 +7,15 @@ import './style/style.css'
 import '@fontsource/nunito-sans'
 import Amplify from 'aws-amplify'
 import config from './aws-exports.js'
+import AppNotes from './AppNotes'
 Amplify.configure(config)
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
       <AppProvider>
-        <App />
+        {/* <App /> */}
+        <AppNotes />
       </AppProvider>
     </BrowserRouter>
   </React.StrictMode>
