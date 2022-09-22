@@ -1,0 +1,58 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifydeec166aeaf24-staging-41425-authRole",
+      "UnauthRoleArn": "arn:aws:iam::252802802601:role/amplify-amplifydeec166aeaf24-staging-41425-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::252802802601:role/amplify-amplifydeec166aeaf24-staging-41425-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-amplifydeec166aeaf24-staging-41425-deployment",
+      "UnauthRoleName": "amplify-amplifydeec166aeaf24-staging-41425-unauthRole",
+      "StackName": "amplify-amplifydeec166aeaf24-staging-41425",
+      "StackId": "arn:aws:cloudformation:us-east-1:252802802601:stack/amplify-amplifydeec166aeaf24-staging-41425/0ba649e0-3a2d-11ed-9669-12098a2b5487",
+      "AmplifyAppId": "d1wsli7kmpd12e"
+    }
+  },
+  "auth": {
+    "recipesappc7242339": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifydeec166aeaf24-staging-41425-deployment/amplify-cfn-templates/auth/recipesappc7242339-cloudformation-template.json",
+        "logicalId": "authrecipesappc7242339"
+      },
+      "lastPushTimeStamp": "2022-09-22T06:11:02.810Z",
+      "output": {
+        "UserPoolId": "us-east-1_1Z6Ljcb1B",
+        "AppClientIDWeb": "7mcvp0ujcddu7fv1hg2huiv5tg",
+        "AppClientID": "59hf666lda8p010ufok95qomtf",
+        "IdentityPoolId": "us-east-1:f04afc38-820b-491d-9f94-52820a57b3aa",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:252802802601:userpool/us-east-1_1Z6Ljcb1B",
+        "IdentityPoolName": "recipesappc7242339_identitypool_c7242339__staging",
+        "UserPoolName": "recipesappc7242339_userpool_c7242339"
+      },
+      "lastPushDirHash": "No1oYmnEQv5WKpOj2hnERWmipQg="
+    }
+  }
+}
