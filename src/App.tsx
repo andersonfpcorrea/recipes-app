@@ -6,6 +6,7 @@ import Details from './pages/Details'
 import Hero from './pages/Hero'
 import Home from './pages/Home'
 import Login from './pages/Login'
+import LoginAuth from './pages/LoginAuth'
 import Notifications from './pages/Notifications'
 import Profile from './pages/Profile'
 import Recipes from './pages/Recipes'
@@ -17,6 +18,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Hero />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/login-auth" element={<LoginAuth />} />
       <Route path="/home" element={<Home />} />
       <Route path="/search" element={<Search />} />
       <Route path="/details/:id" element={<Details />} />

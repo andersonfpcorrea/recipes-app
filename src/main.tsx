@@ -5,6 +5,9 @@ import { AppProvider } from './context/AppProvider'
 import App from './App'
 import './style/style.css'
 import '@fontsource/nunito-sans'
+import Amplify from 'aws-amplify'
+import config from './aws-exports.js'
+Amplify.configure(config)
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -15,5 +18,3 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     </BrowserRouter>
   </React.StrictMode>
 )
-
-// Aparrently there is an error on React regarding typing of functional components: https://github.com/chakra-ui/chakra-ui/issues/5896

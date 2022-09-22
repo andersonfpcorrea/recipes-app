@@ -2,20 +2,20 @@
   "name": "recipes-app",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "commonjs",
   "engines": {
     "node": ">=16.15.0",
     "npm": ">=8.1.0"
   },
   "scripts": {
-    "test": "vitest",
-    "coverage": "vitest run --coverage",
-    "cy:run": "cypress run",
-    "cy:open": "cypress open",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "compile:sass": "sass --watch src/sass/main.scss src/style/style.css",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
     "lint:scripts": "eslint --ext .ts,.tsx src",
     "lint:scss": "stylelint \"src/**/*.scss\"",
     "lint:styles": "stylelint \"src/**/*.css\"",
@@ -24,8 +24,10 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@aws-amplify/ui-react": "^3.5.4",
     "@fontsource/nunito-sans": "^4.5.9",
     "@types/validator": "^13.7.6",
+    "aws-amplify": "^4.3.36",
     "clipboard-copy": "^4.0.1",
     "framer-motion": "^7.3.2",
     "react": "^18.2.0",
