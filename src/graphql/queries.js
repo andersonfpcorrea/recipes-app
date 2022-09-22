@@ -20,7 +20,7 @@ export const getBlog = /* GraphQL */ `
       updatedAt
     }
   }
-`
+`;
 export const listBlogs = /* GraphQL */ `
   query ListBlogs(
     $filter: ModelBlogFilterInput
@@ -40,7 +40,7 @@ export const listBlogs = /* GraphQL */ `
       nextToken
     }
   }
-`
+`;
 export const getPost = /* GraphQL */ `
   query GetPost($id: ID!) {
     getPost(id: $id) {
@@ -70,7 +70,7 @@ export const getPost = /* GraphQL */ `
       blogPostsId
     }
   }
-`
+`;
 export const listPosts = /* GraphQL */ `
   query ListPosts(
     $filter: ModelPostFilterInput
@@ -97,7 +97,7 @@ export const listPosts = /* GraphQL */ `
       nextToken
     }
   }
-`
+`;
 export const getComment = /* GraphQL */ `
   query GetComment($id: ID!) {
     getComment(id: $id) {
@@ -124,7 +124,7 @@ export const getComment = /* GraphQL */ `
       postCommentsId
     }
   }
-`
+`;
 export const listComments = /* GraphQL */ `
   query ListComments(
     $filter: ModelCommentFilterInput
@@ -149,18 +149,19 @@ export const listComments = /* GraphQL */ `
       nextToken
     }
   }
-`
+`;
 export const getNote = /* GraphQL */ `
   query GetNote($id: ID!) {
     getNote(id: $id) {
       id
       name
       description
+      image
       createdAt
       updatedAt
     }
   }
-`
+`;
 export const listNotes = /* GraphQL */ `
   query ListNotes(
     $filter: ModelNoteFilterInput
@@ -172,10 +173,11 @@ export const listNotes = /* GraphQL */ `
         id
         name
         description
+        image
         createdAt
         updatedAt
       }
       nextToken
     }
   }
-`
+`;
