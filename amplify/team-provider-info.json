@@ -1,14 +1,14 @@
 {
-  "staging": {
+  "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-amplifydeec166aeaf24-staging-41425-authRole",
-      "UnauthRoleArn": "arn:aws:iam::252802802601:role/amplify-amplifydeec166aeaf24-staging-41425-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::252802802601:role/amplify-amplifydeec166aeaf24-staging-41425-authRole",
+      "AuthRoleName": "amplify-recipesapp-dev-174222-authRole",
+      "UnauthRoleArn": "arn:aws:iam::252802802601:role/amplify-recipesapp-dev-174222-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::252802802601:role/amplify-recipesapp-dev-174222-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-amplifydeec166aeaf24-staging-41425-deployment",
-      "UnauthRoleName": "amplify-amplifydeec166aeaf24-staging-41425-unauthRole",
-      "StackName": "amplify-amplifydeec166aeaf24-staging-41425",
-      "StackId": "arn:aws:cloudformation:us-east-1:252802802601:stack/amplify-amplifydeec166aeaf24-staging-41425/0ba649e0-3a2d-11ed-9669-12098a2b5487",
+      "DeploymentBucketName": "amplify-recipesapp-dev-174222-deployment",
+      "UnauthRoleName": "amplify-recipesapp-dev-174222-unauthRole",
+      "StackName": "amplify-recipesapp-dev-174222",
+      "StackId": "arn:aws:cloudformation:us-east-1:252802802601:stack/amplify-recipesapp-dev-174222/ea044be0-3a9d-11ed-bc1c-0e14e0509e1f",
       "AmplifyAppId": "d1wsli7kmpd12e"
     },
     "categories": {
