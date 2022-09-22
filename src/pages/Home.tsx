@@ -45,36 +45,38 @@ function Home() {
   }, [])
 
   return (
-    <div className="home-container">
-      <Header />
-      <section className="home">
-        <CategoriesScroll onClick={setCategory} />
-        <div className="flex flex-gap-12 hor-scroll home-cards-container">
-          {recipes.map((recipe) => (
-            <HomeCards
-              key={recipe.idMeal}
-              image={recipe.strMealThumb}
-              name={recipe.strMeal}
-              id={recipe.idMeal}
-              recipe={recipe}
-            />
-          ))}
-        </div>
-        <div className="flex flex-col ">
-          <h3 className="fs-18 pad-left-2 fw-600">New Recipes</h3>
-          <div className="new-recipes-container">
-            {newRecipes?.map((recipe, i) => (
-              <NewRecipesCards
-                meal={recipe.strMeal}
+    <div className="page-container-with-footer">
+      <div>
+        <Header />
+        <section className="home">
+          <CategoriesScroll onClick={setCategory} />
+          <div className="flex flex-gap-12 hor-scroll home-cards-container">
+            {recipes.map((recipe) => (
+              <HomeCards
+                key={recipe.idMeal}
                 image={recipe.strMealThumb}
+                name={recipe.strMeal}
                 id={recipe.idMeal}
-                index={i}
-                key={`${recipe.strMeal.slice(0, 5)}`}
+                recipe={recipe}
               />
             ))}
           </div>
-        </div>
-      </section>
+          <div className="flex flex-col ">
+            <h3 className="fs-18 pad-left-2 fw-600">New Recipes</h3>
+            <div className="new-recipes-container">
+              {newRecipes?.map((recipe, i) => (
+                <NewRecipesCards
+                  meal={recipe.strMeal}
+                  image={recipe.strMealThumb}
+                  id={recipe.idMeal}
+                  index={i}
+                  key={`${recipe.strMeal.slice(0, 5)}`}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
       <Footer />
     </div>
   )

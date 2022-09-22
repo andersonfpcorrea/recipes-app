@@ -1,0 +1,23 @@
+.note-cards {
+  @include flex-column;
+  gap: 0.4rem;
+  background-color: $color-grey-light-1;
+  border-radius: 1rem;
+  padding: 1rem 1.6rem;
+}
+
+.note-cards-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-grad-1;
+  border-radius: 6px;
+  color: darken($color-grad-1, 30%);
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.note-cards-icons--read {
+  background-color: $color-grey-light-2;
+  color: $color-grey-dark-2;
+}

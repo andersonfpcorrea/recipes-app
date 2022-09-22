@@ -235,9 +235,6 @@ function Details() {
               key="Ingredients"
               type="button"
               className="details-tabs__links"
-              // className={`details-tabs__links ${
-              //   activeTab === 'Ingredients' ? 'details-tabs__links--active' : ''
-              // }`}
             >
               Ingredients
             </button>
@@ -253,9 +250,6 @@ function Details() {
               key="Procedures"
               type="button"
               className="details-tabs__links"
-              // className={`details-tabs__links ${
-              //   activeTab === 'Procedures' ? 'details-tabs__links--active' : ''
-              // }`}
             >
               Procedures
             </button>
