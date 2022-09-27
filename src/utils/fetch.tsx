@@ -29,8 +29,8 @@ const searchMealsdb = {
     `https://www.themealdb.com/images/ingredients/${ing}`,
 }
 
-const fetchFromMealdb = async (url: string) =>
-  await fetch(url)
+const fetchFromMealdb = async (url: string, signal?: AbortSignal) =>
+  await fetch(url, { signal })
     .then((res) => res.json())
     .then((data: { meals: ArrayOfObjects }) => data.meals)
     .catch((err) =>
@@ -53,8 +53,11 @@ const getMealsByBasicFilter = async (basicFilter: string, query: string) => {
   }
 }
 
-export const getMealsByCategory = async (category: string) => {
-  return await fetchFromMealdb(searchMealsdb.filterByCategory(category))
+export const getMealsByCategory = async (
+  category: string,
+  signal?: AbortSignal
+) => {
+  return await fetchFromMealdb(searchMealsdb.filterByCategory(category), signal)
 }
 
 const getMealByID = async (id: string) => {
