@@ -204,7 +204,7 @@ function Details() {
 
   useEffect(() => {
     void getDetails()
-  }, [getDetails])
+  }, [])
 
   return (
     <section

@@ -39,5 +39,3 @@ function Bookmarks() {
 }
 
 export default Bookmarks
-
-// heigth-min-90vh
