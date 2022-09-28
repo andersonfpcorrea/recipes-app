@@ -29,16 +29,13 @@ function Home() {
   ])
 
   useEffect(() => {
-    const controller = new AbortController()
-    const signal = controller.signal
-    getMealsByCategory(category, signal)
+    getMealsByCategory(category)
       .then((data) => setRecipes(data as [RecipesByCategory]))
       .catch((err: Error) =>
         console.error(
           `Somethin wrong during fetching mealsdb by category: ${err.message}`
         )
       )
-    return () => controller.abort()
   }, [category])
 
   useEffect(() => {

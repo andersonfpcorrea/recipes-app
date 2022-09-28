@@ -8,9 +8,7 @@ function CommentBox() {
   const [recipe, setRecipe] = useState('')
 
   useEffect(() => {
-    const controller = new AbortController()
-    const signal = controller.signal
-    getMealByID(id as string, signal)
+    getMealByID(id as string)
       .then((res) => {
         console.log(res)
         setRecipe(res?.[0].strMeal as string)
