@@ -29,13 +29,16 @@ function Home() {
   ])
 
   useEffect(() => {
-    getMealsByCategory(category)
+    const controller = new AbortController()
+    const signal = controller.signal
+    getMealsByCategory(category, signal)
       .then((data) => setRecipes(data as [RecipesByCategory]))
       .catch((err: Error) =>
         console.error(
           `Somethin wrong during fetching mealsdb by category: ${err.message}`
         )
       )
+    return () => controller.abort()
   }, [category])
 
   useEffect(() => {
@@ -51,7 +54,7 @@ function Home() {
         <section className="home">
           <CategoriesScroll onClick={setCategory} />
           <div className="flex flex-gap-12 hor-scroll home-cards-container">
-            {recipes.map((recipe) => (
+            {recipes?.map((recipe) => (
               <HomeCards
                 key={recipe.idMeal}
                 image={recipe.strMealThumb}

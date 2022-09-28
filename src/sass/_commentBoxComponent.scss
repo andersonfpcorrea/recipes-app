@@ -1,0 +1,12 @@
+.comment-box textarea {
+  display: block;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 1.4rem;
+  max-width: 100%;
+  @include box-shadow-sm(0.1);
+  &::placeholder {
+    color: $color-grey-dark-1;
+  }
+}

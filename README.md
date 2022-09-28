@@ -32,7 +32,7 @@ São consumidos dados das seguintes APIs: _[spoonacular API](https://spoonacular
 
 ### Continuous Delivery (CD)
 
-- Processo de entrega contínuo (CD) com CloudFlare para o projeto, e com Chromatic para o sistema de design (Storybook).
+- Processo de entrega contínuo (CD) com _[Cloudflare Pages](https://recipes-app.pages.dev)_ e _[AWS Amplify](https://master.d1wsli7kmpd12e.amplifyapp.com/)_ para o projeto, e com Chromatic para o sistema de design (Storybook).
 
 ### Continuous Integration (CI)
 
@@ -71,7 +71,7 @@ Data are consumed from _[spoonacular API](https://spoonacular.com/food-api/)_, _
 
 ### Continuous Delivery (CD)
 
-- Continuous delivery with CloudFlare Pages for the project, and with Chromatic for the design system (Storybook).
+- Continuous delivery with _[Cloudflare Pages](https://recipes-app.pages.dev)_ and _[AWS Amplify](https://master.d1wsli7kmpd12e.amplifyapp.com/)_ for the project, and with Chromatic for the design system (Storybook).
 
 ### Continuous Integration (CI)
 

@@ -20,7 +20,7 @@ function Search() {
     getSearchFromLocalStorage(setSearchResultState)
     setFromLocal(true)
     setSearchPageMessage('')
-  }, [])
+  }, [setSearchPageMessage, setSearchResultState])
 
   const renderResults = () => {
     if (searchResultState?.length > 0)

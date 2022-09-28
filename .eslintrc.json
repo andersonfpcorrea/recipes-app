@@ -32,11 +32,13 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": ["react", "@typescript-eslint", "testing-library"],
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "testing-library"],
   "ignorePatterns": ["cypress/**/*", "src/stories/**/*"],
   "rules": {
     "prettier/prettier": "error",
     "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error"
+    "react/jsx-uses-vars": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }
