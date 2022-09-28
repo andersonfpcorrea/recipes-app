@@ -141,6 +141,9 @@
 .bg-color-main {
   background-color: $color-primary;
 }
+.bg-color-white {
+  background-color: $color-white-1;
+}
 .bg-fade {
   filter: blur(5px);
 }
@@ -195,9 +198,15 @@
 .width-100percent {
   width: 100%;
 }
+.width-100vw {
+  width: 100vw;
+}
 .width-heigth-2 {
   width: 2rem;
   height: 2rem;
+}
+.width-fc {
+  width: fit-content;
 }
 .heigth-0 {
   height: 0;
@@ -232,6 +241,13 @@
 }
 .pos-rel {
   position: relative;
+}
+.pos-fix {
+  position: fixed;
+  top: 0;
+}
+.pos-sticky {
+  position: sticky;
 }
 // Flex
 .flex {

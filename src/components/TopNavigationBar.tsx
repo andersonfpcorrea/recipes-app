@@ -40,7 +40,7 @@ function TopNavigationBar(props: TopBarProps) {
       <svg className="search--top-left-arrow" onClick={navigateBack}>
         <use xlinkHref={`${Icons}#icon-arrow-left`} />
       </svg>
-      <h3 className="ta-center fs-24 center-on-grid-6-cols">
+      <h3 className="ta-center fs-20 center-on-grid-6-cols">
         {withTitle?.title}
       </h3>
     </nav>

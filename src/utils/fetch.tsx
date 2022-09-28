@@ -60,8 +60,8 @@ export const getMealsByCategory = async (
   return await fetchFromMealdb(searchMealsdb.filterByCategory(category), signal)
 }
 
-const getMealByID = async (id: string) => {
-  return await fetchFromMealdb(searchMealsdb.byID(id))
+export const getMealByID = async (id: string, signal?: AbortSignal) => {
+  return await fetchFromMealdb(searchMealsdb.byID(id), signal)
 }
 
 export const getMealByArea = async (area: string) => {

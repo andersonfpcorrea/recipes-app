@@ -135,6 +135,20 @@ a {
   width: 18rem;
 }
 
+.comment-box__btn {
+  align-self: flex-end;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  padding: 0.6rem 1.6rem;
+  width: fit-content;
+  box-shadow: 0 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+.comment-box__btn:active {
+  box-shadow: 0 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
+}
+
 .inputs {
   padding: 0.3rem 1rem;
   height: 3.6rem;
@@ -359,6 +373,10 @@ a {
   background-color: #f38e82;
 }
 
+.bg-color-white {
+  background-color: #fff;
+}
+
 .bg-fade {
   filter: blur(5px);
 }
@@ -422,9 +440,17 @@ a {
   width: 100%;
 }
 
+.width-100vw {
+  width: 100vw;
+}
+
 .width-heigth-2 {
   width: 2rem;
   height: 2rem;
+}
+
+.width-fc {
+  width: fit-content;
 }
 
 .heigth-0 {
@@ -469,6 +495,15 @@ a {
 
 .pos-rel {
   position: relative;
+}
+
+.pos-fix {
+  position: fixed;
+  top: 0;
+}
+
+.pos-sticky {
+  position: sticky;
 }
 
 .flex {
@@ -1361,6 +1396,46 @@ a {
 .note-cards-icons--read {
   background-color: #f2efee;
   color: #918581;
+}
+
+.comment-box textarea {
+  display: block;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 1.4rem;
+  max-width: 100%;
+  box-shadow: 0 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
+}
+.comment-box textarea::placeholder {
+  color: #615551;
+}
+
+.user-comment__img {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+}
+
+.thumbs {
+  background-color: #f2efee;
+  border-radius: 3rem;
+  color: inherit;
+  padding: 0.2rem 1rem;
+}
+
+.thumbs--clicked {
+  background-color: #f38e82;
+}
+
+.reviews {
+  height: 100%;
+  position: fixed;
+  width: 100%;
+}
+
+.reviews__comments {
+  overflow-y: scroll;
 }
 
 /*# sourceMappingURL=style.css.map */

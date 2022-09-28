@@ -43,6 +43,21 @@
   width: 18rem;
 }
 
+// REVIEWS BTN
+.comment-box__btn {
+  align-self: flex-end;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  padding: 0.6rem 1.6rem;
+  width: fit-content;
+  @include box-shadow-sm(0.2);
+  transition: all 0.3s;
+  &:active {
+    @include box-shadow-sm(0.1);
+  }
+}
+
 // INPUTS IN GENERAL
 .inputs {
   padding: 0.3rem 1rem;

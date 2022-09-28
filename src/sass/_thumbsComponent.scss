@@ -1,0 +1,10 @@
+.thumbs {
+  background-color: $color-grey-light-2;
+  border-radius: 3rem;
+  color: inherit;
+  padding: 0.2rem 1rem;
+}
+
+.thumbs--clicked {
+  background-color: $color-primary;
+}
