@@ -164,6 +164,39 @@ a {
   box-shadow: 0 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
 }
 
+.btn-step {
+  background-color: #fbdb89;
+  color: inherit;
+}
+.btn-step:hover {
+  background-color: #fdeaba;
+}
+
+.btn--del {
+  background-color: #fa5252;
+}
+.btn--del:hover {
+  background-color: #fb8484;
+}
+
+.btn--edit {
+  background-color: #40c057;
+}
+.btn--edit:hover {
+  background-color: #66cd79;
+}
+
+.btn-save {
+  background-color: #fab005;
+}
+.btn-save:hover {
+  background-color: #fbc037;
+}
+
+.btn--shadow {
+  box-shadow: 0 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
+}
+
 .inputs {
   padding: 0.3rem 1rem;
   height: 3.6rem;
@@ -439,6 +472,10 @@ a {
   padding-top: 1rem;
 }
 
+.mt-1 {
+  margin-top: 1rem;
+}
+
 .br-1 {
   border-radius: 1rem;
 }
@@ -660,6 +697,10 @@ a {
 
 .component-scroll-y {
   overflow-y: scroll;
+}
+
+.ls-none {
+  list-style: none;
 }
 
 .login-page {
@@ -1532,6 +1573,34 @@ a {
   .scroll-el {
     display: none;
   }
+}
+.recipes fieldset {
+  border-radius: 0.6rem;
+  border: none;
+  box-shadow: 0 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
+}
+.recipes textarea {
+  background-color: #f9f5f3;
+  border-radius: 0.6rem;
+  border: 1px solid #d3c7c3;
+  font-size: 1.2rem;
+  padding: 0.6rem 1rem;
+}
+.recipes input {
+  background-color: #f9f5f3;
+  border-radius: 0.4rem;
+  border: 1px solid #d3c7c3;
+  font-size: 1.2rem;
+  padding-left: 0.2rem;
+}
+.recipes input::placeholder {
+  padding-left: 0.2rem;
+}
+.recipes select {
+  background-color: #f9f5f3;
+  border: 1px solid #d3c7c3;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

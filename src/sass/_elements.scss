@@ -58,6 +58,41 @@
   }
 }
 
+// Add step btn
+.btn-step {
+  background-color: $color-grad-1;
+  color: inherit;
+  &:hover {
+    background-color: lighten($color-grad-1, 10%);
+  }
+}
+
+// Delete btn
+.btn--del {
+  background-color: #fa5252;
+  &:hover {
+    background-color: lighten(#fa5252, 10%);
+  }
+}
+// Edit btn
+.btn--edit {
+  background-color: #40c057;
+  &:hover {
+    background-color: lighten(#40c057, 10%);
+  }
+}
+// Save btn
+.btn-save {
+  background-color: #fab005;
+  &:hover {
+    background-color: lighten(#fab005, 10%);
+  }
+}
+//  Btn with shadow
+.btn--shadow {
+  @include box-shadow-sm(0.2);
+}
+
 // INPUTS IN GENERAL
 .inputs {
   padding: 0.3rem 1rem;

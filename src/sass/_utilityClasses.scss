@@ -184,6 +184,10 @@
 .pad-top-1 {
   padding-top: 1rem;
 }
+// MARGIN
+.mt-1 {
+  margin-top: 1rem;
+}
 // BORDERS
 .br-1 {
   border-radius: 1rem;
@@ -359,4 +363,9 @@
 }
 .component-scroll-y {
   overflow-y: scroll;
+}
+
+// LISTS
+.ls-none {
+  list-style: none;
 }

@@ -1,0 +1,30 @@
+.recipes {
+  fieldset {
+    border-radius: 0.6rem;
+    border: none;
+    @include box-shadow-sm(0.1);
+  }
+  textarea {
+    background-color: $color-grey-light-1;
+    border-radius: 0.6rem;
+    border: 1px solid $color-grey-light-3;
+    font-size: 1.2rem;
+    padding: 0.6rem 1rem;
+  }
+  input {
+    background-color: $color-grey-light-1;
+    border-radius: 0.4rem;
+    border: 1px solid $color-grey-light-3;
+    font-size: 1.2rem;
+    padding-left: 0.2rem;
+    &::placeholder {
+      padding-left: 0.2rem;
+    }
+  }
+  select {
+    background-color: $color-grey-light-1;
+    border: 1px solid $color-grey-light-3;
+    border-radius: 0.4rem;
+    font-size: 1.2rem;
+  }
+}
