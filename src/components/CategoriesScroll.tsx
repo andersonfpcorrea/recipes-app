@@ -28,11 +28,7 @@ function CategoriesScroll(props: CatScrollProps) {
     return mealsCategoryArray.map((cat) => markup(cat))
   }
 
-  return (
-    <div className="flex flex-gap-02 categories-scroll">
-      {renderCategories()}
-    </div>
-  )
+  return <>{renderCategories()}</>
 }
 
 export default CategoriesScroll

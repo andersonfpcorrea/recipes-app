@@ -1,0 +1,54 @@
+// For screen size adjusts:
+
+@media (min-width: 350px) {
+  html {
+    font-size: 2.9vw;
+  }
+}
+
+@media (min-width: 400px) {
+  html {
+    font-size: 72%;
+  }
+  .details-img {
+    height: 50vw;
+  }
+}
+
+@media (min-width: 545px) {
+  #root {
+    display: flex;
+    place-content: center;
+    background: $gradient-right-top-transparent;
+  }
+  .page-container,
+  .page-container-with-footer {
+    width: 45rem;
+    background-color: $color-white-1;
+  }
+  .details-img,
+  .details-img--fake-player,
+  .details-video {
+    height: 30rem;
+  }
+  .cards {
+    width: 20rem;
+  }
+  .share-modal {
+    width: 40rem;
+    position: fixed;
+    margin: 0 auto;
+  }
+  .rate-modal {
+    width: 18rem;
+    position: fixed;
+    margin: 0 auto;
+  }
+}
+
+// FOR DETECTING THE USER DEVICE and toggling an element to scroll the recipes' cards on home page
+@media (hover: none) {
+  .scroll-el {
+    display: none;
+  }
+}

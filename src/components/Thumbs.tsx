@@ -51,7 +51,7 @@ function Thumbs(props: ThumbsProps) {
       }}
     >
       <button
-        className={`flex flex-gap-06 fs-12 fw-600 btn thumbs ${
+        className={`flex flex-gap-06 fs-12 fw-600 thumbs ${
           active === 'up' ? 'thumbs--clicked' : ''
         }`}
         data-value="up"
@@ -60,7 +60,7 @@ function Thumbs(props: ThumbsProps) {
         <p data-value="up">{votes.up}</p>
       </button>
       <button
-        className={`flex flex-gap-06 fs-12 fw-600 btn thumbs ${
+        className={`flex flex-gap-06 fs-12 fw-600 thumbs ${
           active === 'down' ? 'thumbs--clicked' : ''
         }`}
         data-value="down"

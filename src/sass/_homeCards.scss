@@ -1,5 +1,33 @@
 .home-cards-container {
   height: fit-content;
+  isolation: isolate;
+}
+
+.scroll-el {
+  position: absolute;
+  top: 39%;
+  color: lighten($color-grey-light-3, 5%);
+  font-size: 2.4rem;
+  z-index: 1;
+  border-radius: 50%;
+  @include box-shadow-sm(0.3);
+}
+
+.scroll-el--right {
+  right: 0.6rem;
+}
+
+.scroll-el--left {
+  left: 0.6rem;
+}
+
+.scroll-el--lower {
+  top: 63%;
+}
+
+.scroll-el--categ {
+  top: 5%;
+  font-size: 2rem;
 }
 
 .home-card {
