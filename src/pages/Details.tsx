@@ -73,7 +73,6 @@ function Details() {
   }
 
   function getRecipeSteps(recipe: ObjectWithStrKeysAndStrNullValues) {
-    // return recipe.strInstructions?.split('\r\n').length;
     if (recipe.strInstructions)
       return recipe.strInstructions?.split('\r\n').length
     return 0
@@ -141,7 +140,7 @@ function Details() {
     if (activeTab === 'Ingredients')
       return (
         <div
-          className="details-img flex"
+          className="details-img flex "
           style={{ backgroundImage: `url('${recipe.strMealThumb}')` }}
         >
           <div className="flex flex-col flex-jc-sb flex-a-end">
@@ -173,29 +172,31 @@ function Details() {
       )
     else
       return (
-        <iframe
-          className="details-video"
-          width="560"
-          height="315"
-          src={`https://www.youtube.com/embed/${
-            recipe.strYoutube?.split('=').at(1) as string
-          }`}
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
+        <div className="details-img">
+          <iframe
+            className="details-video"
+            width="560"
+            height="100%"
+            src={`https://www.youtube.com/embed/${
+              recipe.strYoutube?.split('=').at(1) as string
+            }`}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
       )
   }
 
   function RenderIngredientsOrProcedures() {
     if (activeTab === 'Ingredients')
       return (
-        <ul className="details-ing-ul">
+        <ul className="details-ing-ul ">
           {ingredients.ingredients && renderIngredientsList(ingredients)}
         </ul>
       )
-    return <ul className="details-ing-ul">{renderProceduresList(recipe)}</ul>
+    return <ul className="details-ing-ul ">{renderProceduresList(recipe)}</ul>
   }
 
   function backgroundHandler() {
@@ -208,7 +209,7 @@ function Details() {
 
   return (
     <section
-      className="page-container flex flex-col flex-gap-20"
+      className="page-container flex flex-col flex-gap-20 component-fix-100"
       onClick={() => {
         if (backgroundFade) setBackgroundFade(false)
       }}
@@ -228,7 +229,7 @@ function Details() {
         </div>
         <Author />
       </div>
-      <div className="flex flex-col flex-gap-14">
+      <div className="flex flex-col flex-gap-14 component-scroll-y">
         <div className="details-tabs" onClick={handleTabs}>
           <div>
             <button
@@ -272,17 +273,19 @@ function Details() {
             <p className="fs-12">{steps} steps</p>
           )}
         </div>
-        <AnimatePresence exitBeforeEnter>
-          <motion.div
-            key={activeTab}
-            initial={{ y: 10, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -10, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-          >
-            <RenderIngredientsOrProcedures />
-          </motion.div>
-        </AnimatePresence>
+        <div className="component-scroll-y">
+          <AnimatePresence exitBeforeEnter>
+            <motion.div
+              key={activeTab}
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -10, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              <RenderIngredientsOrProcedures />
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
     </section>
   )

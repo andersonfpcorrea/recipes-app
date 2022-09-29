@@ -70,6 +70,21 @@ $icons-size-1: 2.4rem;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
+// Define custom scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0 transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $color-grey-light-3;
+}
 /*
   2. Remove default margin
 */
@@ -103,6 +118,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
+
 /*
   6. Improve media defaults
 */

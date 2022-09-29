@@ -4,6 +4,7 @@
   margin-top: 2rem;
   padding: 1.6rem 2rem;
   @include box-shadow-bg(0.1);
+  isolation: isolate;
 
   & ul {
     list-style: none;
