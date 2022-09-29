@@ -22,7 +22,9 @@
     background: $gradient-right-top-transparent;
   }
   .page-container,
-  .page-container-with-footer {
+  .page-container-with-footer,
+  .hero,
+  .login-page {
     width: 45rem;
     background-color: $color-white-1;
   }
