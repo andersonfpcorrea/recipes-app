@@ -1503,7 +1503,9 @@ a {
     background: linear-gradient(to right top, rgba(244, 136, 128, 0.6), rgba(244, 136, 128, 0.1), rgba(251, 218, 137, 0.4));
   }
   .page-container,
-.page-container-with-footer {
+.page-container-with-footer,
+.hero,
+.login-page {
     width: 45rem;
     background-color: #fff;
   }
