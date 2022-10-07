@@ -2,7 +2,9 @@
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=andersonfpcorrea_recipes-app&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=andersonfpcorrea_recipes-app)
 
-![Forkify](https://www.youtube.com/watch?v=ekWEAQMjBt4)
+
+[Screencast from 06-10-2022 23:45:15.webm](https://user-images.githubusercontent.com/92505216/194460359-9cd9f5a3-99cf-4303-b0ee-8e753a90d410.webm)
+
 
 <details>
 <summary><strong>Leia a descrição do projeto em português 🇧🇷</strong></summary>
