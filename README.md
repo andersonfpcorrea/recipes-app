@@ -2,6 +2,10 @@
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=andersonfpcorrea_recipes-app&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=andersonfpcorrea_recipes-app)
 
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/92505216/194462054-e19bb747-711f-434e-8feb-4e0277e0b47b.gif)
+
+
 <details>
 <summary><strong>Leia a descrição do projeto em português 🇧🇷</strong></summary>
 <br />
