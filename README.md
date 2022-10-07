@@ -2,10 +2,6 @@
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=andersonfpcorrea_recipes-app&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=andersonfpcorrea_recipes-app)
 
-
-[<img src="https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg" width="50%">](https://www.youtube.com/watch?v=ekWEAQMjBt4 "Now in Android: 55")
-
-
 <details>
 <summary><strong>Leia a descrição do projeto em português 🇧🇷</strong></summary>
 <br />
